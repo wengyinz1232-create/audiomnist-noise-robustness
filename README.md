@@ -30,11 +30,11 @@ python reproduce.py all --jobs 2
 
 当前 12 组 = 2 特征 × 3 类模型 × 2 训练方式。说话者隔离的外层 10 折、内层 3 折，共 1,320 次拟合、120 外层模型和 12 全数据模型。
 
-### NGBoost 候选模型讨论
+### 新增 NGBoost 配对训练实验
 
-[NGBoost 与 LightGBM–GOSS：局限、取舍与证据边界](docs/NGBOOST_VS_LIGHTGBM.md) 解释自然梯度计算、数值条件、概率预测收益及公平比较所需的验证工作，并提供英文报告段落。
+[实验说明与运行命令](docs/NGBOOST_EXPERIMENT.md) · [训练及比较入口](compare_ngboost.py) · [GitHub Actions](.github/workflows/ngboost.yml)
 
-**当前正式结果不包含 NGBoost，不能据此宣称它比 LightGBM 更差、更慢或更不稳定。** 初稿中的三折 NGBoost 数字尚无当前仓库内的可核验原始证据。本次选择 LightGBM 的依据是完整复现和已验证实现，而非已证明的 NGBoost 性能劣势；讨论文件明确区分文献/源码机制与实测结论。
+以 MFCC+delta＋白噪声增强为范围，NGBoost 和 LightGBM 在相同外层十折、内层三折上选参并训练；每对模型在同一 runner 顺序运行，保存逐折预测、模型重载核验、配对分数差和计时。它是独立补充实验，不改写原 12 组配置。结果以实际训练和完整十折核验为准，不预设 NGBoost 更差；未完成的折不能被删除后用其余折冒充完整比较。
 
 | 特征 | 模型 | 网格 |
 |---|---|---|

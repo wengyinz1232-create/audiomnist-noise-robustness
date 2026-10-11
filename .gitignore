@@ -1,5 +1,6 @@
 # Local environments and credentials
 .reproduction/
+.ngboost-comparison/
 .audit_deps/
 .venv/
 venv/
