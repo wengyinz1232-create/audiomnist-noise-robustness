@@ -36,6 +36,17 @@ python reproduce.py all --jobs 2
 
 以 MFCC+delta＋白噪声增强为范围，NGBoost 和 LightGBM 在相同外层十折、内层三折上选参并训练；每对模型在同一 runner 顺序运行，保存逐折预测、模型重载核验、配对分数差和计时。它是独立补充实验，不改写原 12 组配置。结果以实际训练和完整十折核验为准，不预设 NGBoost 更差；未完成的折不能被删除后用其余折冒充完整比较。
 
+**已完成：[十折实际对比报告](reproduced_results/ngboost-38150310147/NGBOOST_RESULTS_ZH.md) · [成功运行 38150310147](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38150310147)**。20 个外折模型全部通过保存/重载核验，逐折预测已复算；预测与 JSON 长期保存在结果目录，可独立重建汇总。
+
+| 指标（MFCC+delta＋白噪声增强） | NGBoost | LightGBM–GOSS |
+|---|---:|---:|
+| Clean macro-F1 | 0.9275 ± 0.0282 | 0.9640 ± 0.0158 |
+| Pink-10 macro-F1 | 0.8466 ± 0.0374 | 0.9071 ± 0.0399 |
+| Pink-10 log loss | 0.4910 ± 0.1063 | 0.3477 ± 0.1156 |
+| 平均最终拟合秒/折 | 740.44 | 8.20 |
+
+四种条件的 F1 均为 LightGBM 十折全部胜出；粉红噪声配对 F1 差（NGBoost−LightGBM）为 −0.0605 ± 0.0168。该结论限于这次配置和预算：NGBoost 十折全部选中 200 轮上限，**未通过“中间参数最常选”检查，不能宣称已充分调参或全面满足课程要求**。两者均无训练警告；NGBoost 的 Pink-10 F1 折间 SD 反而略小，所以不能写成“NGBoost 更不稳定”。耗时是同机配对测量，不代表所有实现或硬件的普遍速度比。
+
 | 特征 | 模型 | 网格 |
 |---|---|---|
 | LogMel | Logistic | C = 0.0001, 0.1, 100 |

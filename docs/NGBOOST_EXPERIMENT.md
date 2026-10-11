@@ -2,6 +2,12 @@
 
 This is an actual training entry point, separate from the original twelve configurations. Its scope is **MFCC+delta with clean + white-10 augmentation**, compared against the current seven-leaf LightGBM–GOSS configuration. Results do not cover clean-only training or Log-Mel NGBoost.
 
+## Completed run
+
+[Run 38150310147](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38150310147) completed all ten paired folds at training commit `e2c58ebc1a800900d10051eda1f0f24e5d40397e`. [Measured report and retained evidence](../reproduced_results/ngboost-38150310147/NGBOOST_RESULTS_ZH.md) include predictions so metrics remain verifiable after Actions artifacts expire. Model files are in the downloadable workflow artifact, not committed to Git.
+
+Pink-noise F1 was 0.8466 ± 0.0374 for NGBoost versus 0.9071 ± 0.0399 for LightGBM, with LightGBM winning all ten paired folds. Final-fit means were 740.44 versus 8.20 seconds. NGBoost selected the 200-stage upper boundary in every fold; its grid fails the course midpoint criterion and cannot establish fully tuned algorithmic inferiority. Neither model produced recorded training warnings, and NGBoost's pink-noise fold SD was slightly smaller. Thus the run supports a performance/cost disadvantage for the declared NGBoost pipeline, not a claim of numerical instability or universal inferiority.
+
 ## Fixed protocol
 
 - Same 12,000 recordings, seed 20261009, ten speaker-disjoint outer folds and three inner folds as the original experiment. Each outer fold has 54 training and six unseen test speakers.

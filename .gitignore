@@ -23,6 +23,12 @@ __pycache__/
 *.download
 *.log
 
+# Retain only the new paired experiment's derived predictions for metric audits.
+# These contain probabilities/labels/speaker groups, not raw audio or features.
+!reproduced_results/ngboost-38150310147/comparison/fold_*/*_predictions.npz
+# Verification stages matching core modules here; they are already in the source tree.
+reproduced_results/ngboost-38150310147/*.py
+
 # Course handouts / instructor correspondence stay local
 AudioMNIST_完整版/assignment_sources/
 
