@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "complete_configurations": 20,
+  "current_configurations": 12,
+  "current_middle_check_failures": [],
+  "historical_summary_unchanged": true,
+  "new_L2_metrics_and_pair_labels_verified": true,
+  "new_L2_prediction_conditions_verified": 80,
+  "new_L2_model_checks": 22,
+  "code_zip_files": 32,
+  "scope": "Parameter requirement and saved evidence checks only; not assignment-wide compliance."
+}

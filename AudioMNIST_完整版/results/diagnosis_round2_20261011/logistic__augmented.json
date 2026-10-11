@@ -1,0 +1,3067 @@
+{
+  "plan": {
+    "signature": {
+      "diagnose_round2.py": "07a3c8245d5bb442facf32a393329a7ea6c4fa6738b9bbf63899501d6188fe74",
+      "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+      "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+      "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+      "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+    },
+    "grids": {
+      "logistic": [
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        3.0,
+        10.0,
+        30.0
+      ],
+      "lightgbm_rounds": [
+        10,
+        40,
+        160
+      ]
+    },
+    "lightgbm_fixed_num_leaves": 7,
+    "lightgbm_other_settings": "Unchanged model_for(lightgbm_goss,7,seed); only n_estimators varies.",
+    "rationale": "Explore logarithmic neighborhoods of prior logistic preferences; vary boosting duration with a previously examined leaf cap, identical in both modes.",
+    "scope": "Exploratory inner validation only; same ten outer-training partitions and three inner folds; no outer-test evaluation.",
+    "objective": "mean(clean macro-F1, white_10 macro-F1)",
+    "rounds_evaluation": "Train 160 rounds and predict prefixes 10/40/160. Verify prefix against separate 10-round fit in first inner fold of each mode.",
+    "stop": "Complete these fixed grids, report failures as well as successes; no automatic extra grid search."
+  },
+  "rows": [
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9396868228762354,
+      "condition_scores": [
+        0.9552656418932359,
+        0.9241080038592348
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.944324453991215,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9471191470611595,
+      "condition_scores": [
+        0.9596954345486337,
+        0.9345428595736852
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9463243871905055,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9445299572914185,
+      "condition_scores": [
+        0.9594497543708729,
+        0.9296101602119642
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9430413828216705,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9425226841274195,
+      "condition_scores": [
+        0.9578196496905642,
+        0.9272257185642747
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9416868042992659,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9414063878880601,
+      "condition_scores": [
+        0.95753621195751,
+        0.9252765638186101
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9389307942064117,
+      "condition_scores": [
+        0.9600375912495863,
+        0.917823997163237
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9439716114613759,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9439357172593841,
+      "condition_scores": [
+        0.9591736893053341,
+        0.9286977452134341
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.941639706672925,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9406487534166668,
+      "condition_scores": [
+        0.9569583340831637,
+        0.9243391727501699
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9372979482214742,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9374846364899081,
+      "condition_scores": [
+        0.9566547125194577,
+        0.9183145604603584
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9355485015114746,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9352757343495952,
+      "condition_scores": [
+        0.9541690559139285,
+        0.9163824127852618
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9167289493714699,
+      "condition_scores": [
+        0.9316248402108707,
+        0.9018330585320691
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9264383072529808,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9280354040480924,
+      "condition_scores": [
+        0.9382115864203815,
+        0.9178592216758032
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9255766748367611,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9220450962423995,
+      "condition_scores": [
+        0.9351818384442158,
+        0.9089083540405832
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9201310603881322,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9194346686206692,
+      "condition_scores": [
+        0.933298394021234,
+        0.9055709432201045
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9184683182173804,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9177669983231582,
+      "condition_scores": [
+        0.9313715021813642,
+        0.9041624944649523
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9296691187767079,
+      "condition_scores": [
+        0.9479314650022967,
+        0.9114067725511191
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9356885130060095,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9376051193432928,
+      "condition_scores": [
+        0.952106909112133,
+        0.9231033295744527
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9328238932955586,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9324710418642776,
+      "condition_scores": [
+        0.9484792128377378,
+        0.9164628708908176
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9294083038106755,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9281652352004718,
+      "condition_scores": [
+        0.9459609208959259,
+        0.9103695495050177
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9277562710694844,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9274920894382768,
+      "condition_scores": [
+        0.9454616332835851,
+        0.9095225455929683
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9084182919816306,
+      "condition_scores": [
+        0.9330261170731984,
+        0.8838104668900627
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9162861448995169,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9189654012517184,
+      "condition_scores": [
+        0.940813726394059,
+        0.8971170761093779
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.918023143666146,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9169772989426337,
+      "condition_scores": [
+        0.944163658672508,
+        0.8897909392127593
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9131675063478004,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.91163106386977,
+      "condition_scores": [
+        0.9420222263888467,
+        0.8812399013506932
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9113281076497918,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9109284903174315,
+      "condition_scores": [
+        0.9422777955549557,
+        0.8795791850799072
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9399968661601819,
+      "condition_scores": [
+        0.9528891332652252,
+        0.9271045990551384
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9486707465469941,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9503598987227801,
+      "condition_scores": [
+        0.9616058270335465,
+        0.9391139704120137
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9504792369497885,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9474383144727316,
+      "condition_scores": [
+        0.9583340188600964,
+        0.9365426100853668
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9464793054550917,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9445326915811141,
+      "condition_scores": [
+        0.9564436988698859,
+        0.9326216842923423
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9432233462061648,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9429456747137498,
+      "condition_scores": [
+        0.9583172307068164,
+        0.9275741187206832
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9500727226099623,
+      "condition_scores": [
+        0.9669323415440294,
+        0.9332131036758954
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9530366838619728,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9502575716140631,
+      "condition_scores": [
+        0.966965882040369,
+        0.9335492611877573
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9508004719772136,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.951212579741205,
+      "condition_scores": [
+        0.9675168904793008,
+        0.9349082690031093
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9507929512362487,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9501167890453162,
+      "condition_scores": [
+        0.9669429730580754,
+        0.9332906050325569
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9492523392053817,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9486788409041775,
+      "condition_scores": [
+        0.965221831564136,
+        0.9321358502442191
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9034719314751218,
+      "condition_scores": [
+        0.9190896893480636,
+        0.88785417360218
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9109331658729196,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9100023519694742,
+      "condition_scores": [
+        0.9251309266522426,
+        0.8948737772867057
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9122366822833388,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9088445359291859,
+      "condition_scores": [
+        0.9272513383380954,
+        0.8904377335202763
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.8996564930984512,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.8982885930904471,
+      "condition_scores": [
+        0.9159084366513195,
+        0.8806687495295746
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.8978878899533007,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.8976033044648706,
+      "condition_scores": [
+        0.9148068077859934,
+        0.8803998011437478
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9143147667945399,
+      "condition_scores": [
+        0.9253102311817829,
+        0.9033193024072969
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9191790751646393,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.920896713212957,
+      "condition_scores": [
+        0.9262571904387773,
+        0.9155362359871366
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9195534714266718,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9148995533798767,
+      "condition_scores": [
+        0.9241102624445215,
+        0.9056888443152319
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.911705142520163,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9094970309311596,
+      "condition_scores": [
+        0.9199560462909607,
+        0.8990380155713584
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9066266065369746,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9070355302978464,
+      "condition_scores": [
+        0.918326915810997,
+        0.8957441447846959
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9347712040669889,
+      "condition_scores": [
+        0.9510281820524218,
+        0.918514226081556
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9395564254713704,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9406750437881071,
+      "condition_scores": [
+        0.9555125842532275,
+        0.9258375033229868
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9388789791848697,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9379089834855885,
+      "condition_scores": [
+        0.9566577556396586,
+        0.9191602113315185
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9345596028223201,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9344118991968713,
+      "condition_scores": [
+        0.9550366566952551,
+        0.9137871416984874
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9337374924161372,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9329171960031053,
+      "condition_scores": [
+        0.9547656405332573,
+        0.9110687514729532
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9313421642792518,
+      "condition_scores": [
+        0.9519661449579946,
+        0.9107181836005089
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9364714246805733,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9370458710947063,
+      "condition_scores": [
+        0.955009999767108,
+        0.9190817424223046
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9319052811423423,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9282770148682884,
+      "condition_scores": [
+        0.9492387402197611,
+        0.9073152895168157
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9221743254847707,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9213348807535322,
+      "condition_scores": [
+        0.9433022001682406,
+        0.8993675613388238
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9209153377615853,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9207756772361755,
+      "condition_scores": [
+        0.9433037981217869,
+        0.8982475563505641
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9347258431187158,
+      "condition_scores": [
+        0.951411206169737,
+        0.9180404800676945
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9416578335040887,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.945178093646956,
+      "condition_scores": [
+        0.9594138311142231,
+        0.9309423561796889
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9462978767440351,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9456488866968252,
+      "condition_scores": [
+        0.9605406421196371,
+        0.9307571312740134
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9423287333324476,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9420535583361191,
+      "condition_scores": [
+        0.9583576230363408,
+        0.9257494936358974
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9402490582067808,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9402490582067808,
+      "condition_scores": [
+        0.9572235411056733,
+        0.9232745753078884
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9404138841700613,
+      "condition_scores": [
+        0.9615429552459854,
+        0.9192848130941371
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9427346659086282,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9445002833865253,
+      "condition_scores": [
+        0.9614832433210768,
+        0.9275173234519736
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9433709114189159,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9412680591093205,
+      "condition_scores": [
+        0.9600595260664043,
+        0.9224765921522369
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9407710982376654,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9392520058504457,
+      "condition_scores": [
+        0.9600366602883792,
+        0.9184673514125121
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9388202724205604,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9382561938447176,
+      "condition_scores": [
+        0.9589274913578809,
+        0.9175848963315543
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.8955654321721369,
+      "condition_scores": [
+        0.9104378798438635,
+        0.8806929845004104
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9005619607502502,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9033664920968525,
+      "condition_scores": [
+        0.918349104384313,
+        0.888383879809392
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9047588711229239,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9013377472832923,
+      "condition_scores": [
+        0.9170213627087331,
+        0.8856541318578515
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.8948078498746683,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.893685268819129,
+      "condition_scores": [
+        0.9083168480696446,
+        0.8790536895686133
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.8929934940464586,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.8929979798172392,
+      "condition_scores": [
+        0.9083252865268137,
+        0.8776706731076646
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9433495670376211,
+      "condition_scores": [
+        0.9643405702831078,
+        0.9223585637921344
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.949401611740527,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9497326384457687,
+      "condition_scores": [
+        0.9682413126232301,
+        0.9312239642683073
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9484586528694269,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9471823227596533,
+      "condition_scores": [
+        0.9687751307101875,
+        0.9255895148091191
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9449859238345766,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9436622456615454,
+      "condition_scores": [
+        0.9657474422269438,
+        0.9215770490961471
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9444916195934716,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9436529346771562,
+      "condition_scores": [
+        0.9671347184750763,
+        0.9201711508792361
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9256331300979272,
+      "condition_scores": [
+        0.9466211025492512,
+        0.9046451576466031
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9331172779055469,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9337188238402324,
+      "condition_scores": [
+        0.9499962678168702,
+        0.9174413798635946
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9303574363434652,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9262998798041655,
+      "condition_scores": [
+        0.9460707424228175,
+        0.9065290171855136
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9233911956340062,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9216827006382924,
+      "condition_scores": [
+        0.9430317336879371,
+        0.9003336675886475
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9188677989896524,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.918742934888708,
+      "condition_scores": [
+        0.9416605284319498,
+        0.8958253413454662
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9406528384913865,
+      "condition_scores": [
+        0.9558277473539881,
+        0.9254779296287848
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.948606653936716,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.949804881557489,
+      "condition_scores": [
+        0.9603780687971477,
+        0.9392316943178303
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9521922087217123,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9521767158351904,
+      "condition_scores": [
+        0.9620588662360708,
+        0.9422945654343098
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9496540017397971,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.948290756294236,
+      "condition_scores": [
+        0.9606544267360995,
+        0.9359270858523724
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9484310591880524,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9484195925102563,
+      "condition_scores": [
+        0.9606548124034184,
+        0.9361843726170942
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9201127050679334,
+      "condition_scores": [
+        0.9397666555379075,
+        0.9004587545979594
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9286531384678512,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9296133522249121,
+      "condition_scores": [
+        0.9455978312564316,
+        0.9136288731933926
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9279299850114656,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9278156236015689,
+      "condition_scores": [
+        0.943300534938721,
+        0.9123307122644169
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.920088890220382,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9190751187499544,
+      "condition_scores": [
+        0.9396627866625279,
+        0.898487450837381
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9194137285185445,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9189796661938077,
+      "condition_scores": [
+        0.9394057370971364,
+        0.8985535952904788
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9388639407004489,
+      "condition_scores": [
+        0.953886928442558,
+        0.9238409529583398
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9452559694189874,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9474696779731717,
+      "condition_scores": [
+        0.959686163685401,
+        0.9352531922609424
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9436083964018138,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9434984632633308,
+      "condition_scores": [
+        0.9616243113552768,
+        0.9253726151713847
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9377229103485941,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9407485516650359,
+      "condition_scores": [
+        0.9605569722467532,
+        0.9209401310833186
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9389604979903843,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9386885094286863,
+      "condition_scores": [
+        0.9594390480596374,
+        0.9179379707977352
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9470645913994405,
+      "condition_scores": [
+        0.9691691920297311,
+        0.92495999076915
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9548280303707353,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9584021062313381,
+      "condition_scores": [
+        0.9730116897064918,
+        0.9437925227561845
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9560968137205166,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9553959855485274,
+      "condition_scores": [
+        0.9721988345631619,
+        0.938593136533893
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9526739653463859,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9521324398967764,
+      "condition_scores": [
+        0.9677609098978435,
+        0.9365039698957094
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9518434015933477,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9521328488721859,
+      "condition_scores": [
+        0.9683181580988123,
+        0.9359475396455593
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.916395837090202,
+      "condition_scores": [
+        0.9367438965757019,
+        0.8960477776047021
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.925906784505341,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9291294006888815,
+      "condition_scores": [
+        0.9470337324705687,
+        0.9112250689071942
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9287219296540888,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9294278328938537,
+      "condition_scores": [
+        0.9481606086527877,
+        0.9106950571349197
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9242480096803815,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9241229110647197,
+      "condition_scores": [
+        0.9445463203327567,
+        0.9036995017966827
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.923712429646529,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9241181720556786,
+      "condition_scores": [
+        0.9439999029884587,
+        0.9042364411228985
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.91788609691772,
+      "condition_scores": [
+        0.9333552732263544,
+        0.9024169206090858
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9224713761806066,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9219334678078452,
+      "condition_scores": [
+        0.934370000327571,
+        0.9094969352881195
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9183442554528412,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9168768968585048,
+      "condition_scores": [
+        0.9308887716332347,
+        0.9028650220837748
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9135791745681543,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9117247273887007,
+      "condition_scores": [
+        0.9261893335888294,
+        0.897260121188572
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9104511270288966,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9103113796205275,
+      "condition_scores": [
+        0.9250561004398687,
+        0.8955666588011864
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9101190350020549,
+      "condition_scores": [
+        0.9345176114006317,
+        0.8857204586034783
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9195750042098854,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9226899232102169,
+      "condition_scores": [
+        0.9390796366551619,
+        0.9063002097652719
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9234885023982966,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9225017423218418,
+      "condition_scores": [
+        0.9385465337759357,
+        0.9064569508677479
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9180507087823493,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9165780581041664,
+      "condition_scores": [
+        0.936136977759964,
+        0.8970191384483688
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9159563220138341,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9155533843946861,
+      "condition_scores": [
+        0.9361067512521538,
+        0.8950000175372184
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9603258691025218,
+      "condition_scores": [
+        0.9697465931825505,
+        0.9509051450224932
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9626594108626649,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9614071768933579,
+      "condition_scores": [
+        0.9703341732088772,
+        0.9524801805778385
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9582175031991627,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9561417223276316,
+      "condition_scores": [
+        0.9662104447314359,
+        0.9460729999238273
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9558606332501276,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9550448725460758,
+      "condition_scores": [
+        0.966732904181217,
+        0.9433568409109346
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9540613919165182,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9511460901313196,
+      "condition_scores": [
+        0.9634049206039272,
+        0.938887259658712
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9233098705152365,
+      "condition_scores": [
+        0.9397683563494047,
+        0.9068513846810683
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.9314520137521283,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.9323545812822118,
+      "condition_scores": [
+        0.9459853989331799,
+        0.9187237636312439
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9312658663928903,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9289297697433774,
+      "condition_scores": [
+        0.9388944800718374,
+        0.9189650594149175
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.9252784669609226,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9254077383021869,
+      "condition_scores": [
+        0.936682438168406,
+        0.9141330384359678
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9252790526775965,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.9250171933020015,
+      "condition_scores": [
+        0.936682121441376,
+        0.9133522651626269
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9232234103355422,
+      "condition_scores": [
+        0.9441908565139642,
+        0.9022559641571203
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9314671319022647,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9307327929009162,
+      "condition_scores": [
+        0.9505561228424408,
+        0.9109094629593916
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.929627743132959,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9295030818867758,
+      "condition_scores": [
+        0.9487101243312551,
+        0.9102960394422963
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9260784920625305,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9216275951647035,
+      "condition_scores": [
+        0.9423692661832795,
+        0.9008859241461273
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9194356544074691,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9195733100513048,
+      "condition_scores": [
+        0.9412641908818375,
+        0.8978824292207722
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9356679810377673,
+      "condition_scores": [
+        0.9537775054850851,
+        0.9175584565904493
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9388922786116198,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9426566065213545,
+      "condition_scores": [
+        0.9569310794046768,
+        0.9283821336380322
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9364576754318905,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9354835781059893,
+      "condition_scores": [
+        0.9533396725532466,
+        0.9176274836587319
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9354804680231726,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9333040031448558,
+      "condition_scores": [
+        0.9530969306155187,
+        0.9135110756741931
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9335705547866304,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9328623891861558,
+      "condition_scores": [
+        0.9533517479323118,
+        0.9123730304399998
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 0.003,
+      "score": 0.9260543366289158,
+      "condition_scores": [
+        0.9448319751091387,
+        0.9072766981486927
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 0.01,
+      "score": 0.93699407708584,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 0.03,
+      "score": 0.938146692505675,
+      "condition_scores": [
+        0.9513143522389408,
+        0.9249790327724092
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 0.1,
+      "score": 0.9390042201194091,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 0.3,
+      "score": 0.9380151500372892,
+      "condition_scores": [
+        0.9533006593457299,
+        0.9227296407288484
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 1.0,
+      "score": 0.937065448288378,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 3.0,
+      "score": 0.9363818830351052,
+      "condition_scores": [
+        0.9510840588066725,
+        0.9216797072635379
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 10.0,
+      "score": 0.9339397435459008,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 30.0,
+      "score": 0.93353713172942,
+      "condition_scores": [
+        0.9496912761688516,
+        0.9173829872899883
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 0.003,
+      "score": 0.9207328392582854,
+      "condition_scores": [
+        0.9364536640379789,
+        0.905012014478592
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 0.01,
+      "score": 0.9291234965567308,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 0.03,
+      "score": 0.9314027744593496,
+      "condition_scores": [
+        0.9462209852973658,
+        0.9165845636213336
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 0.1,
+      "score": 0.9302923504523049,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 0.3,
+      "score": 0.9282762856431359,
+      "condition_scores": [
+        0.9462481992224818,
+        0.9103043720637899
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 1.0,
+      "score": 0.9260705468174919,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 3.0,
+      "score": 0.9249080777123073,
+      "condition_scores": [
+        0.9436722385721208,
+        0.9061439168524938
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 10.0,
+      "score": 0.9245201229806272,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 30.0,
+      "score": 0.9248012591101464,
+      "condition_scores": [
+        0.9442621293124839,
+        0.9053403889078089
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 0.003,
+      "score": 0.9145534548887795,
+      "condition_scores": [
+        0.9388744594248806,
+        0.8902324503526783
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 0.01,
+      "score": 0.9225601899619407,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 0.03,
+      "score": 0.9211318649873405,
+      "condition_scores": [
+        0.9424476995926044,
+        0.8998160303820765
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 0.1,
+      "score": 0.9216994297473338,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 0.3,
+      "score": 0.9186202846656809,
+      "condition_scores": [
+        0.9396666489295636,
+        0.8975739204017982
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 1.0,
+      "score": 0.9147027592365713,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 3.0,
+      "score": 0.9169830758812636,
+      "condition_scores": [
+        0.9391495491361608,
+        0.8948166026263664
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 10.0,
+      "score": 0.9159071965797169,
+      "condition_scores": null,
+      "source": "round1 saved inner score",
+      "warnings": []
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 30.0,
+      "score": 0.9155028082396598,
+      "condition_scores": [
+        0.938855403974314,
+        0.8921502125050056
+      ],
+      "source": "new logistic fit",
+      "warnings": []
+    }
+  ],
+  "prefix_checks": [],
+  "summary": {
+    "grid": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0
+    ],
+    "counts": [
+      0,
+      1,
+      8,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "fold_means": [
+      [
+        0.931782188818039,
+        0.9382447909018573,
+        0.9396967561228786,
+        0.9378469229000639,
+        0.9357412689834949,
+        0.9334901304770923,
+        0.9331473297459989,
+        0.9319012080093736,
+        0.9314830401869378
+      ],
+      [
+        0.9260280923061734,
+        0.9335484681508402,
+        0.9356434731059305,
+        0.9337754246371643,
+        0.9322955517598809,
+        0.929685038537856,
+        0.928109663550452,
+        0.9274359083084803,
+        0.9271220848231527
+      ],
+      [
+        0.9226198069598747,
+        0.927716308299844,
+        0.9270522122654982,
+        0.9275302085624081,
+        0.9249855563500892,
+        0.9207181956182877,
+        0.9193008043556409,
+        0.9179222785652189,
+        0.9177725585556314
+      ],
+      [
+        0.9336130704883189,
+        0.9392285612186774,
+        0.9409663361765898,
+        0.939027379023749,
+        0.9372782950169007,
+        0.9330208872131794,
+        0.9326001127621742,
+        0.9316339627948343,
+        0.9313139771486872
+      ],
+      [
+        0.9264429611266065,
+        0.9308994127998017,
+        0.9325331379763822,
+        0.9321961451370889,
+        0.9299293763840888,
+        0.9268549573156367,
+        0.9255331734437067,
+        0.9254351286868303,
+        0.9249690361130377
+      ],
+      [
+        0.928799557885749,
+        0.936792356770038,
+        0.9377123525408778,
+        0.936826543358881,
+        0.935430739746975,
+        0.9310446958647285,
+        0.9296828585608276,
+        0.9289041955654165,
+        0.928714064530924
+      ],
+      [
+        0.9341081230633638,
+        0.9419969280983546,
+        0.9450003949644638,
+        0.9428090465921398,
+        0.942774093901904,
+        0.9382149617917871,
+        0.9390013008755106,
+        0.9381721097434204,
+        0.9383131767855168
+      ],
+      [
+        0.9294436670074323,
+        0.9349019304177189,
+        0.9353435226371399,
+        0.9333500870167667,
+        0.9318401205026593,
+        0.9291635055335438,
+        0.9277825526796476,
+        0.9268229469864163,
+        0.925670284715511
+      ],
+      [
+        0.9274004206295153,
+        0.9339371414220042,
+        0.9352479935681609,
+        0.9324504283192466,
+        0.9313054765787142,
+        0.9289458090155419,
+        0.926779778870582,
+        0.9260950872905654,
+        0.9258176308464874
+      ],
+      [
+        0.9204468769253268,
+        0.9295592545348371,
+        0.9302271106507883,
+        0.9303320001063492,
+        0.9283039067820353,
+        0.9259462514474803,
+        0.9260910122095587,
+        0.9247890210354149,
+        0.9246137330264087
+      ]
+    ],
+    "mean_scores": [
+      0.9280684765210401,
+      0.9346825152613973,
+      0.935942329000871,
+      0.9346144185653857,
+      0.9329884386006743,
+      0.9297084432815133,
+      0.9288028587054098,
+      0.9279111846985971,
+      0.9275789586732295
+    ],
+    "warnings": 0
+  }
+}

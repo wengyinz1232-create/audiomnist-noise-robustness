@@ -1,0 +1,24 @@
+[
+  {
+    "mode": "clean_matched",
+    "outer_folds_verified": 10,
+    "predictions_verified": 40,
+    "selected_counts": [
+      1,
+      6,
+      3
+    ],
+    "middle_unique_mode": true
+  },
+  {
+    "mode": "augmented",
+    "outer_folds_verified": 10,
+    "predictions_verified": 40,
+    "selected_counts": [
+      4,
+      3,
+      3
+    ],
+    "middle_unique_mode": false
+  }
+]

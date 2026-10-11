@@ -1,0 +1,22 @@
+{
+  "source": "AudioMNIST-master/data/01/7_01_0.wav",
+  "true_digit": 7,
+  "model": "runs\\main\\logmel__logistic__augmented\\models\\fold_00.pkl",
+  "prediction": {
+    "prediction": 7,
+    "probabilities": {
+      "0": 7.616787200959152e-08,
+      "1": 3.115283309096384e-10,
+      "2": 1.979297170606742e-09,
+      "3": 1.0980485271039342e-10,
+      "4": 1.2275466199085372e-09,
+      "5": 4.7286869175877655e-07,
+      "6": 2.7839932581485982e-09,
+      "7": 0.9999994039535522,
+      "8": 5.074934613172322e-13,
+      "9": 3.512358404123006e-08
+    },
+    "note": "A single prediction is not a held-out evaluation result."
+  },
+  "claim": "CLI integration works. This is NOT held-out performance."
+}

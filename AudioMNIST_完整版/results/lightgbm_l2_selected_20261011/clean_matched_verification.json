@@ -1,0 +1,101 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss_l2",
+    "mode": "clean_matched",
+    "grid": [
+      0.0,
+      0.1,
+      1.0
+    ],
+    "outer_folds": 10,
+    "inner_folds": 3,
+    "seed": 20261009,
+    "samples": 12000,
+    "features": 320,
+    "signature": {
+      "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+      "evaluation.py": "cb4048b468b13a4554be1c05639245d1a44fb5ce548e872ebd22c0f59f02f8ed",
+      "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+      "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+    }
+  },
+  "outer_folds_verified": 10,
+  "condition_metrics_verified": 40,
+  "selected_counts": [
+    2,
+    5,
+    3
+  ],
+  "middle_unique_mode": true,
+  "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+  "model_checks": [
+    {
+      "fold": 1,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 2,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 3,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 4,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 5,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 6,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 7,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 8,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 9,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 10,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 0,
+      "model_hash_and_parameters": "PASS",
+      "scaler": "PASS",
+      "max_prediction_difference": 0.0
+    }
+  ]
+}

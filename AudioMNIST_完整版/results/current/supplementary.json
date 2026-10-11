@@ -1,0 +1,9 @@
+[
+  {
+    "source": "analysis/三模型等权集成.json",
+    "sha256": "3bf8c36f530faaede57d88732adfa6642d3f45cee6b7ba83fce4daed8a043308",
+    "role": "post_hoc_ensemble_of_original_main_MFCC_augmented_models",
+    "includes_new_logistic": false,
+    "warning": "Not recomputed using updated logistic; not a separately tuned fourth algorithm."
+  }
+]

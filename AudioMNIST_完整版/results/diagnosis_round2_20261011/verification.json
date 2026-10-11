@@ -1,0 +1,111 @@
+{
+  "status": "PASS_saved_diagnostic_consistency",
+  "new_fits": 362,
+  "reused_inner_scores": 240,
+  "outer_test_evaluations": 0,
+  "configurations": [
+    {
+      "file": "lightgbm_rounds__augmented.json",
+      "grid": [
+        10,
+        40,
+        160
+      ],
+      "counts": [
+        0,
+        0,
+        10
+      ],
+      "warnings": 0,
+      "new_fits": 31,
+      "prefix_checks": [
+        {
+          "fold": 1,
+          "inner": 0,
+          "rounds": 10,
+          "max_probability_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "lightgbm_rounds__clean_matched.json",
+      "grid": [
+        10,
+        40,
+        160
+      ],
+      "counts": [
+        0,
+        0,
+        10
+      ],
+      "warnings": 0,
+      "new_fits": 31,
+      "prefix_checks": [
+        {
+          "fold": 1,
+          "inner": 0,
+          "rounds": 10,
+          "max_probability_difference": 0.0
+        }
+      ]
+    },
+    {
+      "file": "logistic__augmented.json",
+      "grid": [
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        3.0,
+        10.0,
+        30.0
+      ],
+      "counts": [
+        0,
+        1,
+        8,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "warnings": 0,
+      "new_fits": 150,
+      "prefix_checks": []
+    },
+    {
+      "file": "logistic__clean_matched.json",
+      "grid": [
+        0.003,
+        0.01,
+        0.03,
+        0.1,
+        0.3,
+        1.0,
+        3.0,
+        10.0,
+        30.0
+      ],
+      "counts": [
+        8,
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "warnings": 0,
+      "new_fits": 150,
+      "prefix_checks": []
+    }
+  ],
+  "note": "No assignment-wide pass or independent confirmation claimed. Mode-specific logistic grids are exploratory alternatives, not the original common-grid design."
+}

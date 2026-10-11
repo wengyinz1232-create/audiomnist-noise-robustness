@@ -1,0 +1,13 @@
+﻿id,source,selected_role,grid,selected_counts,middle_unique_mode
+alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched,runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/result.json,standalone_lightgbm_alternative,"[5, 20, 80]","[1, 6, 3]",True
+logistic_selected_grids_20261011/mfcc_delta__logistic__augmented,runs/logistic_selected_grids_20261011/mfcc_delta__logistic__augmented/result.json,separately_tuned_logistic,"[0.01, 0.03, 0.1]","[1, 8, 1]",True
+logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched,runs/logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched/result.json,separately_tuned_logistic,"[0.0001, 0.003, 0.01]","[0, 10, 0]",True
+main/logmel__forest__augmented,runs/main/logmel__forest__augmented/result.json,matched_grid_comparison,"[4, 48, 128]","[0, 10, 0]",True
+main/logmel__forest__clean_matched,runs/main/logmel__forest__clean_matched/result.json,matched_grid_comparison,"[4, 48, 128]","[0, 10, 0]",True
+main/logmel__lightgbm_goss__augmented,runs/main/logmel__lightgbm_goss__augmented/result.json,matched_grid_comparison,"[3, 63, 255]","[0, 8, 2]",True
+main/logmel__lightgbm_goss__clean_matched,runs/main/logmel__lightgbm_goss__clean_matched/result.json,matched_grid_comparison,"[3, 63, 255]","[0, 7, 3]",True
+main/logmel__logistic__augmented,runs/main/logmel__logistic__augmented/result.json,matched_grid_comparison,"[0.0001, 0.1, 100.0]","[0, 10, 0]",True
+main/logmel__logistic__clean_matched,runs/main/logmel__logistic__clean_matched/result.json,matched_grid_comparison,"[0.0001, 0.1, 100.0]","[0, 6, 4]",True
+main/mfcc_delta__forest__augmented,runs/main/mfcc_delta__forest__augmented/result.json,matched_grid_comparison,"[4, 48, 128]","[0, 10, 0]",True
+main/mfcc_delta__forest__clean_matched,runs/main/mfcc_delta__forest__clean_matched/result.json,matched_grid_comparison,"[4, 48, 128]","[0, 10, 0]",True
+main/mfcc_delta__lightgbm_goss__augmented,runs/main/mfcc_delta__lightgbm_goss__augmented/result.json,standalone_lightgbm_original,"[3, 63, 255]","[0, 7, 3]",True

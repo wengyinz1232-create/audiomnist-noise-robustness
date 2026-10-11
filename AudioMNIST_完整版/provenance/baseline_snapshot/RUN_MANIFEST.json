@@ -1,0 +1,44 @@
+{
+  "created_utc": "2026-10-10T08:43:33.448361+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "complete_configurations": 12,
+  "outer_models": 120,
+  "full_data_models": 12,
+  "total_model_fits": 1320,
+  "source_code_sha256": {
+    "check_prediction_cli.py": "60be335b1e4182ba095075378a406a516c107d509c040b27ef73ef10f61d4d3a",
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "package_code.py": "ccb2034fe96b6ef4295daa713d25a53c54adcd72a7273a1432a6d4793c9c0f7d",
+    "plot_training.py": "32255deadb9078968ceb30d999a7d2f343585cfcdf1dd6ac8e33c052bcefcdd3",
+    "predict.py": "c3dac35a4f6eeec952e31ea49ed67355bde114392764428d685fa700e5bf8c3b",
+    "prepare_data.py": "ffa36356f8da318c2fb71bd2fdda68dee3b56e946ba0543000e4b79b2bf8522a",
+    "run_pipeline.py": "47978cac5b0da27c748ca38055a046cff798872091a7418ec3909dd65aa9d3bf",
+    "summarize.py": "fa0e319742390d359a8c083710c0e78daec0ba256805b977d1e1143ebc03dda7",
+    "verify.py": "9b1aeda9d19d5970c7c8a7e03fd35f95765c7fb5c1df43b195b5ff8e83ef5008"
+  },
+  "result_sha256": {
+    "runs\\main\\logmel__forest__augmented\\result.json": "3edc17d488361e858a778d4f044345b6a6886581913709f30048247968170c3d",
+    "runs\\main\\logmel__forest__clean_matched\\result.json": "4458cd32ab00e4ad0dec6e482c92ed815b13867f53ca24cac3fdb786ede621cc",
+    "runs\\main\\logmel__lightgbm_goss__augmented\\result.json": "a86551de119535e0e69d3a58e3e2fe4d53a49f0846c464cb9261852e197cee6a",
+    "runs\\main\\logmel__lightgbm_goss__clean_matched\\result.json": "cbccf6f10d05c911a48087a00f1d56d526bc8d6d7ac8a2b834c9d8b86ed9071b",
+    "runs\\main\\logmel__logistic__augmented\\result.json": "18789cd233414b150402fce9c3234ba19efd32e108582caedc1215ffad49d6c0",
+    "runs\\main\\logmel__logistic__clean_matched\\result.json": "1f0818440c40d853df3141acc15bca70c1371745d0c2b5ae353523cff7c51727",
+    "runs\\main\\mfcc_delta__forest__augmented\\result.json": "8a7cb89b6c7e0d85ac2ae1988064dc806a0b67393d13ab249d4fcd1d5ee07995",
+    "runs\\main\\mfcc_delta__forest__clean_matched\\result.json": "ac36baf184df7a2518742cca7870e730cee72792a49bef5d144c3f40a5e7d0d3",
+    "runs\\main\\mfcc_delta__lightgbm_goss__augmented\\result.json": "a8da8f8dfa54e23613746bbdd7f6cb93cf07cacb88f47c1c01937f0dc04ae362",
+    "runs\\main\\mfcc_delta__lightgbm_goss__clean_matched\\result.json": "88904ba96b1b1a6dc863b99c29a960bdfedc6b9741c40db3b21c9ffb99ad556a",
+    "runs\\main\\mfcc_delta__logistic__augmented\\result.json": "e88fa545434d05d291e655237e16c9dda98b2a6fc2604d392eca8091418ac450",
+    "runs\\main\\mfcc_delta__logistic__clean_matched\\result.json": "e06744020d8e2dd7076f05413dd2eb8a2802ad808807702226bd262b6fa62e81"
+  },
+  "raw_sha256": "9619c59a345ccc39c0c6e3de3b5420db29eac95a46528e7fb77fb3d7d517199b",
+  "verification_sha256": "d4cf7779fcc5f028721cb614304e47c6154df82e66c6d00ea93fe5e63857c223"
+}

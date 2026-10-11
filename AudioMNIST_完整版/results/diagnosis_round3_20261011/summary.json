@@ -1,0 +1,128 @@
+{
+  "status": "STOPPED_EARLY_CERTIFIED_NO_UNIQUE_MIDDLE_MODE",
+  "configurations": {
+    "clean_matched": {
+      "grid": [
+        160,
+        480,
+        1440
+      ],
+      "completed_inner_tasks": 18,
+      "completed_outer_training_partitions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "selection_counts_completed_only": [
+        0,
+        0,
+        6
+      ],
+      "maximum_possible_middle_count_after_all_ten": 4,
+      "boundary_count_already_observed": 6,
+      "unique_middle_mode_impossible": true,
+      "fold_means_completed_only": [
+        [
+          0.5968412906759594,
+          0.6035752387247824,
+          0.6069740700766182
+        ],
+        [
+          0.5801643623420795,
+          0.5838195562498846,
+          0.5866339303421894
+        ],
+        [
+          0.5942577465669014,
+          0.5986376517662244,
+          0.5992969839589496
+        ],
+        [
+          0.6029205002737639,
+          0.6080038060105889,
+          0.610962543438876
+        ],
+        [
+          0.5821880125294396,
+          0.585387803991439,
+          0.5865037983641681
+        ],
+        [
+          0.5921234577642602,
+          0.5988217365237347,
+          0.6020071943527222
+        ]
+      ],
+      "warnings": 0,
+      "prefix_checks_passed": 18,
+      "partial_tasks_retained": []
+    },
+    "augmented": {
+      "grid": [
+        160,
+        480,
+        1440
+      ],
+      "completed_inner_tasks": 16,
+      "completed_outer_training_partitions": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "selection_counts_completed_only": [
+        0,
+        0,
+        5
+      ],
+      "maximum_possible_middle_count_after_all_ten": 5,
+      "boundary_count_already_observed": 5,
+      "unique_middle_mode_impossible": true,
+      "fold_means_completed_only": [
+        [
+          0.9589775755767164,
+          0.964232328130219,
+          0.9653388781832983
+        ],
+        [
+          0.9566269457160823,
+          0.962554602257316,
+          0.964216353887544
+        ],
+        [
+          0.9593003405796526,
+          0.9631749202835074,
+          0.9651964619444112
+        ],
+        [
+          0.9611939000183664,
+          0.9665945922283762,
+          0.967935063930113
+        ],
+        [
+          0.9577055456993349,
+          0.9630834797898287,
+          0.9647046282709377
+        ]
+      ],
+      "warnings": 0,
+      "prefix_checks_passed": 16,
+      "partial_tasks_retained": [
+        [
+          6,
+          0
+        ]
+      ]
+    }
+  },
+  "outer_test_evaluations": 0,
+  "completed_fits": 34,
+  "ten_fold_diagnostic_complete": false,
+  "reason": "Each mode already has at least five boundary wins; remaining folds cannot make the midpoint the unique most frequent winner. This certifies failure under the conservative unique-mode criterion, not the outcome under a rule allowing tied modes.",
+  "plan_deviation": "Stopped before planned 60 tasks after a deterministic impossibility certificate; no new grids tried. In-flight fits terminated, completed checkpoints retained.",
+  "scope": "Exploratory inner-validation diagnostic only. Do not label as completed ten-fold experiment."
+}

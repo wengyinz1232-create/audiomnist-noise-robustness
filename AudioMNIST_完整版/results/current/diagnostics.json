@@ -1,0 +1,56 @@
+[
+  {
+    "source": "results/diagnosis_20261011/diagnosis_summary.json",
+    "sha256": "de1496d2e30f3b393e37df00283675aae98a861a99fe6cb095b7d6a83537852b",
+    "kind": "inner_diagnostic",
+    "reported_status": "diagnostic_complete_not_assignment_pass",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "results/diagnosis_l2_20261011/summary.json",
+    "sha256": "b8ec5455ac4f2f3273725cf780331f1872715d5ffc6808c74e6f5978c60ef371",
+    "kind": "inner_diagnostic",
+    "reported_status": "complete_inner_diagnostic",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "results/diagnosis_min_child_200_20261011/summary.json",
+    "sha256": "8a06d2b39e366c9fe27a402eb134b291128c0bface08c270f218e08cab337125",
+    "kind": "inner_diagnostic",
+    "reported_status": "complete_inner_diagnostic",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "results/diagnosis_round2_20261011/summary.json",
+    "sha256": "a4cc2a664abd88f247fb7401ebbf96a3e8180a07dcca50216e7b93c662b030a6",
+    "kind": "inner_diagnostic",
+    "reported_status": "see source",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "results/diagnosis_round3_20261011/summary.json",
+    "sha256": "cb884eca52c360665aa287d89e1dff5cf471b3eb197d5d0ecf5d644b524b927d",
+    "kind": "incomplete_inner_diagnostic",
+    "reported_status": "STOPPED_EARLY_CERTIFIED_NO_UNIQUE_MIDDLE_MODE",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "provenance/grid_probe_followup.json",
+    "sha256": "fb2f610073dd3e74b3f0ffd6ed552f645f71efbe13840365ddda1241118d033e",
+    "kind": "historical_inner_probe",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  },
+  {
+    "source": "provenance/grid_probe_initial.json",
+    "sha256": "5298bed6600a281a020bb4b486d83f057f2a71682b2e332d891da122400f478d",
+    "kind": "historical_inner_probe",
+    "is_outer_test_result": false,
+    "include_in_performance_summary": false
+  }
+]

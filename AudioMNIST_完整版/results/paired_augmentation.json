@@ -1,0 +1,386 @@
+[
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__augmented",
+    "condition": "clean",
+    "mean_gain": 0.0020145261663294,
+    "gain_sd": 0.00727014685602002,
+    "positive_folds": 6
+  },
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.5363823696018378,
+    "gain_sd": 0.04341613626909084,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.836760792405585,
+    "gain_sd": 0.03721066357748394,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.7205548843459237,
+    "gain_sd": 0.056934580204892705,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__augmented",
+    "condition": "clean",
+    "mean_gain": 0.003987875689861986,
+    "gain_sd": 0.0061932777565533925,
+    "positive_folds": 7
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.5045433722217219,
+    "gain_sd": 0.03727048264643838,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.7789723389161718,
+    "gain_sd": 0.04357760753613571,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.6659178243065608,
+    "gain_sd": 0.0464413455701667,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__augmented",
+    "condition": "clean",
+    "mean_gain": -0.006339776706209621,
+    "gain_sd": 0.013999996869530717,
+    "positive_folds": 5
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.6531981359136311,
+    "gain_sd": 0.07258635685282572,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.8580278269067433,
+    "gain_sd": 0.04380405373153088,
+    "positive_folds": 10
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.6352626919902539,
+    "gain_sd": 0.050694100619417384,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__augmented",
+    "condition": "clean",
+    "mean_gain": -0.00795833937576752,
+    "gain_sd": 0.005903197508271113,
+    "positive_folds": 0
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.24051485832777503,
+    "gain_sd": 0.04228203353316591,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.578316042089357,
+    "gain_sd": 0.037693016352792756,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.4040173388594999,
+    "gain_sd": 0.03879074426380109,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__augmented",
+    "condition": "clean",
+    "mean_gain": 0.01476962164600698,
+    "gain_sd": 0.01296161152363499,
+    "positive_folds": 9
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.37101700245856445,
+    "gain_sd": 0.036539626330210406,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.7419167680538811,
+    "gain_sd": 0.029923843634763955,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.408669358689387,
+    "gain_sd": 0.03716243106307624,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__augmented",
+    "condition": "clean",
+    "mean_gain": 0.008532257889754868,
+    "gain_sd": 0.031554347661347786,
+    "positive_folds": 3
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__augmented",
+    "condition": "white_20",
+    "mean_gain": 0.27807168131556426,
+    "gain_sd": 0.08053737882823037,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__augmented",
+    "condition": "white_10",
+    "mean_gain": 0.61383719231254,
+    "gain_sd": 0.07812845246844499,
+    "positive_folds": 10
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__augmented",
+    "condition": "pink_10",
+    "mean_gain": 0.48507188697942966,
+    "gain_sd": 0.041987396458900664,
+    "positive_folds": 10
+  }
+]

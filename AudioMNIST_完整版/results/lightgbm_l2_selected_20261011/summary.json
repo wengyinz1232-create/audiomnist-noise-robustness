@@ -1,0 +1,176 @@
+{
+  "status": "complete_verified_rerun",
+  "grid": [
+    0.0,
+    0.1,
+    1.0
+  ],
+  "selected_counts": {
+    "clean_matched": [
+      2,
+      5,
+      3
+    ],
+    "augmented": [
+      3,
+      6,
+      1
+    ]
+  },
+  "both_middle_unique": true,
+  "full_fit_selected": {
+    "clean_matched": 0.0,
+    "augmented": 0.1
+  },
+  "warnings": {
+    "clean_matched": 0,
+    "augmented": 0
+  },
+  "fits": 220,
+  "outer_models": 20,
+  "full_data_models": 2,
+  "metrics": [
+    {
+      "mode": "clean_matched",
+      "condition": "clean",
+      "macro_f1_mean": 0.9728400504433052,
+      "fold_sd": 0.011461196569049616
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_20",
+      "macro_f1_mean": 0.6069325581491617,
+      "fold_sd": 0.05864265431990288
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_10",
+      "macro_f1_mean": 0.19285653705790634,
+      "fold_sd": 0.0242329993531862
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "pink_10",
+      "macro_f1_mean": 0.5425951859483885,
+      "fold_sd": 0.04786912219819135
+    },
+    {
+      "mode": "augmented",
+      "condition": "clean",
+      "macro_f1_mean": 0.9640009747913569,
+      "fold_sd": 0.015833465209593407
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_20",
+      "macro_f1_mean": 0.9357220135951729,
+      "fold_sd": 0.02380253707608988
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_10",
+      "macro_f1_mean": 0.9372882587396706,
+      "fold_sd": 0.02680887953333327
+    },
+    {
+      "mode": "augmented",
+      "condition": "pink_10",
+      "macro_f1_mean": 0.9070609992177122,
+      "fold_sd": 0.03991154795727884
+    }
+  ],
+  "new_minus_original_configuration": [
+    {
+      "mode": "clean_matched",
+      "condition": "clean",
+      "old_macro_f1_mean": 0.9578487291318691,
+      "new_macro_f1_mean": 0.9728400504433052,
+      "paired_change": 0.014991321311436179,
+      "paired_change_sd": 0.007493614952021038
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_20",
+      "old_macro_f1_mean": 0.5728811523223145,
+      "new_macro_f1_mean": 0.6069325581491617,
+      "paired_change": 0.03405140582684723,
+      "paired_change_sd": 0.03160291040727088
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_10",
+      "old_macro_f1_mean": 0.2064481632278278,
+      "new_macro_f1_mean": 0.19285653705790634,
+      "paired_change": -0.013591626169921453,
+      "paired_change_sd": 0.027587622659029396
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "pink_10",
+      "old_macro_f1_mean": 0.499766933787716,
+      "new_macro_f1_mean": 0.5425951859483885,
+      "paired_change": 0.04282825216067253,
+      "paired_change_sd": 0.02122796964964399
+    },
+    {
+      "mode": "augmented",
+      "condition": "clean",
+      "old_macro_f1_mean": 0.9726183507778761,
+      "new_macro_f1_mean": 0.9640009747913569,
+      "paired_change": -0.00861737598651915,
+      "paired_change_sd": 0.008217978798947291
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_20",
+      "old_macro_f1_mean": 0.9438981547808789,
+      "new_macro_f1_mean": 0.9357220135951729,
+      "paired_change": -0.008176141185706054,
+      "paired_change_sd": 0.00901292937691494
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_10",
+      "old_macro_f1_mean": 0.9483649312817088,
+      "new_macro_f1_mean": 0.9372882587396706,
+      "paired_change": -0.011076672542038212,
+      "paired_change_sd": 0.006628228969410308
+    },
+    {
+      "mode": "augmented",
+      "condition": "pink_10",
+      "old_macro_f1_mean": 0.908436292477103,
+      "new_macro_f1_mean": 0.9070609992177122,
+      "paired_change": -0.0013752932593906863,
+      "paired_change_sd": 0.013028697327161524
+    }
+  ],
+  "matched_grid_augmentation_effects": [
+    {
+      "condition": "clean",
+      "augmented_minus_clean_mean": -0.008839075651948348,
+      "paired_fold_sd": 0.006972386363191527,
+      "positive_folds": 1
+    },
+    {
+      "condition": "white_20",
+      "augmented_minus_clean_mean": 0.3287894554460112,
+      "paired_fold_sd": 0.043893069627379225,
+      "positive_folds": 10
+    },
+    {
+      "condition": "white_10",
+      "augmented_minus_clean_mean": 0.7444317216817643,
+      "paired_fold_sd": 0.02527993353809926,
+      "positive_folds": 10
+    },
+    {
+      "condition": "pink_10",
+      "augmented_minus_clean_mean": 0.36446581326932376,
+      "paired_fold_sd": 0.045302840647012906,
+      "positive_folds": 10
+    }
+  ],
+  "scope": "Full refit on common grids and original speaker splits after inner-data exploration; not independent confirmation.",
+  "limitations": "Fixed 7-leaf L2-tuned replacement, not the original leaf-tuned configuration. Original runs remain unchanged. Fold SD is not an independent confidence interval."
+}

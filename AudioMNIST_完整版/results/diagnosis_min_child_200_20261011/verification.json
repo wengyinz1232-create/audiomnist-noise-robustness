@@ -1,0 +1,32 @@
+{
+  "status": "PASS_diagnostic_consistency_only",
+  "checks": [
+    {
+      "mode": "clean_matched",
+      "rows_verified": 90,
+      "counts": [
+        1,
+        5,
+        4
+      ],
+      "exact_winner_ties": 0,
+      "middle_unique": true,
+      "anchor_difference": 0.0
+    },
+    {
+      "mode": "augmented",
+      "rows_verified": 90,
+      "counts": [
+        6,
+        3,
+        1
+      ],
+      "exact_winner_ties": 4,
+      "middle_unique": false,
+      "anchor_difference": 0.0
+    }
+  ],
+  "new_fits": 62,
+  "reused_scores": 120,
+  "outer_evaluations": 0
+}

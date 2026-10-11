@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "selected_configurations": 12,
+  "source_metric_rows_verified": 48,
+  "figures_png_pdf": 4,
+  "historical_summary_unchanged": true,
+  "visual_inspection": "All four PNGs checked for readable labels, captions and grouping.",
+  "scope": "Saved-results selection and plotting only; no training."
+}

@@ -1,0 +1,917 @@
+{
+  "plan": {
+    "grid": [
+      5,
+      20,
+      200
+    ],
+    "signature": {
+      "diagnose_min_child_200.py": "4f164e2ba5f28cba2bf254934683c1c4c33d65495e48be05b24a64c5a8194903",
+      "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+      "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+      "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+      "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+    },
+    "reference_hashes": {
+      "clean_matched": "94841641635dc5d68abbb1ad53280127f17271c29cceb4f097b8d3479864e212",
+      "augmented": "833a06be0302ba5110ec0dbdcd224f9d4d832c9b1f5a1932632c907cee9615f9"
+    },
+    "fixed_settings": "model_for(lightgbm_goss_min_child): num_leaves=2, n_estimators=70, learning_rate=.08; unchanged other settings",
+    "objective": "mean(clean macro-F1, white_10 macro-F1)",
+    "scope": "Exploratory inner-only diagnostic; no outer-test scoring; stop after this grid regardless of outcome.",
+    "reuse_validation": "Cache/common/frontend hashes, speaker folds, every saved outer-model hash and constructor parameters, plus fresh CANDIDATE 20 anchor fit in first inner fold of each mode. Historical evaluation.py hash differs, so no claim of complete historical source identity."
+  },
+  "rows": [
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8646665610921758,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8646665610921758,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8646665610921758,
+      "condition_scores": [
+        0.8864371176713159,
+        0.8428960045130355
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.894180699979188
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 5,
+      "score": 0.863995644608307,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8667021197368978,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8648183286721802,
+      "condition_scores": [
+        0.8906938520636244,
+        0.838942805280736
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.902338600018993
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8557252262203494,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8557252262203494,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 1,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8557252262203494,
+      "condition_scores": [
+        0.8828577913123755,
+        0.8285926611283232
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8354081999859773
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 5,
+      "score": 0.883597882432829,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 20,
+      "score": 0.883597882432829,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8848314903449825,
+      "condition_scores": [
+        0.9096441346283821,
+        0.860018846061583
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8046120000071824
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8320842016967476,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8320842016967476,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8320842016967476,
+      "condition_scores": [
+        0.8800383905897572,
+        0.784130012803738
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.893802600010531
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8723238932157673,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8723238932157673,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 2,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8695159840375986,
+      "condition_scores": [
+        0.876460008174296,
+        0.8625719599009012
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7840432999946643
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8796303630745075,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8796303630745075,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 0,
+      "value": 200,
+      "score": 0.877750544316242,
+      "condition_scores": [
+        0.8970445946012136,
+        0.8584564940312704
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8332304999930784
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8451515305159876,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8467289143820746,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8446841487589092,
+      "condition_scores": [
+        0.8670612952509711,
+        0.8223070022668473
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8423614999919664
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8667647708578408,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8667647708578408,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 3,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8667647708578408,
+      "condition_scores": [
+        0.8874611723737967,
+        0.8460683693418847
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8131086999783292
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8547286813655192,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8547286813655192,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8551968161448258,
+      "condition_scores": [
+        0.8892016192552893,
+        0.8211920130343623
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7718893999990541
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8725812729881217,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8725812729881217,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8725812729881217,
+      "condition_scores": [
+        0.8821225321458346,
+        0.863040013830409
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.821303300006548
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8681764434962839,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8681764434962839,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 4,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8669699258051925,
+      "condition_scores": [
+        0.8933774241489303,
+        0.8405624274614547
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8283340999914799
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8765158701927028,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8765158701927028,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8765158701927028,
+      "condition_scores": [
+        0.9049347242916028,
+        0.8480970160938028
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7625756000052206
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8185745241774256,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8185745241774256,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8185745241774256,
+      "condition_scores": [
+        0.8391383015451013,
+        0.79801074680975
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.902935799997067
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8955003166143558,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 20,
+      "score": 0.893294785632331,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 5,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8914903255016676,
+      "condition_scores": [
+        0.9254908078977346,
+        0.8574898431056006
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7355740000202786
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8492449447779636,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8511401064293602,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8517061678670292,
+      "condition_scores": [
+        0.8810382777348446,
+        0.8223740579992139
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8008476000104565
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8903397599526661,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8903397599526661,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8911521191893365,
+      "condition_scores": [
+        0.909766995297639,
+        0.8725372430810339
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7922541000007186
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8448738237176928,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8448738237176928,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 6,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8463628285604327,
+      "condition_scores": [
+        0.8676973975392585,
+        0.8250282595816069
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8434502000163775
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8790658196243467,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8790658196243467,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8790658196243467,
+      "condition_scores": [
+        0.8994089291777907,
+        0.8587227100709027
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8397260000056121
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8853604107792085,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8853604107792085,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8853604107792085,
+      "condition_scores": [
+        0.914246793014002,
+        0.8564740285444149
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.9067577999958303
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 5,
+      "score": 0.849116623821272,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 20,
+      "score": 0.849116623821272,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 7,
+      "inner": 2,
+      "value": 200,
+      "score": 0.849116623821272,
+      "condition_scores": [
+        0.8615602433551934,
+        0.8366730042873506
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8589757999870926
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8428142171393541,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8460099557232801,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8443497343554431,
+      "condition_scores": [
+        0.8553666045106623,
+        0.8333328642002241
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8133936999947764
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8382143568390159,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8382143568390159,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8382143568390159,
+      "condition_scores": [
+        0.8783505228156715,
+        0.7980781908623602
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8118980999861378
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 5,
+      "score": 0.9070335071790827,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 20,
+      "score": 0.9070335071790827,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 8,
+      "inner": 2,
+      "value": 200,
+      "score": 0.9063037363482926,
+      "condition_scores": [
+        0.9159470894659559,
+        0.8966603832306295
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8154694999975618
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8694878488340969,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8654462633699322,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8680634436119469,
+      "condition_scores": [
+        0.8951870294136046,
+        0.8409398578102891
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.9109425999922678
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8565675873300934,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8565675873300934,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8565675873300934,
+      "condition_scores": [
+        0.869064726436178,
+        0.8440704482240088
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8281983000051696
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8686866163969689,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8686866163969689,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 9,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8686866163969689,
+      "condition_scores": [
+        0.8981780007217466,
+        0.8391952320721912
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8815625999995973
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 5,
+      "score": 0.8578863871730937,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 20,
+      "score": 0.8578863871730937,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 0,
+      "value": 200,
+      "score": 0.8536251574323708,
+      "condition_scores": [
+        0.8813553584030791,
+        0.8258949564616624
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.7934190000232775
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 5,
+      "score": 0.8430671191172194,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 20,
+      "score": 0.8430671191172194,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 1,
+      "value": 200,
+      "score": 0.8430671191172194,
+      "condition_scores": [
+        0.8593389999004641,
+        0.8267952383339747
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.828257899993332
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 5,
+      "score": 0.8531014132987165,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 20,
+      "score": 0.8531014132987165,
+      "source": "saved alt_min_child inner score"
+    },
+    {
+      "fold": 10,
+      "inner": 2,
+      "value": 200,
+      "score": 0.8503705446824965,
+      "condition_scores": [
+        0.8901766516700567,
+        0.8105644376949364
+      ],
+      "source": "new fit",
+      "warnings": [],
+      "seconds": 1.8728187000087928
+    }
+  ],
+  "reuse_checks": [
+    {
+      "fold": 1,
+      "inner": 0,
+      "value": 20,
+      "absolute_score_difference": 0.0,
+      "warnings": []
+    }
+  ],
+  "summary": {
+    "grid": [
+      5,
+      20,
+      200
+    ],
+    "counts": [
+      6,
+      3,
+      1
+    ],
+    "middle_unique": false,
+    "fold_means": [
+      [
+        0.861462477306944,
+        0.862364635683141,
+        0.8617367053282351
+      ],
+      [
+        0.8626686591151147,
+        0.8626686591151147,
+        0.8621438920264429
+      ],
+      [
+        0.8638488881494452,
+        0.8643746827714743,
+        0.863066487977664
+      ],
+      [
+        0.8651621326166415,
+        0.8651621326166415,
+        0.86491600497938
+      ],
+      [
+        0.8635302369948281,
+        0.86279506000082,
+        0.8621935732905986
+      ],
+      [
+        0.8614861761494409,
+        0.8621178966999063,
+        0.8630737052055996
+      ],
+      [
+        0.8711809514082757,
+        0.8711809514082757,
+        0.8711809514082757
+      ],
+      [
+        0.8626873603858177,
+        0.8637526065804595,
+        0.8629559425142506
+      ],
+      [
+        0.8649140175203863,
+        0.8635668223656648,
+        0.8644392157796696
+      ],
+      [
+        0.8513516398630099,
+        0.8513516398630099,
+        0.8490209404106955
+      ]
+    ],
+    "mean_scores": [
+      0.8628292539509903,
+      0.8629335087104508,
+      0.8624727418920811
+    ],
+    "exact_winner_ties": 4,
+    "warnings_new_fits": 0
+  }
+}

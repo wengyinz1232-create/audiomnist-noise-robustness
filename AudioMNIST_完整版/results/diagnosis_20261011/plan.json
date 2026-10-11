@@ -1,0 +1,24 @@
+{
+  "signature": {
+    "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+    "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+    "diagnose_inner.py": "8644bcd43121b8c6be3f54157f4727962838a30555de3c8caf9fce40a858aad7"
+  },
+  "grids": {
+    "logistic": [
+      0.01,
+      0.1,
+      1.0,
+      10.0,
+      100.0
+    ],
+    "lightgbm_goss": [
+      2,
+      3,
+      7
+    ]
+  },
+  "objective": "mean(clean, white_10) inner macro-F1",
+  "scope": "Exploratory inner-only diagnostics on previously explored splits; no outer scores.",
+  "reuse": "Main-run inner scores only after feature hash, folds and settings checks; historical probes are not reused."
+}

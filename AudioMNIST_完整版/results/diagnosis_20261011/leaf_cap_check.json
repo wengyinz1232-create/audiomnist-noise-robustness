@@ -1,0 +1,20 @@
+{
+  "scope": "outer fold 1 inner fold 1 only",
+  "rows": [
+    {
+      "cap": 63,
+      "max_actual_leaves": 49,
+      "mean_actual_leaves": 22.931428571428572,
+      "inner_score": 0.5893027086288813,
+      "warnings": []
+    },
+    {
+      "cap": 255,
+      "max_actual_leaves": 49,
+      "mean_actual_leaves": 22.931428571428572,
+      "inner_score": 0.5893027086288813,
+      "warnings": []
+    }
+  ],
+  "max_probability_difference": 0.0
+}

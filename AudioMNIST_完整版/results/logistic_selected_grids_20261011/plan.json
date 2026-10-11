@@ -1,0 +1,29 @@
+{
+  "run_id": "logistic_selected_grids_20261011",
+  "representation": "mfcc_delta",
+  "model": "logistic",
+  "grids": {
+    "clean_matched": [
+      0.0001,
+      0.003,
+      0.01
+    ],
+    "augmented": [
+      0.01,
+      0.03,
+      0.1
+    ]
+  },
+  "seed": 20261009,
+  "python": "3.13.5",
+  "signature": {
+    "rerun_logistic_selected_grids.py": "b2a7aa23430dcc411a2bec7c3df5c1e5bdc71f44f64e82228f81f81ddf673bb1",
+    "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+  },
+  "selection_evidence_sha256": "861fbff6abe2c670267c0e2d5f2e0521b9e6607b4ce09ad2cecb9b3784912292",
+  "scope": "Full 10x3 nested re-fit plus separately tuned full-data models; exploratory grids from previously observed data.",
+  "limitation": "Mode-specific search ranges: comparisons are between separately tuned pipelines, not an identical-grid augmentation-only intervention."
+}

@@ -1,0 +1,1314 @@
+{
+  "completed_additional_runs": [
+    "runs\\alt_min_child\\mfcc_delta__lightgbm_goss_min_child__augmented",
+    "runs\\alt_min_child\\mfcc_delta__lightgbm_goss_min_child__clean_matched",
+    "runs\\multi_snr_20261010\\logmel__logistic__multi_snr_augmented",
+    "runs\\multi_snr_20261010\\mfcc_delta__logistic__multi_snr_augmented"
+  ],
+  "excluded_incomplete_runs": [
+    "runs\\multi_snr_20261010\\mfcc_delta__lightgbm_goss__multi_snr_augmented"
+  ],
+  "files": {
+    "METHODS_AND_SOURCES.md": {
+      "bytes": 8462
+    },
+    "README.md": {
+      "bytes": 6735
+    },
+    "REQUIREMENTS_CHECKLIST.md": {
+      "bytes": 3261
+    },
+    "Readme.txt": {
+      "bytes": 1778
+    },
+    "analysis/assignment_core.csv": {
+      "bytes": 4269
+    },
+    "analysis/comparison.json": {
+      "bytes": 39972
+    },
+    "analysis/configuration_summary.csv": {
+      "bytes": 6523
+    },
+    "analysis/paired_differences.csv": {
+      "bytes": 6310
+    },
+    "analysis/三模型等权集成.json": {
+      "bytes": 84267
+    },
+    "analysis/双强度白噪声_LogMel逻辑回归对比.json": {
+      "bytes": 1801
+    },
+    "analysis/双强度白噪声_LogMel逻辑回归核验.json": {
+      "bytes": 962
+    },
+    "analysis/双强度白噪声_LogMel逻辑回归逐折.json": {
+      "bytes": 169468
+    },
+    "analysis/双强度白噪声_MFCC逻辑回归逐折.json": {
+      "bytes": 169952
+    },
+    "analysis/双强度白噪声_逻辑回归对比.json": {
+      "bytes": 1808
+    },
+    "analysis/双强度白噪声_逻辑回归核验.json": {
+      "bytes": 970
+    },
+    "analysis/替代LightGBM_逐折结果/增强训练.json": {
+      "bytes": 170617
+    },
+    "analysis/替代LightGBM_逐折结果/干净训练.json": {
+      "bytes": 168655
+    },
+    "analysis/替代配置核验.json": {
+      "bytes": 404
+    },
+    "analysis/模型精进结果.md": {
+      "bytes": 3866
+    },
+    "analysis/结果解读与代码更新.md": {
+      "bytes": 5418
+    },
+    "analysis/课程要求推进与替代实验.md": {
+      "bytes": 3440
+    },
+    "assignment_sources/INSTRUCTOR_FEEDBACK.txt": {
+      "bytes": 1430
+    },
+    "assignment_sources/Project.pdf": {
+      "bytes": 160464
+    },
+    "check_prediction_cli.py": {
+      "bytes": 1334
+    },
+    "code_only_no_data.zip": {
+      "bytes": 39493
+    },
+    "common.py": {
+      "bytes": 808
+    },
+    "compare_results.py": {
+      "bytes": 6634
+    },
+    "compare_training_modes.py": {
+      "bytes": 3189
+    },
+    "data/feature_names.json": {
+      "bytes": 19599
+    },
+    "data/inventory.json": {
+      "bytes": 1360
+    },
+    "data/logmel.npz": {
+      "bytes": 41452703
+    },
+    "data/mfcc_delta.npz": {
+      "bytes": 54210741
+    },
+    "data/sample_manifest.json": {
+      "bytes": 1624284
+    },
+    "data_raw/SOURCE_LICENSE": {
+      "bytes": 1065
+    },
+    "data_raw/SOURCE_README.md": {
+      "bytes": 2595
+    },
+    "data_raw/audiomnist.zip": {
+      "bytes": 994575660
+    },
+    "evaluate_ensemble.py": {
+      "bytes": 4292
+    },
+    "evaluation.py": {
+      "bytes": 9654
+    },
+    "examples/prediction_smoke_test.json": {
+      "bytes": 725
+    },
+    "features.py": {
+      "bytes": 2901
+    },
+    "package_code.py": {
+      "bytes": 838
+    },
+    "plot_training.py": {
+      "bytes": 1782
+    },
+    "predict.py": {
+      "bytes": 1724
+    },
+    "predict_ensemble.py": {
+      "bytes": 2756
+    },
+    "prepare_data.py": {
+      "bytes": 5388
+    },
+    "provenance/baseline_snapshot/CLASSROOM_SOURCE_CHECK.md": {
+      "bytes": 1076
+    },
+    "provenance/baseline_snapshot/METHODS_AND_SOURCES.md": {
+      "bytes": 8462
+    },
+    "provenance/baseline_snapshot/README.md": {
+      "bytes": 4960
+    },
+    "provenance/baseline_snapshot/REQUIREMENTS_CHECKLIST.md": {
+      "bytes": 3261
+    },
+    "provenance/baseline_snapshot/RUN_MANIFEST.json": {
+      "bytes": 3192
+    },
+    "provenance/baseline_snapshot/Readme.txt": {
+      "bytes": 849
+    },
+    "provenance/baseline_snapshot/TRAINING_RESULTS.md": {
+      "bytes": 7324
+    },
+    "provenance/baseline_snapshot/VERIFICATION.json": {
+      "bytes": 3363
+    },
+    "provenance/baseline_snapshot/check_prediction_cli.py": {
+      "bytes": 1334
+    },
+    "provenance/baseline_snapshot/common.py": {
+      "bytes": 808
+    },
+    "provenance/baseline_snapshot/environment_freeze.txt": {
+      "bytes": 328
+    },
+    "provenance/baseline_snapshot/evaluation.py": {
+      "bytes": 9091
+    },
+    "provenance/baseline_snapshot/features.py": {
+      "bytes": 2901
+    },
+    "provenance/baseline_snapshot/package_code.py": {
+      "bytes": 838
+    },
+    "provenance/baseline_snapshot/plot_training.py": {
+      "bytes": 1782
+    },
+    "provenance/baseline_snapshot/predict.py": {
+      "bytes": 1724
+    },
+    "provenance/baseline_snapshot/prediction_check.log": {
+      "bytes": 23
+    },
+    "provenance/baseline_snapshot/prepare_data.py": {
+      "bytes": 5388
+    },
+    "provenance/baseline_snapshot/requirements-plots.txt": {
+      "bytes": 39
+    },
+    "provenance/baseline_snapshot/requirements.txt": {
+      "bytes": 84
+    },
+    "provenance/baseline_snapshot/run_pipeline.py": {
+      "bytes": 1929
+    },
+    "provenance/baseline_snapshot/summarize.py": {
+      "bytes": 7153
+    },
+    "provenance/baseline_snapshot/training.log": {
+      "bytes": 14961
+    },
+    "provenance/baseline_snapshot/verify.py": {
+      "bytes": 7310
+    },
+    "provenance/grid_probe_followup.json": {
+      "bytes": 2050
+    },
+    "provenance/grid_probe_initial.json": {
+      "bytes": 4110
+    },
+    "requirements-plots.txt": {
+      "bytes": 39
+    },
+    "requirements.txt": {
+      "bytes": 84
+    },
+    "results/grid_audit.json": {
+      "bytes": 6538
+    },
+    "results/paired_augmentation.json": {
+      "bytes": 9008
+    },
+    "results/robustness_errorbars.png": {
+      "bytes": 296262
+    },
+    "results/summary.json": {
+      "bytes": 35871
+    },
+    "run_pipeline.py": {
+      "bytes": 2615
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_00.pkl": {
+      "bytes": 288242
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_01.pkl": {
+      "bytes": 288227
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_02.pkl": {
+      "bytes": 288213
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_03.pkl": {
+      "bytes": 288236
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_04.pkl": {
+      "bytes": 288212
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_05.pkl": {
+      "bytes": 288176
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_06.pkl": {
+      "bytes": 288224
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_07.pkl": {
+      "bytes": 288173
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_08.pkl": {
+      "bytes": 288188
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_09.pkl": {
+      "bytes": 288211
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/models/fold_10.pkl": {
+      "bytes": 288185
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_01.npz": {
+      "bytes": 366476
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_02.npz": {
+      "bytes": 366548
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_03.npz": {
+      "bytes": 366588
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_04.npz": {
+      "bytes": 366580
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_05.npz": {
+      "bytes": 366457
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_06.npz": {
+      "bytes": 366545
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_07.npz": {
+      "bytes": 366512
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_08.npz": {
+      "bytes": 366510
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_09.npz": {
+      "bytes": 366567
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/predictions_10.npz": {
+      "bytes": 366495
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/result.json": {
+      "bytes": 170617
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_00.pkl": {
+      "bytes": 287962
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_01.pkl": {
+      "bytes": 287894
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_02.pkl": {
+      "bytes": 287847
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_03.pkl": {
+      "bytes": 287845
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_04.pkl": {
+      "bytes": 287849
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_05.pkl": {
+      "bytes": 287783
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_06.pkl": {
+      "bytes": 287852
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_07.pkl": {
+      "bytes": 287894
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_08.pkl": {
+      "bytes": 287761
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_09.pkl": {
+      "bytes": 287868
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/models/fold_10.pkl": {
+      "bytes": 287907
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_01.npz": {
+      "bytes": 366526
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_02.npz": {
+      "bytes": 366550
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_03.npz": {
+      "bytes": 366488
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_04.npz": {
+      "bytes": 366562
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_05.npz": {
+      "bytes": 366510
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_06.npz": {
+      "bytes": 366647
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_07.npz": {
+      "bytes": 366555
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_08.npz": {
+      "bytes": 366587
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_09.npz": {
+      "bytes": 366492
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/predictions_10.npz": {
+      "bytes": 366492
+    },
+    "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/result.json": {
+      "bytes": 168655
+    },
+    "runs/main/logmel__forest__augmented/models/fold_00.pkl": {
+      "bytes": 31914179
+    },
+    "runs/main/logmel__forest__augmented/models/fold_01.pkl": {
+      "bytes": 29473655
+    },
+    "runs/main/logmel__forest__augmented/models/fold_02.pkl": {
+      "bytes": 28859063
+    },
+    "runs/main/logmel__forest__augmented/models/fold_03.pkl": {
+      "bytes": 28435703
+    },
+    "runs/main/logmel__forest__augmented/models/fold_04.pkl": {
+      "bytes": 29191127
+    },
+    "runs/main/logmel__forest__augmented/models/fold_05.pkl": {
+      "bytes": 28920695
+    },
+    "runs/main/logmel__forest__augmented/models/fold_06.pkl": {
+      "bytes": 29250167
+    },
+    "runs/main/logmel__forest__augmented/models/fold_07.pkl": {
+      "bytes": 28738679
+    },
+    "runs/main/logmel__forest__augmented/models/fold_08.pkl": {
+      "bytes": 28599287
+    },
+    "runs/main/logmel__forest__augmented/models/fold_09.pkl": {
+      "bytes": 28671575
+    },
+    "runs/main/logmel__forest__augmented/models/fold_10.pkl": {
+      "bytes": 29395895
+    },
+    "runs/main/logmel__forest__augmented/predictions_01.npz": {
+      "bytes": 100128
+    },
+    "runs/main/logmel__forest__augmented/predictions_02.npz": {
+      "bytes": 100823
+    },
+    "runs/main/logmel__forest__augmented/predictions_03.npz": {
+      "bytes": 107545
+    },
+    "runs/main/logmel__forest__augmented/predictions_04.npz": {
+      "bytes": 99718
+    },
+    "runs/main/logmel__forest__augmented/predictions_05.npz": {
+      "bytes": 101316
+    },
+    "runs/main/logmel__forest__augmented/predictions_06.npz": {
+      "bytes": 100467
+    },
+    "runs/main/logmel__forest__augmented/predictions_07.npz": {
+      "bytes": 103969
+    },
+    "runs/main/logmel__forest__augmented/predictions_08.npz": {
+      "bytes": 102577
+    },
+    "runs/main/logmel__forest__augmented/predictions_09.npz": {
+      "bytes": 105092
+    },
+    "runs/main/logmel__forest__augmented/predictions_10.npz": {
+      "bytes": 100354
+    },
+    "runs/main/logmel__forest__augmented/result.json": {
+      "bytes": 170502
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_00.pkl": {
+      "bytes": 13532583
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_01.pkl": {
+      "bytes": 12586491
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_02.pkl": {
+      "bytes": 12251259
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_03.pkl": {
+      "bytes": 12183867
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_04.pkl": {
+      "bytes": 12472443
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_05.pkl": {
+      "bytes": 12277179
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_06.pkl": {
+      "bytes": 12383451
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_07.pkl": {
+      "bytes": 12210939
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_08.pkl": {
+      "bytes": 12259035
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_09.pkl": {
+      "bytes": 12329595
+    },
+    "runs/main/logmel__forest__clean_matched/models/fold_10.pkl": {
+      "bytes": 12581307
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_01.npz": {
+      "bytes": 99572
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_02.npz": {
+      "bytes": 107850
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_03.npz": {
+      "bytes": 106171
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_04.npz": {
+      "bytes": 103192
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_05.npz": {
+      "bytes": 104826
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_06.npz": {
+      "bytes": 101158
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_07.npz": {
+      "bytes": 98881
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_08.npz": {
+      "bytes": 108903
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_09.npz": {
+      "bytes": 101057
+    },
+    "runs/main/logmel__forest__clean_matched/predictions_10.npz": {
+      "bytes": 99660
+    },
+    "runs/main/logmel__forest__clean_matched/result.json": {
+      "bytes": 165303
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_00.pkl": {
+      "bytes": 4697986
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_01.pkl": {
+      "bytes": 4666517
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_02.pkl": {
+      "bytes": 4645998
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_03.pkl": {
+      "bytes": 6157265
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_04.pkl": {
+      "bytes": 4649219
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_05.pkl": {
+      "bytes": 4614780
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_06.pkl": {
+      "bytes": 4649535
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_07.pkl": {
+      "bytes": 6237271
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_08.pkl": {
+      "bytes": 4663280
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_09.pkl": {
+      "bytes": 4662612
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/models/fold_10.pkl": {
+      "bytes": 4669401
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_01.npz": {
+      "bytes": 367138
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_02.npz": {
+      "bytes": 367305
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_03.npz": {
+      "bytes": 367205
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_04.npz": {
+      "bytes": 367284
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_05.npz": {
+      "bytes": 367267
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_06.npz": {
+      "bytes": 367291
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_07.npz": {
+      "bytes": 366911
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_08.npz": {
+      "bytes": 367157
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_09.npz": {
+      "bytes": 367346
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/predictions_10.npz": {
+      "bytes": 367193
+    },
+    "runs/main/logmel__lightgbm_goss__augmented/result.json": {
+      "bytes": 170289
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_00.pkl": {
+      "bytes": 3104874
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_01.pkl": {
+      "bytes": 2920956
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_02.pkl": {
+      "bytes": 2820714
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_03.pkl": {
+      "bytes": 2847750
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_04.pkl": {
+      "bytes": 2871362
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_05.pkl": {
+      "bytes": 2828988
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_06.pkl": {
+      "bytes": 2891956
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_07.pkl": {
+      "bytes": 2817293
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_08.pkl": {
+      "bytes": 2850359
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_09.pkl": {
+      "bytes": 2817778
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/models/fold_10.pkl": {
+      "bytes": 2888285
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_01.npz": {
+      "bytes": 366788
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_02.npz": {
+      "bytes": 366777
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_03.npz": {
+      "bytes": 366834
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_04.npz": {
+      "bytes": 366701
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_05.npz": {
+      "bytes": 366753
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_06.npz": {
+      "bytes": 366762
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_07.npz": {
+      "bytes": 366597
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_08.npz": {
+      "bytes": 366754
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_09.npz": {
+      "bytes": 366693
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/predictions_10.npz": {
+      "bytes": 366734
+    },
+    "runs/main/logmel__lightgbm_goss__clean_matched/result.json": {
+      "bytes": 166566
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_00.pkl": {
+      "bytes": 15671
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_01.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_02.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_03.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_04.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_05.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_06.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_07.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_08.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_09.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/models/fold_10.pkl": {
+      "bytes": 15659
+    },
+    "runs/main/logmel__logistic__augmented/predictions_01.npz": {
+      "bytes": 224850
+    },
+    "runs/main/logmel__logistic__augmented/predictions_02.npz": {
+      "bytes": 224601
+    },
+    "runs/main/logmel__logistic__augmented/predictions_03.npz": {
+      "bytes": 224677
+    },
+    "runs/main/logmel__logistic__augmented/predictions_04.npz": {
+      "bytes": 224837
+    },
+    "runs/main/logmel__logistic__augmented/predictions_05.npz": {
+      "bytes": 224341
+    },
+    "runs/main/logmel__logistic__augmented/predictions_06.npz": {
+      "bytes": 224958
+    },
+    "runs/main/logmel__logistic__augmented/predictions_07.npz": {
+      "bytes": 224166
+    },
+    "runs/main/logmel__logistic__augmented/predictions_08.npz": {
+      "bytes": 224601
+    },
+    "runs/main/logmel__logistic__augmented/predictions_09.npz": {
+      "bytes": 225697
+    },
+    "runs/main/logmel__logistic__augmented/predictions_10.npz": {
+      "bytes": 224546
+    },
+    "runs/main/logmel__logistic__augmented/result.json": {
+      "bytes": 169679
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_00.pkl": {
+      "bytes": 15675
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_01.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_02.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_03.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_04.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_05.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_06.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_07.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_08.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_09.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/models/fold_10.pkl": {
+      "bytes": 15663
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_01.npz": {
+      "bytes": 232444
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_02.npz": {
+      "bytes": 229720
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_03.npz": {
+      "bytes": 225413
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_04.npz": {
+      "bytes": 225650
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_05.npz": {
+      "bytes": 225198
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_06.npz": {
+      "bytes": 231421
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_07.npz": {
+      "bytes": 225974
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_08.npz": {
+      "bytes": 225969
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_09.npz": {
+      "bytes": 226146
+    },
+    "runs/main/logmel__logistic__clean_matched/predictions_10.npz": {
+      "bytes": 231485
+    },
+    "runs/main/logmel__logistic__clean_matched/result.json": {
+      "bytes": 164258
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_00.pkl": {
+      "bytes": 35889319
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_01.pkl": {
+      "bytes": 32954299
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_02.pkl": {
+      "bytes": 32382043
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_03.pkl": {
+      "bytes": 32347483
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_04.pkl": {
+      "bytes": 32978491
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_05.pkl": {
+      "bytes": 32343739
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_06.pkl": {
+      "bytes": 32886043
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_07.pkl": {
+      "bytes": 32323291
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_08.pkl": {
+      "bytes": 32046523
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_09.pkl": {
+      "bytes": 32366779
+    },
+    "runs/main/mfcc_delta__forest__augmented/models/fold_10.pkl": {
+      "bytes": 33342235
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_01.npz": {
+      "bytes": 105761
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_02.npz": {
+      "bytes": 106202
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_03.npz": {
+      "bytes": 111276
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_04.npz": {
+      "bytes": 107019
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_05.npz": {
+      "bytes": 106151
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_06.npz": {
+      "bytes": 105401
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_07.npz": {
+      "bytes": 110525
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_08.npz": {
+      "bytes": 108613
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_09.npz": {
+      "bytes": 108277
+    },
+    "runs/main/mfcc_delta__forest__augmented/predictions_10.npz": {
+      "bytes": 104335
+    },
+    "runs/main/mfcc_delta__forest__augmented/result.json": {
+      "bytes": 169851
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_00.pkl": {
+      "bytes": 15856331
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_01.pkl": {
+      "bytes": 14570399
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_02.pkl": {
+      "bytes": 14430143
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_03.pkl": {
+      "bytes": 14402207
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_04.pkl": {
+      "bytes": 14764223
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_05.pkl": {
+      "bytes": 14409983
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_06.pkl": {
+      "bytes": 14623967
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_07.pkl": {
+      "bytes": 14505311
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_08.pkl": {
+      "bytes": 14510207
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_09.pkl": {
+      "bytes": 14586239
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/models/fold_10.pkl": {
+      "bytes": 14504159
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_01.npz": {
+      "bytes": 114299
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_02.npz": {
+      "bytes": 112393
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_03.npz": {
+      "bytes": 120579
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_04.npz": {
+      "bytes": 117859
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_05.npz": {
+      "bytes": 112908
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_06.npz": {
+      "bytes": 112699
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_07.npz": {
+      "bytes": 112012
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_08.npz": {
+      "bytes": 116964
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_09.npz": {
+      "bytes": 116551
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/predictions_10.npz": {
+      "bytes": 114670
+    },
+    "runs/main/mfcc_delta__forest__clean_matched/result.json": {
+      "bytes": 170090
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_00.pkl": {
+      "bytes": 4650154
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_01.pkl": {
+      "bytes": 4583928
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_02.pkl": {
+      "bytes": 4578264
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_03.pkl": {
+      "bytes": 5540563
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_04.pkl": {
+      "bytes": 4558332
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_05.pkl": {
+      "bytes": 4534837
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_06.pkl": {
+      "bytes": 4564134
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_07.pkl": {
+      "bytes": 5547442
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_08.pkl": {
+      "bytes": 5519961
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_09.pkl": {
+      "bytes": 4570676
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/models/fold_10.pkl": {
+      "bytes": 4590860
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_01.npz": {
+      "bytes": 367230
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_02.npz": {
+      "bytes": 367339
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_03.npz": {
+      "bytes": 367112
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_04.npz": {
+      "bytes": 367343
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_05.npz": {
+      "bytes": 367374
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_06.npz": {
+      "bytes": 367550
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_07.npz": {
+      "bytes": 367173
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_08.npz": {
+      "bytes": 367067
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_09.npz": {
+      "bytes": 367227
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/predictions_10.npz": {
+      "bytes": 367465
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__augmented/result.json": {
+      "bytes": 169281
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_00.pkl": {
+      "bytes": 362218
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_01.pkl": {
+      "bytes": 362123
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_02.pkl": {
+      "bytes": 362215
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_03.pkl": {
+      "bytes": 362163
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_04.pkl": {
+      "bytes": 362075
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_05.pkl": {
+      "bytes": 362182
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_06.pkl": {
+      "bytes": 362057
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_07.pkl": {
+      "bytes": 362017
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_08.pkl": {
+      "bytes": 361997
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_09.pkl": {
+      "bytes": 362118
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/models/fold_10.pkl": {
+      "bytes": 362054
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_01.npz": {
+      "bytes": 366554
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_02.npz": {
+      "bytes": 366640
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_03.npz": {
+      "bytes": 366590
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_04.npz": {
+      "bytes": 366549
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_05.npz": {
+      "bytes": 366572
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_06.npz": {
+      "bytes": 366655
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_07.npz": {
+      "bytes": 366606
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_08.npz": {
+      "bytes": 366569
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_09.npz": {
+      "bytes": 366597
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/predictions_10.npz": {
+      "bytes": 366645
+    },
+    "runs/main/mfcc_delta__lightgbm_goss__clean_matched/result.json": {
+      "bytes": 167771
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_00.pkl": {
+      "bytes": 19259
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_01.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_02.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_03.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_04.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_05.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_06.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_07.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_08.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_09.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/models/fold_10.pkl": {
+      "bytes": 19247
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_01.npz": {
+      "bytes": 224803
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_02.npz": {
+      "bytes": 224197
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_03.npz": {
+      "bytes": 225132
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_04.npz": {
+      "bytes": 225248
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_05.npz": {
+      "bytes": 224226
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_06.npz": {
+      "bytes": 224714
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_07.npz": {
+      "bytes": 224457
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_08.npz": {
+      "bytes": 225036
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_09.npz": {
+      "bytes": 225152
+    },
+    "runs/main/mfcc_delta__logistic__augmented/predictions_10.npz": {
+      "bytes": 223305
+    },
+    "runs/main/mfcc_delta__logistic__augmented/result.json": {
+      "bytes": 169760
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_00.pkl": {
+      "bytes": 19263
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_01.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_02.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_03.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_04.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_05.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_06.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_07.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_08.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_09.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/models/fold_10.pkl": {
+      "bytes": 19251
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_01.npz": {
+      "bytes": 229343
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_02.npz": {
+      "bytes": 228871
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_03.npz": {
+      "bytes": 204586
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_04.npz": {
+      "bytes": 229270
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_05.npz": {
+      "bytes": 229271
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_06.npz": {
+      "bytes": 229116
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_07.npz": {
+      "bytes": 229444
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_08.npz": {
+      "bytes": 204638
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_09.npz": {
+      "bytes": 229446
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/predictions_10.npz": {
+      "bytes": 228783
+    },
+    "runs/main/mfcc_delta__logistic__clean_matched/result.json": {
+      "bytes": 168575
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_00.pkl": {
+      "bytes": 15681
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_01.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_02.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_03.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_04.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_05.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_06.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_07.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_08.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_09.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/models/fold_10.pkl": {
+      "bytes": 15669
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_01.npz": {
+      "bytes": 225434
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_02.npz": {
+      "bytes": 225261
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_03.npz": {
+      "bytes": 225399
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_04.npz": {
+      "bytes": 225302
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_05.npz": {
+      "bytes": 225486
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_06.npz": {
+      "bytes": 225576
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_07.npz": {
+      "bytes": 225471
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_08.npz": {
+      "bytes": 225762
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_09.npz": {
+      "bytes": 226459
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/predictions_10.npz": {
+      "bytes": 225146
+    },
+    "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/result.json": {
+      "bytes": 169468
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_00.pkl": {
+      "bytes": 19269
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_01.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_02.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_03.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_04.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_05.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_06.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_07.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_08.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_09.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/models/fold_10.pkl": {
+      "bytes": 19257
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_01.npz": {
+      "bytes": 225419
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_02.npz": {
+      "bytes": 224957
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_03.npz": {
+      "bytes": 225458
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_04.npz": {
+      "bytes": 225238
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_05.npz": {
+      "bytes": 225058
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_06.npz": {
+      "bytes": 225114
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_07.npz": {
+      "bytes": 224863
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_08.npz": {
+      "bytes": 225397
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_09.npz": {
+      "bytes": 225215
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/predictions_10.npz": {
+      "bytes": 223680
+    },
+    "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/result.json": {
+      "bytes": 169952
+    },
+    "summarize.py": {
+      "bytes": 7153
+    },
+    "verify.py": {
+      "bytes": 7310
+    },
+    "verify_saved_run.py": {
+      "bytes": 3032
+    }
+  },
+  "contains_raw_data": true,
+  "contains_python_environment": false
+}

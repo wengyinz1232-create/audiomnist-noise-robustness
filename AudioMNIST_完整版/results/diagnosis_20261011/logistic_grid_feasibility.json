@@ -1,0 +1,185 @@
+{
+  "scope": "Descriptive post-hoc check of all triples in the predeclared five-value diagnostic grid. Not a fresh experiment or independent selection.",
+  "triples": [
+    {
+      "grid": [
+        0.01,
+        0.1,
+        1.0
+      ],
+      "clean_counts": [
+        4,
+        0,
+        6
+      ],
+      "augmented_counts": [
+        5,
+        5,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.01,
+        0.1,
+        10.0
+      ],
+      "clean_counts": [
+        4,
+        0,
+        6
+      ],
+      "augmented_counts": [
+        5,
+        5,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.01,
+        0.1,
+        100.0
+      ],
+      "clean_counts": [
+        5,
+        0,
+        5
+      ],
+      "augmented_counts": [
+        5,
+        5,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.01,
+        1.0,
+        10.0
+      ],
+      "clean_counts": [
+        4,
+        4,
+        2
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.01,
+        1.0,
+        100.0
+      ],
+      "clean_counts": [
+        4,
+        4,
+        2
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.01,
+        10.0,
+        100.0
+      ],
+      "clean_counts": [
+        4,
+        6,
+        0
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.1,
+        1.0,
+        10.0
+      ],
+      "clean_counts": [
+        0,
+        5,
+        5
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.1,
+        1.0,
+        100.0
+      ],
+      "clean_counts": [
+        0,
+        6,
+        4
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        0.1,
+        10.0,
+        100.0
+      ],
+      "clean_counts": [
+        0,
+        10,
+        0
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    },
+    {
+      "grid": [
+        1.0,
+        10.0,
+        100.0
+      ],
+      "clean_counts": [
+        5,
+        5,
+        0
+      ],
+      "augmented_counts": [
+        10,
+        0,
+        0
+      ],
+      "both_middle_unique": false
+    }
+  ]
+}

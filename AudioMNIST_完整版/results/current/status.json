@@ -1,0 +1,17 @@
+{
+  "complete_configurations": 20,
+  "current_view_configurations": 12,
+  "current_view_middle_check_failures": [],
+  "current_view_definition": "Twelve configuration slots: original Log-Mel and MFCC forest, updated mode-specific-grid MFCC logistic, and updated shared-L2-grid MFCC LightGBM. Original runs are retained as references.",
+  "not_a_compliance_certificate": true,
+  "historical_summary_sha256": "bda7c744231c95276d163b93c347802fc939d6878208f0f8826cb4608bcd2a34",
+  "audit_scope": "Record structure, inner selections, paired splits, artifact presence and recomputed fold summaries; this index does not refit models or re-audit every prediction.",
+  "uncertainty": "Fold sample SD, not independent-sample confidence intervals.",
+  "artifacts": {
+    "catalog": "catalog.json",
+    "current_metrics": "summary_current_12.csv",
+    "all_metrics": "summary_all_runs.csv",
+    "paired_comparisons": "paired_comparisons.csv",
+    "diagnostics": "diagnostics.json"
+  }
+}

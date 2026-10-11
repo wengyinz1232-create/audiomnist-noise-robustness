@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "outer_models_verified": 120,
+  "full_models_verified": 12,
+  "checks": [
+    "known metric arithmetic",
+    "training-only scaling",
+    "white and pink SNR",
+    "raw and code hashes",
+    "cache dimensions and identities",
+    "10x3 speaker isolation",
+    "tuning argmax",
+    "augmentation row counts",
+    "every saved probability matrix reproduces metrics",
+    "model reload predictions"
+  ],
+  "grid_requirement_audit": [
+    {
+      "configuration": "runs\\main\\logmel__forest__augmented\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\logmel__forest__clean_matched\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\logmel__lightgbm_goss__augmented\\result.json",
+      "counts": [
+        0,
+        8,
+        2
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\logmel__lightgbm_goss__clean_matched\\result.json",
+      "counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\logmel__logistic__augmented\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\logmel__logistic__clean_matched\\result.json",
+      "counts": [
+        0,
+        6,
+        4
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__forest__augmented\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__forest__clean_matched\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__lightgbm_goss__augmented\\result.json",
+      "counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__lightgbm_goss__clean_matched\\result.json",
+      "counts": [
+        10,
+        0,
+        0
+      ],
+      "middle_unique_mode": false,
+      "middle_majority": false
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__logistic__augmented\\result.json",
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_majority": true
+    },
+    {
+      "configuration": "runs\\main\\mfcc_delta__logistic__clean_matched\\result.json",
+      "counts": [
+        2,
+        0,
+        8
+      ],
+      "middle_unique_mode": false,
+      "middle_majority": false
+    }
+  ],
+  "note": "PASS means integrity checks pass, not automatic compliance with the grid midpoint or topic approval."
+}

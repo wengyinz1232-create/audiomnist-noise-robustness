@@ -1,0 +1,11 @@
+{
+  "python": "3.13.5",
+  "launch_environment": {
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "2"
+  },
+  "scheduling": "Started with 2 workers, resumed with 6 workers; finished task records retained. Scheduling revision preserved in plan_before_worker_change.json.",
+  "recovered_error": "OpenBLAS initialization memory allocation failure at first six-worker launch; resumed after limiting native thread initialization.",
+  "scope": "60 completed fits intended; interrupted in-flight attempts are not counted as completed fits."
+}

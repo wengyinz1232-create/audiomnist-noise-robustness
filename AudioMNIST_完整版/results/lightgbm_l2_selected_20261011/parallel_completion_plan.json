@@ -1,0 +1,75 @@
+{
+  "script_sha256": "1fed660d4569cfbb2629b12d1c6587842aab7fbf68d9d7f0816ed32d79dd1712",
+  "workers": 6,
+  "pending_tasks": [
+    [
+      "augmented",
+      3
+    ],
+    [
+      "augmented",
+      4
+    ],
+    [
+      "clean_matched",
+      4
+    ],
+    [
+      "augmented",
+      5
+    ],
+    [
+      "clean_matched",
+      5
+    ],
+    [
+      "augmented",
+      6
+    ],
+    [
+      "clean_matched",
+      6
+    ],
+    [
+      "augmented",
+      7
+    ],
+    [
+      "clean_matched",
+      7
+    ],
+    [
+      "augmented",
+      8
+    ],
+    [
+      "clean_matched",
+      8
+    ],
+    [
+      "augmented",
+      9
+    ],
+    [
+      "clean_matched",
+      9
+    ],
+    [
+      "augmented",
+      10
+    ],
+    [
+      "clean_matched",
+      10
+    ],
+    [
+      "augmented",
+      0
+    ],
+    [
+      "clean_matched",
+      0
+    ]
+  ],
+  "scope": "Scheduling change only. Original source, grids, seeds, inner search and model settings remain unchanged. No inner scores reused."
+}

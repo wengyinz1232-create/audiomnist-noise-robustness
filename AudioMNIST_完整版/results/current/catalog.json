@@ -1,0 +1,591 @@
+[
+  {
+    "id": "alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented",
+    "source": "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/result.json",
+    "sha256": "833a06be0302ba5110ec0dbdcd224f9d4d832c9b1f5a1932632c907cee9615f9",
+    "batch": "alt_min_child",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss_min_child",
+    "mode": "augmented",
+    "role": "lightgbm_alternative",
+    "in_current_12_view": false,
+    "grid": [
+      5,
+      20,
+      80
+    ],
+    "selected_counts": [
+      4,
+      3,
+      3
+    ],
+    "middle_unique_mode": false,
+    "outer_folds": 10,
+    "full_fit_selected": 5,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Does not pass the conservative unique-middle-mode check.",
+      "Two-leaf alternative; do not pair with original augmented LightGBM as an augmentation-only comparison.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched",
+    "source": "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/result.json",
+    "sha256": "94841641635dc5d68abbb1ad53280127f17271c29cceb4f097b8d3479864e212",
+    "batch": "alt_min_child",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss_min_child",
+    "mode": "clean_matched",
+    "role": "lightgbm_alternative",
+    "in_current_12_view": false,
+    "grid": [
+      5,
+      20,
+      80
+    ],
+    "selected_counts": [
+      1,
+      6,
+      3
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 20,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Two-leaf alternative; do not pair with original augmented LightGBM as an augmentation-only comparison.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__augmented",
+    "source": "runs/lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__augmented/result.json",
+    "sha256": "12871467e29bae81bd9e996de8b01eb94e88554542400177a0720693bef2592d",
+    "batch": "lightgbm_l2_selected_20261011",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss_l2",
+    "mode": "augmented",
+    "role": "updated_lightgbm_shared_l2_grid",
+    "in_current_12_view": true,
+    "grid": [
+      0.0,
+      0.1,
+      1.0
+    ],
+    "selected_counts": [
+      3,
+      6,
+      1
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Shared L2 grid with fixed seven-leaf trees; replaces the original leaf-tuned configuration, whose results remain historical.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__clean_matched",
+    "source": "runs/lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__clean_matched/result.json",
+    "sha256": "d7b502c74cb0805ab5a4b2209fa5d925e3815703064183506163da045ad5a663",
+    "batch": "lightgbm_l2_selected_20261011",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss_l2",
+    "mode": "clean_matched",
+    "role": "updated_lightgbm_shared_l2_grid",
+    "in_current_12_view": true,
+    "grid": [
+      0.0,
+      0.1,
+      1.0
+    ],
+    "selected_counts": [
+      2,
+      5,
+      3
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.0,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Shared L2 grid with fixed seven-leaf trees; replaces the original leaf-tuned configuration, whose results remain historical.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "logistic_selected_grids_20261011/mfcc_delta__logistic__augmented",
+    "source": "runs/logistic_selected_grids_20261011/mfcc_delta__logistic__augmented/result.json",
+    "sha256": "88d69eb79055f12ca3fb95b47ba448c8aad888bad2c49042aef9fdf8fc415ca6",
+    "batch": "logistic_selected_grids_20261011",
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "role": "updated_logistic_different_grids",
+    "in_current_12_view": true,
+    "grid": [
+      0.01,
+      0.03,
+      0.1
+    ],
+    "selected_counts": [
+      1,
+      8,
+      1
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.03,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Mode-specific grids; post-exploration rerun, not identical-grid augmentation comparison.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched",
+    "source": "runs/logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched/result.json",
+    "sha256": "470a8b986329200b5e33220683041f86e5326b9c014a2612af3f0f62be35c129",
+    "batch": "logistic_selected_grids_20261011",
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "clean_matched",
+    "role": "updated_logistic_different_grids",
+    "in_current_12_view": true,
+    "grid": [
+      0.0001,
+      0.003,
+      0.01
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.003,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Mode-specific grids; post-exploration rerun, not identical-grid augmentation comparison.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__forest__augmented",
+    "source": "runs/main/logmel__forest__augmented/result.json",
+    "sha256": "3edc17d488361e858a778d4f044345b6a6886581913709f30048247968170c3d",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 48,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__forest__clean_matched",
+    "source": "runs/main/logmel__forest__clean_matched/result.json",
+    "sha256": "4458cd32ab00e4ad0dec6e482c92ed815b13867f53ca24cac3fdb786ede621cc",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "clean_matched",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 48,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__lightgbm_goss__augmented",
+    "source": "runs/main/logmel__lightgbm_goss__augmented/result.json",
+    "sha256": "a86551de119535e0e69d3a58e3e2fe4d53a49f0846c464cb9261852e197cee6a",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "selected_counts": [
+      0,
+      8,
+      2
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 63,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__lightgbm_goss__clean_matched",
+    "source": "runs/main/logmel__lightgbm_goss__clean_matched/result.json",
+    "sha256": "cbccf6f10d05c911a48087a00f1d56d526bc8d6d7ac8a2b834c9d8b86ed9071b",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "clean_matched",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "selected_counts": [
+      0,
+      7,
+      3
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 255,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__logistic__augmented",
+    "source": "runs/main/logmel__logistic__augmented/result.json",
+    "sha256": "18789cd233414b150402fce9c3234ba19efd32e108582caedc1215ffad49d6c0",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/logmel__logistic__clean_matched",
+    "source": "runs/main/logmel__logistic__clean_matched/result.json",
+    "sha256": "1f0818440c40d853df3141acc15bca70c1371745d0c2b5ae353523cff7c51727",
+    "batch": "main",
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "clean_matched",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      0,
+      6,
+      4
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__forest__augmented",
+    "source": "runs/main/mfcc_delta__forest__augmented/result.json",
+    "sha256": "8a7cb89b6c7e0d85ac2ae1988064dc806a0b67393d13ab249d4fcd1d5ee07995",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 48,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__forest__clean_matched",
+    "source": "runs/main/mfcc_delta__forest__clean_matched/result.json",
+    "sha256": "ac36baf184df7a2518742cca7870e730cee72792a49bef5d144c3f40a5e7d0d3",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "clean_matched",
+    "role": "original_main",
+    "in_current_12_view": true,
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 128,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__lightgbm_goss__augmented",
+    "source": "runs/main/mfcc_delta__lightgbm_goss__augmented/result.json",
+    "sha256": "a8da8f8dfa54e23613746bbdd7f6cb93cf07cacb88f47c1c01937f0dc04ae362",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "role": "historical_lightgbm_reference",
+    "in_current_12_view": false,
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "selected_counts": [
+      0,
+      7,
+      3
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 63,
+    "warning_count": 0,
+    "superseded_by": "lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__augmented",
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__lightgbm_goss__clean_matched",
+    "source": "runs/main/mfcc_delta__lightgbm_goss__clean_matched/result.json",
+    "sha256": "88904ba96b1b1a6dc863b99c29a960bdfedc6b9741c40db3b21c9ffb99ad556a",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "clean_matched",
+    "role": "historical_lightgbm_reference",
+    "in_current_12_view": false,
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "selected_counts": [
+      10,
+      0,
+      0
+    ],
+    "middle_unique_mode": false,
+    "outer_folds": 10,
+    "full_fit_selected": 3,
+    "warning_count": 0,
+    "superseded_by": "lightgbm_l2_selected_20261011/mfcc_delta__lightgbm_goss_l2__clean_matched",
+    "limitations": [
+      "Does not pass the conservative unique-middle-mode check.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__logistic__augmented",
+    "source": "runs/main/mfcc_delta__logistic__augmented/result.json",
+    "sha256": "e88fa545434d05d291e655237e16c9dda98b2a6fc2604d392eca8091418ac450",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "role": "historical_logistic_reference",
+    "in_current_12_view": false,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": "logistic_selected_grids_20261011/mfcc_delta__logistic__augmented",
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "main/mfcc_delta__logistic__clean_matched",
+    "source": "runs/main/mfcc_delta__logistic__clean_matched/result.json",
+    "sha256": "e06744020d8e2dd7076f05413dd2eb8a2802ad808807702226bd262b6fa62e81",
+    "batch": "main",
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "clean_matched",
+    "role": "historical_logistic_reference",
+    "in_current_12_view": false,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      2,
+      0,
+      8
+    ],
+    "middle_unique_mode": false,
+    "outer_folds": 10,
+    "full_fit_selected": 100.0,
+    "warning_count": 0,
+    "superseded_by": "logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched",
+    "limitations": [
+      "Does not pass the conservative unique-middle-mode check.",
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "multi_snr_20261010/logmel__logistic__multi_snr_augmented",
+    "source": "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/result.json",
+    "sha256": "04b65571ae2ca6187bde82c7c4dd48b6ca6a53389385b973e9b6423e9cc2b792",
+    "batch": "multi_snr_20261010",
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "multi_snr_augmented",
+    "role": "multi_snr_supplement",
+    "in_current_12_view": false,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  },
+  {
+    "id": "multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented",
+    "source": "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/result.json",
+    "sha256": "d0f871e41358494adf485a1185a82b33100104b654b463a78bdd02ab391ba89b",
+    "batch": "multi_snr_20261010",
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "multi_snr_augmented",
+    "role": "multi_snr_supplement",
+    "in_current_12_view": false,
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "selected_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "outer_folds": 10,
+    "full_fit_selected": 0.1,
+    "warning_count": 0,
+    "superseded_by": null,
+    "limitations": [
+      "Previously explored data and splits; no independent confirmation claim."
+    ]
+  }
+]

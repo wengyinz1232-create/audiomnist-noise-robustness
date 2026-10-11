@@ -1,0 +1,32 @@
+# Local environments and credentials
+.reproduction/
+.audit_deps/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.aws/
+.codex/
+*.pem
+*.key
+
+# Downloaded audio, feature caches, fitted models and per-example probabilities
+*.zip
+*.wav
+*.npz
+*.pkl
+*.joblib
+*.download
+*.log
+
+# Course handouts / instructor correspondence stay local
+AudioMNIST_完整版/assignment_sources/
+
+# Editor / OS files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,593 @@
+{
+  "runs": [
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "lightgbm_goss_min_child",
+        "mode": "augmented",
+        "grid": [
+          5,
+          20,
+          80
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "105500194887c53e99ec1aef5483523fc50e3cf06fd9f7fc21b30caee83b6c99",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        4,
+        3,
+        3
+      ],
+      "middle_unique_mode": false,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\alt_min_child\\mfcc_delta__lightgbm_goss_min_child__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "lightgbm_goss_min_child",
+        "mode": "clean_matched",
+        "grid": [
+          5,
+          20,
+          80
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "105500194887c53e99ec1aef5483523fc50e3cf06fd9f7fc21b30caee83b6c99",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        1,
+        6,
+        3
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\alt_min_child\\mfcc_delta__lightgbm_goss_min_child__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "forest",
+        "mode": "augmented",
+        "grid": [
+          4,
+          48,
+          128
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__forest__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "forest",
+        "mode": "clean_matched",
+        "grid": [
+          4,
+          48,
+          128
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__forest__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "lightgbm_goss",
+        "mode": "augmented",
+        "grid": [
+          3,
+          63,
+          255
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        8,
+        2
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__lightgbm_goss__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "lightgbm_goss",
+        "mode": "clean_matched",
+        "grid": [
+          3,
+          63,
+          255
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__lightgbm_goss__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "logistic",
+        "mode": "augmented",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__logistic__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "logistic",
+        "mode": "clean_matched",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        6,
+        4
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\logmel__logistic__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "forest",
+        "mode": "augmented",
+        "grid": [
+          4,
+          48,
+          128
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__forest__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "forest",
+        "mode": "clean_matched",
+        "grid": [
+          4,
+          48,
+          128
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__forest__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "lightgbm_goss",
+        "mode": "augmented",
+        "grid": [
+          3,
+          63,
+          255
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__lightgbm_goss__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "lightgbm_goss",
+        "mode": "clean_matched",
+        "grid": [
+          3,
+          63,
+          255
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        10,
+        0,
+        0
+      ],
+      "middle_unique_mode": false,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__lightgbm_goss__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "logistic",
+        "mode": "augmented",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__logistic__augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "logistic",
+        "mode": "clean_matched",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        2,
+        0,
+        8
+      ],
+      "middle_unique_mode": false,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\main\\mfcc_delta__logistic__clean_matched\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "logmel",
+        "model": "logistic",
+        "mode": "multi_snr_augmented",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 256,
+        "signature": {
+          "logmel.npz": "afe668e9ff5d9eb9fbdb5a90c1ec2cce7928686ae858d27e748aa1c768e1b891",
+          "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\multi_snr_20261010\\logmel__logistic__multi_snr_augmented\\result.json"
+    },
+    {
+      "status": "PASS",
+      "configuration": {
+        "representation": "mfcc_delta",
+        "model": "logistic",
+        "mode": "multi_snr_augmented",
+        "grid": [
+          0.0001,
+          0.1,
+          100.0
+        ],
+        "outer_folds": 10,
+        "inner_folds": 3,
+        "seed": 20261009,
+        "samples": 12000,
+        "features": 320,
+        "signature": {
+          "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+          "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+          "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+          "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+        }
+      },
+      "outer_folds_verified": 10,
+      "condition_metrics_verified": 40,
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+      "path": "runs\\multi_snr_20261010\\mfcc_delta__logistic__multi_snr_augmented\\result.json"
+    }
+  ],
+  "summary_rows_verified": 48,
+  "ensemble_summary": {
+    "clean": {
+      "ensemble_macro_f1_mean": 0.9754811848111409,
+      "ensemble_macro_f1_fold_sd": 0.014027951118684996,
+      "logistic_macro_f1_mean": 0.9574070926712879,
+      "ensemble_minus_logistic_mean": 0.018074092139852914,
+      "paired_difference_fold_sd": 0.00957294092001268,
+      "positive_folds": 10,
+      "negative_folds": 0
+    },
+    "white_20": {
+      "ensemble_macro_f1_mean": 0.9627837591233622,
+      "ensemble_macro_f1_fold_sd": 0.02167286721827578,
+      "logistic_macro_f1_mean": 0.9538503977390639,
+      "ensemble_minus_logistic_mean": 0.008933361384298278,
+      "paired_difference_fold_sd": 0.009546425848629763,
+      "positive_folds": 10,
+      "negative_folds": 0
+    },
+    "white_10": {
+      "ensemble_macro_f1_mean": 0.9538855621185729,
+      "ensemble_macro_f1_fold_sd": 0.02302619469519229,
+      "logistic_macro_f1_mean": 0.9298420060478509,
+      "ensemble_minus_logistic_mean": 0.02404355607072205,
+      "paired_difference_fold_sd": 0.014671221086495366,
+      "positive_folds": 10,
+      "negative_folds": 0
+    },
+    "pink_10": {
+      "ensemble_macro_f1_mean": 0.9414366171233087,
+      "ensemble_macro_f1_fold_sd": 0.026249761663925984,
+      "logistic_macro_f1_mean": 0.9165566337589625,
+      "ensemble_minus_logistic_mean": 0.02487998336434628,
+      "paired_difference_fold_sd": 0.014196089564331589,
+      "positive_folds": 10,
+      "negative_folds": 0
+    }
+  },
+  "code_zip": {
+    "files": 22,
+    "forbidden_files": [],
+    "different_from_current_files": []
+  },
+  "scope": "Saved predictions and metadata verified; no model retraining or pickle loading."
+}

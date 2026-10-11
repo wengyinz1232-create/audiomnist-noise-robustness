@@ -1,0 +1,478 @@
+{
+  "selected": [
+    {
+      "id": "alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched",
+      "source": "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__clean_matched/result.json",
+      "sha256": "94841641635dc5d68abbb1ad53280127f17271c29cceb4f097b8d3479864e212",
+      "batch": "alt_min_child",
+      "representation": "mfcc_delta",
+      "model": "lightgbm_goss_min_child",
+      "mode": "clean_matched",
+      "role": "lightgbm_alternative",
+      "in_current_12_view": false,
+      "grid": [
+        5,
+        20,
+        80
+      ],
+      "selected_counts": [
+        1,
+        6,
+        3
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 20,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Two-leaf alternative; do not pair with original augmented LightGBM as an augmentation-only comparison.",
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "standalone_lightgbm_alternative"
+    },
+    {
+      "id": "logistic_selected_grids_20261011/mfcc_delta__logistic__augmented",
+      "source": "runs/logistic_selected_grids_20261011/mfcc_delta__logistic__augmented/result.json",
+      "sha256": "88d69eb79055f12ca3fb95b47ba448c8aad888bad2c49042aef9fdf8fc415ca6",
+      "batch": "logistic_selected_grids_20261011",
+      "representation": "mfcc_delta",
+      "model": "logistic",
+      "mode": "augmented",
+      "role": "updated_logistic_different_grids",
+      "in_current_12_view": true,
+      "grid": [
+        0.01,
+        0.03,
+        0.1
+      ],
+      "selected_counts": [
+        1,
+        8,
+        1
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 0.03,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Mode-specific grids; post-exploration rerun, not identical-grid augmentation comparison.",
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "separately_tuned_logistic"
+    },
+    {
+      "id": "logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched",
+      "source": "runs/logistic_selected_grids_20261011/mfcc_delta__logistic__clean_matched/result.json",
+      "sha256": "470a8b986329200b5e33220683041f86e5326b9c014a2612af3f0f62be35c129",
+      "batch": "logistic_selected_grids_20261011",
+      "representation": "mfcc_delta",
+      "model": "logistic",
+      "mode": "clean_matched",
+      "role": "updated_logistic_different_grids",
+      "in_current_12_view": true,
+      "grid": [
+        0.0001,
+        0.003,
+        0.01
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 0.003,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Mode-specific grids; post-exploration rerun, not identical-grid augmentation comparison.",
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "separately_tuned_logistic"
+    },
+    {
+      "id": "main/logmel__forest__augmented",
+      "source": "runs/main/logmel__forest__augmented/result.json",
+      "sha256": "3edc17d488361e858a778d4f044345b6a6886581913709f30048247968170c3d",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "forest",
+      "mode": "augmented",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 48,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/logmel__forest__clean_matched",
+      "source": "runs/main/logmel__forest__clean_matched/result.json",
+      "sha256": "4458cd32ab00e4ad0dec6e482c92ed815b13867f53ca24cac3fdb786ede621cc",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "forest",
+      "mode": "clean_matched",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 48,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/logmel__lightgbm_goss__augmented",
+      "source": "runs/main/logmel__lightgbm_goss__augmented/result.json",
+      "sha256": "a86551de119535e0e69d3a58e3e2fe4d53a49f0846c464cb9261852e197cee6a",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "lightgbm_goss",
+      "mode": "augmented",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        3,
+        63,
+        255
+      ],
+      "selected_counts": [
+        0,
+        8,
+        2
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 63,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/logmel__lightgbm_goss__clean_matched",
+      "source": "runs/main/logmel__lightgbm_goss__clean_matched/result.json",
+      "sha256": "cbccf6f10d05c911a48087a00f1d56d526bc8d6d7ac8a2b834c9d8b86ed9071b",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "lightgbm_goss",
+      "mode": "clean_matched",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        3,
+        63,
+        255
+      ],
+      "selected_counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 255,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/logmel__logistic__augmented",
+      "source": "runs/main/logmel__logistic__augmented/result.json",
+      "sha256": "18789cd233414b150402fce9c3234ba19efd32e108582caedc1215ffad49d6c0",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "logistic",
+      "mode": "augmented",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 0.1,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/logmel__logistic__clean_matched",
+      "source": "runs/main/logmel__logistic__clean_matched/result.json",
+      "sha256": "1f0818440c40d853df3141acc15bca70c1371745d0c2b5ae353523cff7c51727",
+      "batch": "main",
+      "representation": "logmel",
+      "model": "logistic",
+      "mode": "clean_matched",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "selected_counts": [
+        0,
+        6,
+        4
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 0.1,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/mfcc_delta__forest__augmented",
+      "source": "runs/main/mfcc_delta__forest__augmented/result.json",
+      "sha256": "8a7cb89b6c7e0d85ac2ae1988064dc806a0b67393d13ab249d4fcd1d5ee07995",
+      "batch": "main",
+      "representation": "mfcc_delta",
+      "model": "forest",
+      "mode": "augmented",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 48,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/mfcc_delta__forest__clean_matched",
+      "source": "runs/main/mfcc_delta__forest__clean_matched/result.json",
+      "sha256": "ac36baf184df7a2518742cca7870e730cee72792a49bef5d144c3f40a5e7d0d3",
+      "batch": "main",
+      "representation": "mfcc_delta",
+      "model": "forest",
+      "mode": "clean_matched",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 128,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "matched_grid_comparison"
+    },
+    {
+      "id": "main/mfcc_delta__lightgbm_goss__augmented",
+      "source": "runs/main/mfcc_delta__lightgbm_goss__augmented/result.json",
+      "sha256": "a8da8f8dfa54e23613746bbdd7f6cb93cf07cacb88f47c1c01937f0dc04ae362",
+      "batch": "main",
+      "representation": "mfcc_delta",
+      "model": "lightgbm_goss",
+      "mode": "augmented",
+      "role": "original_main",
+      "in_current_12_view": true,
+      "grid": [
+        3,
+        63,
+        255
+      ],
+      "selected_counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "outer_folds": 10,
+      "full_fit_selected": 63,
+      "warning_count": 0,
+      "superseded_by": null,
+      "limitations": [
+        "Previously explored data and splits; no independent confirmation claim."
+      ],
+      "selected_role": "standalone_lightgbm_original"
+    }
+  ],
+  "not_selected_but_retained": [
+    {
+      "id": "alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented",
+      "source": "runs/alt_min_child/mfcc_delta__lightgbm_goss_min_child__augmented/result.json",
+      "original_role": "lightgbm_alternative",
+      "middle_unique_mode": false,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    },
+    {
+      "id": "main/mfcc_delta__lightgbm_goss__clean_matched",
+      "source": "runs/main/mfcc_delta__lightgbm_goss__clean_matched/result.json",
+      "original_role": "original_main",
+      "middle_unique_mode": false,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    },
+    {
+      "id": "main/mfcc_delta__logistic__augmented",
+      "source": "runs/main/mfcc_delta__logistic__augmented/result.json",
+      "original_role": "historical_logistic_reference",
+      "middle_unique_mode": true,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    },
+    {
+      "id": "main/mfcc_delta__logistic__clean_matched",
+      "source": "runs/main/mfcc_delta__logistic__clean_matched/result.json",
+      "original_role": "historical_logistic_reference",
+      "middle_unique_mode": false,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    },
+    {
+      "id": "multi_snr_20261010/logmel__logistic__multi_snr_augmented",
+      "source": "runs/multi_snr_20261010/logmel__logistic__multi_snr_augmented/result.json",
+      "original_role": "multi_snr_supplement",
+      "middle_unique_mode": true,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    },
+    {
+      "id": "multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented",
+      "source": "runs/multi_snr_20261010/mfcc_delta__logistic__multi_snr_augmented/result.json",
+      "original_role": "multi_snr_supplement",
+      "middle_unique_mode": true,
+      "reason": "Historical reference, unresolved grid failure, or supplementary experiment outside agreed selection; retained in all-run catalog."
+    }
+  ],
+  "figures": [
+    {
+      "name": "01_matched_robustness",
+      "caption": "Error bars: sample SD across folds, not confidence intervals. Same grid within each training-mode pair.",
+      "png": "01_matched_robustness.png",
+      "pdf": "01_matched_robustness.pdf"
+    },
+    {
+      "name": "02_matched_paired_effects",
+      "caption": "Error bars: sample SD of within-fold differences. Axis ranges differ between panels; folds are not independent.",
+      "png": "02_matched_paired_effects.png",
+      "pdf": "02_matched_paired_effects.pdf"
+    },
+    {
+      "name": "03_updated_logistic",
+      "caption": "Different search grids; not an identical-grid augmentation-only comparison. Error bars: fold sample SD.",
+      "png": "03_updated_logistic.png",
+      "pdf": "03_updated_logistic.pdf"
+    },
+    {
+      "name": "04_lightgbm_standalone",
+      "caption": "Model configurations differ. Do not attribute the between-panel difference solely to augmentation. Bars: fold sample SD.",
+      "png": "04_lightgbm_standalone.png",
+      "pdf": "04_lightgbm_standalone.pdf"
+    }
+  ],
+  "findings": {
+    "matched_pairs": 4,
+    "matched_pink_gain_positive_in_all_ten_folds": true,
+    "matched_clean_effects": [
+      {
+        "representation": "logmel",
+        "model": "logistic",
+        "mean_difference": -0.006339776706209621,
+        "positive_folds": 5,
+        "negative_folds": 5
+      },
+      {
+        "representation": "logmel",
+        "model": "forest",
+        "mean_difference": 0.0020145261663294,
+        "positive_folds": 6,
+        "negative_folds": 4
+      },
+      {
+        "representation": "logmel",
+        "model": "lightgbm_goss",
+        "mean_difference": 0.003987875689861986,
+        "positive_folds": 7,
+        "negative_folds": 3
+      },
+      {
+        "representation": "mfcc_delta",
+        "model": "forest",
+        "mean_difference": -0.00795833937576752,
+        "positive_folds": 0,
+        "negative_folds": 10
+      }
+    ],
+    "limitations": [
+      "Selection is agreed scope, not a claim that all original configurations passed.",
+      "New logistic grids and earlier supplemental designs followed exploration of this data.",
+      "The LightGBM panels are standalone, not a matched causal comparison.",
+      "All noise is synthetic; fold SD is not an independent confidence interval.",
+      "Original ensemble is not recomputed using updated logistic models."
+    ]
+  }
+}

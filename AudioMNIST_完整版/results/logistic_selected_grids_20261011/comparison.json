@@ -1,0 +1,97 @@
+{
+  "scope": "Full 10x3 nested re-fit plus separately tuned full-data models; exploratory grids from previously observed data.",
+  "limitations": [
+    "Mode-specific search ranges: comparisons are between separately tuned pipelines, not an identical-grid augmentation-only intervention.",
+    "Standard deviations describe overlapping CV folds; not independent confidence intervals."
+  ],
+  "rows": [
+    {
+      "mode": "clean_matched",
+      "condition": "clean",
+      "old_macro_f1": 0.948874834781533,
+      "new_macro_f1": 0.9648423720627084,
+      "new_fold_sd": 0.015048647773613805,
+      "paired_difference_mean": 0.015967537281175302,
+      "paired_difference_sd": 0.036913687937079116,
+      "positive_folds": 5,
+      "negative_folds": 5
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_20",
+      "old_macro_f1": 0.6757787164234996,
+      "new_macro_f1": 0.7454993698362685,
+      "new_fold_sd": 0.06462444430156962,
+      "paired_difference_mean": 0.06972065341276881,
+      "paired_difference_sd": 0.06672326656250988,
+      "positive_folds": 10,
+      "negative_folds": 0
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_10",
+      "old_macro_f1": 0.31600481373531086,
+      "new_macro_f1": 0.3357518904764013,
+      "new_fold_sd": 0.03038130008157602,
+      "paired_difference_mean": 0.019747076741090417,
+      "paired_difference_sd": 0.05523398498016544,
+      "positive_folds": 8,
+      "negative_folds": 2
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "pink_10",
+      "old_macro_f1": 0.43148474677953275,
+      "new_macro_f1": 0.43801665136369455,
+      "new_fold_sd": 0.027868237759549004,
+      "paired_difference_mean": 0.00653190458416183,
+      "paired_difference_sd": 0.030880856139897696,
+      "positive_folds": 6,
+      "negative_folds": 4
+    },
+    {
+      "mode": "augmented",
+      "condition": "clean",
+      "old_macro_f1": 0.9574070926712879,
+      "new_macro_f1": 0.9584244187898371,
+      "new_fold_sd": 0.022099247635832736,
+      "paired_difference_mean": 0.0010173261185491445,
+      "paired_difference_sd": 0.002351371456464157,
+      "positive_folds": 5,
+      "negative_folds": 4
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_20",
+      "old_macro_f1": 0.9538503977390639,
+      "new_macro_f1": 0.9531716507416252,
+      "new_fold_sd": 0.025708306445817366,
+      "paired_difference_mean": -0.000678746997438684,
+      "paired_difference_sd": 0.0038705449339743324,
+      "positive_folds": 4,
+      "negative_folds": 5
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_10",
+      "old_macro_f1": 0.9298420060478509,
+      "new_macro_f1": 0.9325424202482716,
+      "new_fold_sd": 0.03143410173536664,
+      "paired_difference_mean": 0.002700414200420764,
+      "paired_difference_sd": 0.005518000036810284,
+      "positive_folds": 6,
+      "negative_folds": 3
+    },
+    {
+      "mode": "augmented",
+      "condition": "pink_10",
+      "old_macro_f1": 0.9165566337589625,
+      "new_macro_f1": 0.9213323950063649,
+      "new_fold_sd": 0.03269235368605919,
+      "paired_difference_mean": 0.004775761247402421,
+      "paired_difference_sd": 0.003553541073806483,
+      "positive_folds": 9,
+      "negative_folds": 0
+    }
+  ]
+}

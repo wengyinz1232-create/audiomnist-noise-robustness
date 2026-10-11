@@ -1,0 +1,182 @@
+[
+  {
+    "mode": "clean_matched",
+    "fold": 1,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 2,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 3,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 4,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 5,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 6,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 7,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 8,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 9,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "clean_matched",
+    "fold": 10,
+    "selected": 3,
+    "trees": 700,
+    "min_leaves": 3,
+    "max_leaves": 3,
+    "mean_leaves": 3.0
+  },
+  {
+    "mode": "augmented",
+    "fold": 1,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 30,
+    "max_leaves": 63,
+    "mean_leaves": 59.16428571428571
+  },
+  {
+    "mode": "augmented",
+    "fold": 2,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 28,
+    "max_leaves": 63,
+    "mean_leaves": 59.081428571428575
+  },
+  {
+    "mode": "augmented",
+    "fold": 3,
+    "selected": 255,
+    "trees": 700,
+    "min_leaves": 30,
+    "max_leaves": 146,
+    "mean_leaves": 71.70714285714286
+  },
+  {
+    "mode": "augmented",
+    "fold": 4,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 29,
+    "max_leaves": 63,
+    "mean_leaves": 58.79
+  },
+  {
+    "mode": "augmented",
+    "fold": 5,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 28,
+    "max_leaves": 63,
+    "mean_leaves": 58.48714285714286
+  },
+  {
+    "mode": "augmented",
+    "fold": 6,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 31,
+    "max_leaves": 63,
+    "mean_leaves": 58.88428571428572
+  },
+  {
+    "mode": "augmented",
+    "fold": 7,
+    "selected": 255,
+    "trees": 700,
+    "min_leaves": 29,
+    "max_leaves": 154,
+    "mean_leaves": 71.80142857142857
+  },
+  {
+    "mode": "augmented",
+    "fold": 8,
+    "selected": 255,
+    "trees": 700,
+    "min_leaves": 30,
+    "max_leaves": 150,
+    "mean_leaves": 71.43428571428572
+  },
+  {
+    "mode": "augmented",
+    "fold": 9,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 31,
+    "max_leaves": 63,
+    "mean_leaves": 58.95285714285714
+  },
+  {
+    "mode": "augmented",
+    "fold": 10,
+    "selected": 63,
+    "trees": 700,
+    "min_leaves": 31,
+    "max_leaves": 63,
+    "mean_leaves": 59.25142857142857
+  }
+]

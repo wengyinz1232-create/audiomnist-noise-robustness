@@ -1,0 +1,34 @@
+{
+  "signature": {
+    "diagnose_round2.py": "07a3c8245d5bb442facf32a393329a7ea6c4fa6738b9bbf63899501d6188fe74",
+    "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+  },
+  "grids": {
+    "logistic": [
+      0.003,
+      0.01,
+      0.03,
+      0.1,
+      0.3,
+      1.0,
+      3.0,
+      10.0,
+      30.0
+    ],
+    "lightgbm_rounds": [
+      10,
+      40,
+      160
+    ]
+  },
+  "lightgbm_fixed_num_leaves": 7,
+  "lightgbm_other_settings": "Unchanged model_for(lightgbm_goss,7,seed); only n_estimators varies.",
+  "rationale": "Explore logarithmic neighborhoods of prior logistic preferences; vary boosting duration with a previously examined leaf cap, identical in both modes.",
+  "scope": "Exploratory inner validation only; same ten outer-training partitions and three inner folds; no outer-test evaluation.",
+  "objective": "mean(clean macro-F1, white_10 macro-F1)",
+  "rounds_evaluation": "Train 160 rounds and predict prefixes 10/40/160. Verify prefix against separate 10-round fit in first inner fold of each mode.",
+  "stop": "Complete these fixed grids, report failures as well as successes; no automatic extra grid search."
+}

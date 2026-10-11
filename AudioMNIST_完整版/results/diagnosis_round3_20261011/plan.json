@@ -1,0 +1,24 @@
+{
+  "grid": [
+    160,
+    480,
+    1440
+  ],
+  "fixed_num_leaves": 7,
+  "signature": {
+    "diagnose_round3.py": "9d7a1cc1db05d51c136c192e2abd828389b412af354663ef5ce092b590dd9f27",
+    "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+  },
+  "reference_sha256": {
+    "clean_matched": "da9ae28d35bc3de5087ed9b1c8c5c4753527413f7097fb073551b88bd9f93384",
+    "augmented": "3f42939d827ed7341ab5a2a304e2fc8bba3d0759d7dcd5a6ca16d9788c818730"
+  },
+  "workers": 6,
+  "objective": "mean(clean macro-F1, white_10 macro-F1)",
+  "scope": "Previously explored speaker splits, inner only; no outer-test predictions. No early stopping, fixed 1440 upper cap.",
+  "method": "Fit 1440 rounds, evaluate prefixes 160/480/1440; compare every 160-round inner score with prior direct 160-round training.",
+  "stop": "Exactly ten outer training partitions times three inner folds for both modes. No automatic expansion."
+}

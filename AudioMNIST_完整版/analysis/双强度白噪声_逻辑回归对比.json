@@ -1,0 +1,73 @@
+{
+  "representation": "mfcc_delta",
+  "model": "logistic",
+  "old_mode": "augmented",
+  "new_mode": "multi_snr_augmented",
+  "selection": {
+    "old": {
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true
+    },
+    "new": {
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true
+    }
+  },
+  "metrics": {
+    "clean": {
+      "old_mean": 0.9574070926712879,
+      "new_mean": 0.9570823812563343,
+      "new_minus_old_mean": -0.00032471141495369336,
+      "paired_fold_sd": 0.0030332583922737157,
+      "positive_folds": 3,
+      "negative_folds": 7,
+      "zero_folds": 0
+    },
+    "white_20": {
+      "old_mean": 0.9538503977390639,
+      "new_mean": 0.9543304662345624,
+      "new_minus_old_mean": 0.0004800684954985535,
+      "paired_fold_sd": 0.0038574012945895866,
+      "positive_folds": 7,
+      "negative_folds": 3,
+      "zero_folds": 0
+    },
+    "white_10": {
+      "old_mean": 0.9298420060478509,
+      "new_mean": 0.9278876248665178,
+      "new_minus_old_mean": -0.0019543811813331536,
+      "paired_fold_sd": 0.0046518126234348445,
+      "positive_folds": 3,
+      "negative_folds": 7,
+      "zero_folds": 0
+    },
+    "pink_10": {
+      "old_mean": 0.9165566337589625,
+      "new_mean": 0.9197327417587959,
+      "new_minus_old_mean": 0.0031761079998334995,
+      "paired_fold_sd": 0.004750903109701076,
+      "positive_folds": 9,
+      "negative_folds": 1,
+      "zero_folds": 0
+    }
+  },
+  "note": "Descriptive paired fold differences; folds overlap and this is not an independent confirmation set."
+}

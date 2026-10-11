@@ -1,0 +1,290 @@
+[
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__augmented",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 48,
+    "middle_upper_tie_folds": 10,
+    "mean_inner_score_range": 0.2352623974305649,
+    "warning_count": 0,
+    "seconds": 380.546
+  },
+  {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "clean_matched",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__forest__clean_matched",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 48,
+    "middle_upper_tie_folds": 10,
+    "mean_inner_score_range": 0.070590421510255,
+    "warning_count": 0,
+    "seconds": 147.8
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__augmented",
+    "selection_counts": [
+      0,
+      8,
+      2
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 63,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.07157901584861456,
+    "warning_count": 0,
+    "seconds": 734.483
+  },
+  {
+    "representation": "logmel",
+    "model": "lightgbm_goss",
+    "mode": "clean_matched",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__lightgbm_goss__clean_matched",
+    "selection_counts": [
+      0,
+      7,
+      3
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 255,
+    "middle_upper_tie_folds": 5,
+    "mean_inner_score_range": 0.027449748904237254,
+    "warning_count": 0,
+    "seconds": 339.361
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__augmented",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 0.1,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.1410103212901796,
+    "warning_count": 0,
+    "seconds": 35.35
+  },
+  {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "clean_matched",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\logmel__logistic__clean_matched",
+    "selection_counts": [
+      0,
+      6,
+      4
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 0.1,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.07922165716467204,
+    "warning_count": 0,
+    "seconds": 10.314
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "augmented",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__augmented",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 48,
+    "middle_upper_tie_folds": 10,
+    "mean_inner_score_range": 0.13183018453626577,
+    "warning_count": 0,
+    "seconds": 420.887
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "forest",
+    "mode": "clean_matched",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__forest__clean_matched",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 128,
+    "middle_upper_tie_folds": 9,
+    "mean_inner_score_range": 0.03672713695491795,
+    "warning_count": 0,
+    "seconds": 162.40800000000002
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "augmented",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__augmented",
+    "selection_counts": [
+      0,
+      7,
+      3
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 63,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.03975920955481599,
+    "warning_count": 0,
+    "seconds": 664.938
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "lightgbm_goss",
+    "mode": "clean_matched",
+    "grid": [
+      3,
+      63,
+      255
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__lightgbm_goss__clean_matched",
+    "selection_counts": [
+      10,
+      0,
+      0
+    ],
+    "middle_unique_mode": false,
+    "middle_majority": false,
+    "full_fit_selected": 3,
+    "middle_upper_tie_folds": 10,
+    "mean_inner_score_range": 0.026196286434181582,
+    "warning_count": 0,
+    "seconds": 313.214
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__augmented",
+    "selection_counts": [
+      0,
+      10,
+      0
+    ],
+    "middle_unique_mode": true,
+    "middle_majority": true,
+    "full_fit_selected": 0.1,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.07301352268459221,
+    "warning_count": 0,
+    "seconds": 22.249000000000002
+  },
+  {
+    "representation": "mfcc_delta",
+    "model": "logistic",
+    "mode": "clean_matched",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "run_id": "main",
+    "config_dir": "runs\\main\\mfcc_delta__logistic__clean_matched",
+    "selection_counts": [
+      2,
+      0,
+      8
+    ],
+    "middle_unique_mode": false,
+    "middle_majority": false,
+    "full_fit_selected": 100.0,
+    "middle_upper_tie_folds": 0,
+    "mean_inner_score_range": 0.03881030661268732,
+    "warning_count": 0,
+    "seconds": 9.491999999999999
+  }
+]

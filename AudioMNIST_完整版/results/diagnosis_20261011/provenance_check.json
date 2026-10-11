@@ -1,0 +1,22 @@
+{
+  "python": "3.13.5",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "baseline_source_hash_verified": true,
+  "identical_functions": [
+    "grouped_folds",
+    "scaling",
+    "transform",
+    "measure",
+    "fit",
+    "proba"
+  ],
+  "original_three_model_definitions_identical": true,
+  "historical_probe_max_score_difference": 2.014711308673256e-06,
+  "note": "Probe differences are small platform/numerical variation; unproven historical probe scores were recomputed. Original main scores reused after source and feature checks."
+}

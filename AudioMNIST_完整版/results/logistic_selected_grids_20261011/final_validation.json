@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "mode": "clean_matched",
+      "source_and_cache_hashes_verified": true,
+      "full_model_probability_smoke_test": "PASS, training samples only, not performance",
+      "independent_confusion_and_macro_f1_checks": 40
+    },
+    {
+      "mode": "augmented",
+      "source_and_cache_hashes_verified": true,
+      "full_model_probability_smoke_test": "PASS, training samples only, not performance",
+      "independent_confusion_and_macro_f1_checks": 40
+    }
+  ]
+}

@@ -1,0 +1,196 @@
+{
+  "run_id": "logistic_selected_grids_20261011",
+  "completed_configurations": 2,
+  "outer_folds": 20,
+  "full_data_models": 2,
+  "fits_in_complete_run": 220,
+  "selected_counts": {
+    "clean_matched": [
+      0,
+      10,
+      0
+    ],
+    "augmented": [
+      1,
+      8,
+      1
+    ]
+  },
+  "both_middle_unique": true,
+  "warnings": {
+    "clean_matched": 0,
+    "augmented": 0
+  },
+  "full_fit_selected": {
+    "clean_matched": 0.003,
+    "augmented": 0.03
+  },
+  "scope": "Full 10x3 nested re-fit plus separately tuned full-data models; exploratory grids from previously observed data.",
+  "limitations": "Mode-specific search ranges: comparisons are between separately tuned pipelines, not an identical-grid augmentation-only intervention.",
+  "comparison": [
+    {
+      "mode": "clean_matched",
+      "condition": "clean",
+      "old_macro_f1": 0.948874834781533,
+      "new_macro_f1": 0.9648423720627084,
+      "new_fold_sd": 0.015048647773613805,
+      "paired_difference_mean": 0.015967537281175302,
+      "paired_difference_sd": 0.036913687937079116,
+      "positive_folds": 5,
+      "negative_folds": 5
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_20",
+      "old_macro_f1": 0.6757787164234996,
+      "new_macro_f1": 0.7454993698362685,
+      "new_fold_sd": 0.06462444430156962,
+      "paired_difference_mean": 0.06972065341276881,
+      "paired_difference_sd": 0.06672326656250988,
+      "positive_folds": 10,
+      "negative_folds": 0
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "white_10",
+      "old_macro_f1": 0.31600481373531086,
+      "new_macro_f1": 0.3357518904764013,
+      "new_fold_sd": 0.03038130008157602,
+      "paired_difference_mean": 0.019747076741090417,
+      "paired_difference_sd": 0.05523398498016544,
+      "positive_folds": 8,
+      "negative_folds": 2
+    },
+    {
+      "mode": "clean_matched",
+      "condition": "pink_10",
+      "old_macro_f1": 0.43148474677953275,
+      "new_macro_f1": 0.43801665136369455,
+      "new_fold_sd": 0.027868237759549004,
+      "paired_difference_mean": 0.00653190458416183,
+      "paired_difference_sd": 0.030880856139897696,
+      "positive_folds": 6,
+      "negative_folds": 4
+    },
+    {
+      "mode": "augmented",
+      "condition": "clean",
+      "old_macro_f1": 0.9574070926712879,
+      "new_macro_f1": 0.9584244187898371,
+      "new_fold_sd": 0.022099247635832736,
+      "paired_difference_mean": 0.0010173261185491445,
+      "paired_difference_sd": 0.002351371456464157,
+      "positive_folds": 5,
+      "negative_folds": 4
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_20",
+      "old_macro_f1": 0.9538503977390639,
+      "new_macro_f1": 0.9531716507416252,
+      "new_fold_sd": 0.025708306445817366,
+      "paired_difference_mean": -0.000678746997438684,
+      "paired_difference_sd": 0.0038705449339743324,
+      "positive_folds": 4,
+      "negative_folds": 5
+    },
+    {
+      "mode": "augmented",
+      "condition": "white_10",
+      "old_macro_f1": 0.9298420060478509,
+      "new_macro_f1": 0.9325424202482716,
+      "new_fold_sd": 0.03143410173536664,
+      "paired_difference_mean": 0.002700414200420764,
+      "paired_difference_sd": 0.005518000036810284,
+      "positive_folds": 6,
+      "negative_folds": 3
+    },
+    {
+      "mode": "augmented",
+      "condition": "pink_10",
+      "old_macro_f1": 0.9165566337589625,
+      "new_macro_f1": 0.9213323950063649,
+      "new_fold_sd": 0.03269235368605919,
+      "paired_difference_mean": 0.004775761247402421,
+      "paired_difference_sd": 0.003553541073806483,
+      "positive_folds": 9,
+      "negative_folds": 0
+    }
+  ],
+  "lightgbm_existing_options": {
+    "clean_alternative": {
+      "path": "runs\\alt_min_child\\mfcc_delta__lightgbm_goss_min_child__clean_matched\\result.json",
+      "saved_evidence_audit": {
+        "status": "PASS",
+        "configuration": {
+          "representation": "mfcc_delta",
+          "model": "lightgbm_goss_min_child",
+          "mode": "clean_matched",
+          "grid": [
+            5,
+            20,
+            80
+          ],
+          "outer_folds": 10,
+          "inner_folds": 3,
+          "seed": 20261009,
+          "samples": 12000,
+          "features": 320,
+          "signature": {
+            "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+            "evaluation.py": "105500194887c53e99ec1aef5483523fc50e3cf06fd9f7fc21b30caee83b6c99",
+            "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+            "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+          }
+        },
+        "outer_folds_verified": 10,
+        "condition_metrics_verified": 40,
+        "selected_counts": [
+          1,
+          6,
+          3
+        ],
+        "middle_unique_mode": true,
+        "note": "PASS checks saved evidence, not assignment compliance or independent generalization."
+      },
+      "role": "Previously completed alternative pipeline; not a matched augmentation-only pair."
+    },
+    "augmented_original": {
+      "path": "runs\\main\\mfcc_delta__lightgbm_goss__augmented\\result.json",
+      "saved_evidence_audit": {
+        "status": "PASS",
+        "configuration": {
+          "representation": "mfcc_delta",
+          "model": "lightgbm_goss",
+          "mode": "augmented",
+          "grid": [
+            3,
+            63,
+            255
+          ],
+          "outer_folds": 10,
+          "inner_folds": 3,
+          "seed": 20261009,
+          "samples": 12000,
+          "features": 320,
+          "signature": {
+            "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8",
+            "evaluation.py": "a1db0689ed10f62cf05fe5f098b57f867fb0d9ecd3757a90f94c1489c86de423",
+            "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+            "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+          }
+        },
+        "outer_folds_verified": 10,
+        "condition_metrics_verified": 40,
+        "selected_counts": [
+          0,
+          7,
+          3
+        ],
+        "middle_unique_mode": true,
+        "note": "PASS checks saved evidence, not assignment compliance or independent generalization."
+      },
+      "role": "Previously completed alternative pipeline; not a matched augmentation-only pair."
+    }
+  }
+}

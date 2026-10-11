@@ -1,0 +1,20 @@
+{
+  "run_id": "lightgbm_l2_selected_20261011",
+  "grid": [
+    0.0,
+    0.1,
+    1.0
+  ],
+  "model": "lightgbm_goss_l2",
+  "num_leaves": 7,
+  "n_estimators": 70,
+  "source": {
+    "rerun_lightgbm_l2.py": "a8281475d59393f16c52c237bd127e8c9563d37fffeaa845c3083ff62e4f7f02",
+    "evaluation.py": "cb4048b468b13a4554be1c05639245d1a44fb5ce548e872ebd22c0f59f02f8ed",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "mfcc_delta.npz": "00bf7fb62a18db6bada4f82fe7c078aba23b7047fd6678ea13d450d13fa437f8"
+  },
+  "diagnostic_selection_sha256": "b8ca3aa4491d5bd84e1811f65e91a3a95a8b2e4242b243d7911807349434be3d",
+  "scope": "Full refit on common grids and original speaker splits after inner-data exploration; not independent confirmation."
+}

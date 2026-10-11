@@ -1,0 +1,5 @@
+{
+  "evaluation.py": "8e4bae5d69a9fb3de66820e199e13bcf173a786809c85373bd8fac90d5909f2c",
+  "purpose": "Exact hash-matched evaluation source used by the completed logistic rerun, before addition of the L2 model branch.",
+  "reconstruction": "Removed only the new lightgbm_goss_l2 branch, then matched SHA256 against saved logistic configuration."
+}
