@@ -7,9 +7,9 @@ concurrency:
   group: full-reproduction
   cancel-in-progress: false
 jobs:
-  reproduce:
+  prepare:
     runs-on: ubuntu-latest
-    timeout-minutes: 180
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v5
         with:
@@ -19,17 +19,83 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-reproduce.txt
       - run: python -m unittest discover -s tests -v
-      - name: Download fixed dataset and run all 12 configurations
-        run: python reproduce.py all --jobs 2
-      - name: Save verification, metrics and charts
-        if: always()
-        uses: actions/upload-artifact@v4
+      - run: python reproduce.py prepare --work-dir runtime
+      - uses: actions/upload-artifact@v4
+        with:
+          name: prepared-features
+          path: runtime/data/
+          retention-days: 1
+          if-no-files-found: error
+  train:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix:
+        configuration:
+          - logmel__logistic__clean_matched
+          - logmel__logistic__augmented
+          - logmel__forest__clean_matched
+          - logmel__forest__augmented
+          - logmel__lightgbm_goss__clean_matched
+          - logmel__lightgbm_goss__augmented
+          - mfcc_delta__logistic__clean_matched
+          - mfcc_delta__logistic__augmented
+          - mfcc_delta__forest__clean_matched
+          - mfcc_delta__forest__augmented
+          - mfcc_delta__lightgbm_goss_l2__clean_matched
+          - mfcc_delta__lightgbm_goss_l2__augmented
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-reproduce.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-features
+          path: runtime/data
+      - run: python reproduce.py train --work-dir runtime --config ${{ matrix.configuration }}
+      - run: python reproduce.py verify --work-dir runtime --config ${{ matrix.configuration }}
+      - uses: actions/upload-artifact@v4
+        with:
+          name: configuration-${{ matrix.configuration }}
+          path: |
+            runtime/reports/audits/
+            runtime/runs/reproduction/**/result.json
+          retention-days: 14
+          if-no-files-found: error
+  summarize:
+    needs: train
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-reproduce.txt
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: configuration-*
+          merge-multiple: true
+          path: runtime
+      - uses: actions/download-artifact@v4
+        with:
+          name: prepared-features
+          path: features-evidence
+      - run: python reproduce.py summarize --work-dir runtime
+      - uses: actions/upload-artifact@v4
         with:
           name: reproduction-evidence
-          include-hidden-files: true
           path: |
-            .reproduction/reports/
-            .reproduction/runs/reproduction/**/result.json
-            .reproduction/data/inventory.json
-          if-no-files-found: warn
+            runtime/reports/
+            runtime/runs/reproduction/**/result.json
           retention-days: 14
+          if-no-files-found: error

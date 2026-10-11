@@ -54,3 +54,6 @@ python reproduce.py verify --config logmel__logistic__clean_matched
 ```
 
 全部 12 组通过核验后才能 summarize。仅加载自己本次生成的模型，不要将他人提供的 pickle 放入运行目录。
+
+云端完整工作流：一次准备特征 → 12 个独立配置任务并行训练和核验 → 汇总报告。临时 prepared-features 工件保留 1 天；每组及汇总证据保留 14 天。数据缓存经过 SHA-256 核对后才用于训练。
+
