@@ -1,0 +1,241 @@
+{
+  "integrity_status": "PASS",
+  "configurations": 12,
+  "outer_models": 120,
+  "full_data_models": 12,
+  "model_fits": 1320,
+  "midpoint_failures": [],
+  "parameter_audit": [
+    {
+      "id": "logmel__logistic__clean_matched",
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "selected_counts": [
+        0,
+        6,
+        4
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "logmel__logistic__augmented",
+      "grid": [
+        0.0001,
+        0.1,
+        100.0
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "logmel__forest__clean_matched",
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        8,
+        2
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "logmel__forest__augmented",
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "logmel__lightgbm_goss__clean_matched",
+      "grid": [
+        3,
+        63,
+        255
+      ],
+      "selected_counts": [
+        0,
+        7,
+        3
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "logmel__lightgbm_goss__augmented",
+      "grid": [
+        3,
+        63,
+        255
+      ],
+      "selected_counts": [
+        0,
+        8,
+        2
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__logistic__clean_matched",
+      "grid": [
+        0.0001,
+        0.003,
+        0.01
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__logistic__augmented",
+      "grid": [
+        0.01,
+        0.03,
+        0.1
+      ],
+      "selected_counts": [
+        1,
+        8,
+        1
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__forest__clean_matched",
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__forest__augmented",
+      "grid": [
+        4,
+        48,
+        128
+      ],
+      "selected_counts": [
+        0,
+        10,
+        0
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__lightgbm_goss_l2__clean_matched",
+      "grid": [
+        0.0,
+        0.1,
+        1.0
+      ],
+      "selected_counts": [
+        2,
+        5,
+        3
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": false,
+      "warnings": 0
+    },
+    {
+      "id": "mfcc_delta__lightgbm_goss_l2__augmented",
+      "grid": [
+        0.0,
+        0.1,
+        1.0
+      ],
+      "selected_counts": [
+        3,
+        6,
+        1
+      ],
+      "middle_unique_mode": true,
+      "middle_strict_majority": true,
+      "warnings": 0
+    }
+  ],
+  "python": "3.12.15",
+  "packages": {
+    "numpy": "2.5.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1",
+    "lightgbm": "4.7.0",
+    "threadpoolctl": "3.7.0"
+  },
+  "source_sha256": {
+    "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+    "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc",
+    "prepare_data.py": "ffa36356f8da318c2fb71bd2fdda68dee3b56e946ba0543000e4b79b2bf8522a",
+    "evaluation.py": "cb4048b468b13a4554be1c05639245d1a44fb5ce548e872ebd22c0f59f02f8ed",
+    "verify.py": "9b1aeda9d19d5970c7c8a7e03fd35f95765c7fb5c1df43b195b5ff8e83ef5008",
+    "verify_saved_run.py": "15dae7680a48dc881e0189a2b247aa527676a812cf2d243f04eff3d29e3a69f8",
+    "predict.py": "c3dac35a4f6eeec952e31ea49ed67355bde114392764428d685fa700e5bf8c3b"
+  },
+  "result_sha256": {
+    "logmel__logistic__clean_matched": "8d45645bc4e75b13d790d03776c03d752dd234bcd7be7f5d2bd0e4c7db7e6904",
+    "logmel__logistic__augmented": "908abe1593d03520f5b32d6632d932d060f6f9df0a687b0f8af543d89e55810d",
+    "logmel__forest__clean_matched": "55905451518a6f417cae88e26023e850cf67e65122c08bb1cf3b83c6ab65c508",
+    "logmel__forest__augmented": "e5542f76d878a11910554d0263b30527e304529a18e8063a30c2fc28cca13e4f",
+    "logmel__lightgbm_goss__clean_matched": "c0060ba52a96f02eb1e88ee10d28e4455ee06772a0b4f5c7c349768e8c6683a2",
+    "logmel__lightgbm_goss__augmented": "da137ff6f821e76538d4aa24de9173ac87101773a232befb03508833396a4631",
+    "mfcc_delta__logistic__clean_matched": "643b8401b61e2e0e6fe4479bfbe1cc310c30b6d9fce9f2c4b1bea2ca5eaae22c",
+    "mfcc_delta__logistic__augmented": "4c68a9990dc3545bffa531e3a979238a5069afffbdb33df4bdbd30aea9aff839",
+    "mfcc_delta__forest__clean_matched": "5ea3d0d0093694ec3e9daa7ab667de52fcd941aa535ac4ad17185612ce9bbd95",
+    "mfcc_delta__forest__augmented": "7e0161db62bd6db611e0179e506e2c7b9a0549926a30e30536ee373cfd95c091",
+    "mfcc_delta__lightgbm_goss_l2__clean_matched": "f55d3ff1ad1737d078b9010ed9db87e3e30aaa30a578756bc32d9d908e48e903",
+    "mfcc_delta__lightgbm_goss_l2__augmented": "def0d9ba41a3b9febd3b689d003b8e0aa4e657d4edd1f1bd953d4c56d69f9552"
+  },
+  "limits": [
+    "Engineering verification is not course-wide compliance.",
+    "MFCC logistic uses different grids by training mode.",
+    "MFCC LightGBM uses fixed seven-leaf trees and a shared L2 grid.",
+    "Data and grids were explored previously; this is a reproduction, not independent confirmation.",
+    "Error bars are fold sample SD, not independent confidence intervals.",
+    "Unique mode and strict majority are reported separately."
+  ]
+}

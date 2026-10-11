@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "representation": "logmel",
+    "model": "logistic",
+    "mode": "augmented",
+    "grid": [
+      0.0001,
+      0.1,
+      100.0
+    ],
+    "outer_folds": 10,
+    "inner_folds": 3,
+    "seed": 20261009,
+    "samples": 12000,
+    "features": 256,
+    "signature": {
+      "logmel.npz": "08167dc4bfb9605eecdfd32fd45b08e6076f0ced246454cbc66a7317950df84c",
+      "evaluation.py": "cb4048b468b13a4554be1c05639245d1a44fb5ce548e872ebd22c0f59f02f8ed",
+      "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+      "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+    }
+  },
+  "outer_folds_verified": 10,
+  "condition_metrics_verified": 40,
+  "selected_counts": [
+    0,
+    10,
+    0
+  ],
+  "middle_unique_mode": true,
+  "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+  "model_checks": [
+    {
+      "fold": 1,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 2,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 3,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 4,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 5,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 6,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 7,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 8,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 9,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 10,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    },
+    {
+      "fold": 0,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    }
+  ],
+  "result_sha256": "908abe1593d03520f5b32d6632d932d060f6f9df0a687b0f8af543d89e55810d",
+  "middle_strict_majority": true,
+  "warnings": 0
+}

@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "configuration": {
+    "representation": "logmel",
+    "model": "forest",
+    "mode": "clean_matched",
+    "grid": [
+      4,
+      48,
+      128
+    ],
+    "outer_folds": 10,
+    "inner_folds": 3,
+    "seed": 20261009,
+    "samples": 12000,
+    "features": 256,
+    "signature": {
+      "logmel.npz": "08167dc4bfb9605eecdfd32fd45b08e6076f0ced246454cbc66a7317950df84c",
+      "evaluation.py": "cb4048b468b13a4554be1c05639245d1a44fb5ce548e872ebd22c0f59f02f8ed",
+      "common.py": "7f06eb329a150a82cb0cc15f91698f092834811ff39db726991b4bace73c7c60",
+      "features.py": "0b3c0141a23322170190a803a245f0e5ec7aaaf9166907f4f90bbd554a2eebdc"
+    }
+  },
+  "outer_folds_verified": 10,
+  "condition_metrics_verified": 40,
+  "selected_counts": [
+    0,
+    8,
+    2
+  ],
+  "middle_unique_mode": true,
+  "note": "PASS checks saved evidence, not assignment compliance or independent generalization.",
+  "model_checks": [
+    {
+      "fold": 1,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 2,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 3,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 4,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 5,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 6,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 7,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 8,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 9,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 2.220446049250313e-16
+    },
+    {
+      "fold": 10,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 1.1102230246251565e-16
+    },
+    {
+      "fold": 0,
+      "model_and_scaler_verified": true,
+      "max_prediction_difference": 0.0
+    }
+  ],
+  "result_sha256": "55905451518a6f417cae88e26023e850cf67e65122c08bb1cf3b83c6ab65c508",
+  "middle_strict_majority": true,
+  "warnings": 0
+}

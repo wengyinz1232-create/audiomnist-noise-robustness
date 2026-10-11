@@ -57,3 +57,14 @@ python reproduce.py verify --config logmel__logistic__clean_matched
 
 云端完整工作流：一次准备特征 → 12 个独立配置任务并行训练和核验 → 汇总报告。临时 prepared-features 工件保留 1 天；每组及汇总证据保留 14 天。数据缓存经过 SHA-256 核对后才用于训练。
 
+
+## 已验证的云端运行
+
+2026-10-12（悉尼时间），[完整复现 #2](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38144868346) 成功，耗时约 18 分钟（包含资源排队）。被验证代码提交为 14e1eb55dc21a2d858e66c87db80c58b207ecf99；本节与 reproduced_results/ 是随后保存的结果证据。
+
+12 组配置、1,320 次拟合、132 个保存模型核验全部通过，训练记录警告数为 0。全部配置的中间参数都是唯一众数；MFCC LightGBM clean 的计数为 [2,5,3]，中间参数没有严格超过半数。工程 PASS 不表示课程全部要求通过。
+
+结果长期保存在 [reproduced_results/github-actions-38144868346](reproduced_results/github-actions-38144868346/)。云端 Ubuntu/Python 3.12.15 与本机 Windows 重跑相比，48 个“配置×条件”的平均 macro-F1 最大绝对差为 0.00076123，约 0.076 个百分点。跨平台结果接近，但并非逐位一致。
+
+本次 Actions 页面另有 artifact action 的 Node 20 兼容性及 ubuntu-latest 未来迁移提示；运行成功。上面的 0 警告指训练记录，环境版本见保存的 status.json。
+
