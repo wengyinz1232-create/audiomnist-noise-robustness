@@ -2,7 +2,19 @@
 
 This is an actual training entry point, separate from the original twelve configurations. Its scope is **MFCC+delta with clean + white-10 augmentation**, compared against the current seven-leaf LightGBM–GOSS configuration. Results do not cover clean-only training or Log-Mel NGBoost.
 
-## Completed run
+## Completed extended800 result
+
+[Expanded results and retained predictions](../reproduced_results/ngboost-38332286883/NGBOOST_RESULTS_ZH.md) use training commit `1c5ed1eb08c90922f3be7def6672ede6cced73bb`. All ten paired-fold jobs in [run 38332286883](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38332286883) succeeded. The final summarize job never started because of GitHub account payment/spending limits; the overall Actions conclusion remains failure. The ten per-fold artifacts were downloaded and the unchanged summarizer completed locally. There is no aggregate Actions artifact for this run. No training was rerun and no billing setting was changed.
+
+All ten inner searches selected 800. Relative to legacy200, mean F1 gains were 0.00419 / 0.01013 / 0.00886 / 0.01025 for clean / W20 / W10 / P10. LightGBM still won all ten folds in every condition. NGBoost mean final fitting cost was 3074.39 seconds per fold versus 8.24 seconds for paired LightGBM. Clean and white-noise log loss slightly worsened; pink-noise log loss slightly improved. Same feature hashes and speaker splits were verified across runs; between-run timing is not hardware-controlled. The boundary-selection and repeated-exploration limitations remain.
+
+All saved prediction metrics were recomputed. All 20 model hashes were checked and models reloaded locally on 16 held-out recordings per model and condition, in addition to the cloud reload checks. Models are retained in the local deliverable ZIP, while the Git directory retains result records and predictions. Rebuild metrics without audio or model files:
+
+```bash
+python compare_ngboost.py summarize --work-dir reproduced_results/ngboost-38332286883 --protocol extended800
+```
+
+## Historical completed run
 
 [Run 38150310147](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38150310147) completed all ten paired folds at training commit `e2c58ebc1a800900d10051eda1f0f24e5d40397e`. [Measured report and retained evidence](../reproduced_results/ngboost-38150310147/NGBOOST_RESULTS_ZH.md) include predictions so metrics remain verifiable after Actions artifacts expire. Model files are in the downloadable workflow artifact, not committed to Git.
 

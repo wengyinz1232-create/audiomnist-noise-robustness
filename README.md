@@ -32,11 +32,26 @@ python reproduce.py all --jobs 2
 
 ### 新增 NGBoost 配对训练实验
 
-新增 `extended800` 协议：仅将 NGBoost 轮数网格扩展为 **200 / 400 / 800**，保持学习率 0.03、树结构和十折外层／三折内层选参目标不变。Actions 手动运行时选择该协议；内层选择最佳轮数后才拟合外折模型，并非强制所有外折使用 800 轮。原 `legacy200` 协议和以下历史结果继续保留，新结果完成核验后另行归档。
+新增 `extended800` 协议：仅将 NGBoost 轮数网格扩展为 **200 / 400 / 800**，保持学习率 0.03、树结构和十折外层／三折内层选参目标不变。Actions 手动运行时选择该协议；内层选择最佳轮数后才拟合外折模型，并非强制所有外折使用 800 轮。原 `legacy200` 协议和以下历史结果继续保留，新结果已在独立目录完成归档。
 
 [实验说明与运行命令](docs/NGBOOST_EXPERIMENT.md) · [训练及比较入口](compare_ngboost.py) · [GitHub Actions](.github/workflows/ngboost.yml)
 
 以 MFCC+delta＋白噪声增强为范围，NGBoost 和 LightGBM 在相同外层十折、内层三折上选参并训练；每对模型在同一 runner 顺序运行，保存逐折预测、模型重载核验、配对分数差和计时。它是独立补充实验，不改写原 12 组配置。结果以实际训练和完整十折核验为准，不预设 NGBoost 更差；未完成的折不能被删除后用其余折冒充完整比较。
+
+**最新扩展实验已完成：[200/400/800 中文结果与完整证据](reproduced_results/ngboost-38332286883/NGBOOST_RESULTS_ZH.md)**。十折内层全部选择 800 轮；相比旧 200 轮，Clean/W20/W10/P10 的平均 F1 分别提高 0.42/1.01/0.89/1.03 个百分点，仍由 LightGBM 在每种条件十折全部胜出。
+
+| 条件 | 旧 NGBoost 200 | 新 NGBoost 800 | 同轮 LightGBM |
+|---|---:|---:|---:|
+| Clean macro-F1 | 0.9275 | 0.9317 | 0.9640 |
+| White-20 macro-F1 | 0.8772 | 0.8873 | 0.9357 |
+| White-10 macro-F1 | 0.8689 | 0.8778 | 0.9373 |
+| Pink-10 macro-F1 | 0.8466 | 0.8569 | 0.9071 |
+
+本次平均最终拟合为 NGBoost 3074.39 秒/折、LightGBM 8.24 秒/折（约 373 倍）；NGBoost 的干净/白噪声 log loss 略升，粉红噪声略降，不能把 F1 增益解释成概率质量全面改善。800 仍是上界，仍未满足中间参数检查。
+
+[运行 38332286883](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38332286883) 的十个训练任务全部成功；最后汇总任务因账户付款/消费上限问题未启动，整体页面显示 failure。已从十个折工件本地恢复并核验完整汇总，20 个模型哈希和重载检查通过，预测长期保存；课程报告正文未修改。
+
+**历史预算结果：**
 
 **已完成：[十折实际对比报告](reproduced_results/ngboost-38150310147/NGBOOST_RESULTS_ZH.md) · [成功运行 38150310147](https://github.com/wengyinz1232-create/audiomnist-noise-robustness/actions/runs/38150310147)**。20 个外折模型全部通过保存/重载核验，逐折预测已复算；预测与 JSON 长期保存在结果目录，可独立重建汇总。
 

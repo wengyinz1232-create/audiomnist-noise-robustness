@@ -37,3 +37,8 @@ AudioMNIST_完整版/assignment_sources/
 .vscode/
 .DS_Store
 Thumbs.db
+
+# Extended800 retained prediction evidence and local runtime
+.ngboost-extended800/
+!reproduced_results/ngboost-38332286883/comparison/fold_*/*_predictions.npz
+reproduced_results/ngboost-38332286883/*.py
