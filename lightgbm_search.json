@@ -1,0 +1,16 @@
+{
+  "search": {
+    "learning_rate": [0.03, 0.08, 0.15],
+    "n_estimators": [70, 150, 300],
+    "num_leaves": [7, 31, 127]
+  },
+  "fixed": {
+    "data_sample_strategy": "goss",
+    "top_rate": 0.2,
+    "other_rate": 0.1,
+    "min_child_samples": 20,
+    "reg_lambda": 1.0,
+    "reg_alpha": 0.0
+  },
+  "note": "Prospectively locked joint grid for this rerun on previously explored data. Genuine inner-score argmax; no forced midpoint and no P10 selection."
+}

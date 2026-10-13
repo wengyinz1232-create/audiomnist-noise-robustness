@@ -70,6 +70,11 @@ def measure(y, probabilities, classes):
 
 
 def model_for(name, value, seed):
+    if name == 'lightgbm_goss_joint':
+        if set(value) != {'learning_rate','n_estimators','num_leaves'}:
+            raise ValueError('Joint LightGBM requires exactly three named parameters.')
+        return LGBMClassifier(**value,data_sample_strategy='goss',top_rate=.2,other_rate=.1,
+            min_child_samples=20,reg_lambda=1.,reg_alpha=0.,random_state=seed,n_jobs=2,verbosity=-1)
     if name == 'logistic':
         return LogisticRegression(C=value,max_iter=2000,tol=1e-3,solver='lbfgs',random_state=seed)
     if name == 'forest':
@@ -130,6 +135,8 @@ def train_fold(variants,y,groups,name,mode,grid,number,train,test,output,rep):
             [transform(variants[c][valid_idx],stats) for c in ('clean','white_10')],y[valid_idx]))
     scores = []
     for value in grid:
+        if name == 'lightgbm_goss_joint':
+            print('CANDIDATE',rep,mode,number,value,flush=True)
         values = []
         for j,(xfit,yfit,xvalid,yvalid) in enumerate(prepared):
             estimator,w = fit(name,value,xfit,yfit,SEED+100*number+j); notes.extend(w)

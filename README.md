@@ -123,3 +123,9 @@ Log-Mel clean 的完整次数为 `[2,5,3]`，满足唯一众数，但不严格�
 
 本次 Actions 页面另有 artifact action 的 Node 20 兼容性及 ubuntu-latest 未来迁移提示；运行成功。上面的 0 警告指训练记录，环境版本见保存的 status.json。
 
+## LightGBM joint optimization
+
+For the new three-parameter LightGBM experiment, use the **LightGBM joint tuning**
+Actions workflow. It runs four configurations over ten speaker folds and publishes
+verified scores and parameter-selection counts. See [the protocol](docs/LIGHTGBM_JOINT_TUNING.md).
+
