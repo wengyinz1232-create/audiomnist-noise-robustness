@@ -15,6 +15,19 @@ Fixed settings: 60 bootstrap trees, maximum depth 16, minimum leaf size 2, Gini 
 
 ## Run through the existing pipeline
 
+### GitHub Actions
+
+Select **RF reproduction** in Actions and choose **Run workflow** on `main`.
+The workflow prepares fresh features, trains the four RF configurations in parallel,
+and verifies every saved model and prediction. Each configuration includes ten outer
+folds plus the main pipeline's all-data tuning/refit (440 model fits in total).
+Four `rf-evidence-*` artifacts retain inner scores, selections, outer metrics,
+prediction probabilities, data fingerprints and verification records for 14 days.
+Model pickle files are checked on the runner but are not included in these artifacts.
+The workflow also runs when its own YAML file changes on `main`; unrelated pushes
+do not start RF training. An artifact from a failed job can contain partial results;
+confirm all four training jobs succeeded before treating the run as complete.
+
 Use a fresh working directory because the source fingerprint and parameter meaning have changed:
 
 ```bash

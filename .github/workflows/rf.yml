@@ -1,0 +1,73 @@
+name: RF reproduction
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/rf.yml]
+permissions:
+  contents: read
+concurrency:
+  group: rf-reproduction
+  cancel-in-progress: false
+env:
+  PYTHONUNBUFFERED: '1'
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-reproduce.txt
+      - run: python -m unittest discover -s tests -v
+      - run: python reproduce.py prepare --work-dir runtime
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rf-prepared-features
+          path: runtime/data/
+          retention-days: 1
+          if-no-files-found: error
+  train:
+    needs: prepare
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 4
+      matrix:
+        configuration:
+          - logmel__forest__clean_matched
+          - logmel__forest__augmented
+          - mfcc_delta__forest__clean_matched
+          - mfcc_delta__forest__augmented
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-reproduce.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: rf-prepared-features
+          path: runtime/data
+      - run: python reproduce.py train --work-dir runtime --config ${{ matrix.configuration }}
+      - run: python reproduce.py verify --work-dir runtime --config ${{ matrix.configuration }}
+      - run: python -m pip freeze > runtime/requirements-resolved.txt
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: rf-evidence-${{ matrix.configuration }}
+          path: |
+            runtime/reports/audits/
+            runtime/runs/reproduction/**/result.json
+            runtime/runs/reproduction/**/predictions_*.npz
+            runtime/data/inventory.json
+            runtime/requirements-resolved.txt
+          retention-days: 14
+          if-no-files-found: error
