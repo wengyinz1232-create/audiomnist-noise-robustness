@@ -1,6 +1,14 @@
 name: NGBoost paired comparison
 on:
   workflow_dispatch:
+    inputs:
+      protocol:
+        description: NGBoost stage search protocol
+        type: choice
+        default: extended800
+        options:
+          - extended800
+          - legacy200
 permissions:
   contents: read
 concurrency:
@@ -29,7 +37,7 @@ jobs:
   paired-fold:
     needs: prepare
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 240
     strategy:
       fail-fast: false
       max-parallel: 10
@@ -47,7 +55,7 @@ jobs:
         with:
           name: ngboost-features
           path: runtime/data
-      - run: python compare_ngboost.py fold --work-dir runtime --fold ${{ matrix.fold }}
+      - run: python compare_ngboost.py fold --work-dir runtime --fold ${{ matrix.fold }} --protocol ${{ inputs.protocol }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -72,7 +80,7 @@ jobs:
           pattern: paired-fold-*
           merge-multiple: true
           path: runtime/comparison
-      - run: python compare_ngboost.py summarize --work-dir runtime
+      - run: python compare_ngboost.py summarize --work-dir runtime --protocol ${{ inputs.protocol }}
       - uses: actions/upload-artifact@v4
         with:
           name: ngboost-comparison-evidence

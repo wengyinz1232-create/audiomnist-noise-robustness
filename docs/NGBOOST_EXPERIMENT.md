@@ -8,7 +8,25 @@ This is an actual training entry point, separate from the original twelve config
 
 Pink-noise F1 was 0.8466 ± 0.0374 for NGBoost versus 0.9071 ± 0.0399 for LightGBM, with LightGBM winning all ten paired folds. Final-fit means were 740.44 versus 8.20 seconds. NGBoost selected the 200-stage upper boundary in every fold; its grid fails the course midpoint criterion and cannot establish fully tuned algorithmic inferiority. Neither model produced recorded training warnings, and NGBoost's pink-noise fold SD was slightly smaller. Thus the run supports a performance/cost disadvantage for the declared NGBoost pipeline, not a claim of numerical instability or universal inferiority.
 
-## Fixed protocol
+## Expanded stage search: 200 / 400 / 800
+
+The `extended800` protocol keeps learning rate 0.03, the existing base trees, all sampling settings, speaker folds and the clean/W10 mean macro-F1 selection objective unchanged. Each of the three inner folds fits one 800-stage trajectory and evaluates prefixes 200, 400 and 800. The best mean inner score selects the final outer refit's stage count; ties select the smaller candidate. The ten final NGBoost models are therefore **not forced to use 800 stages**. The same LightGBM L2 search is repeated on each paired runner.
+
+This is a follow-up after the original upper-bound result and a local one-split pilot. It is not independent confirmation on previously unexamined data. Do not adjust the new grid using its outer scores. Keep the legacy results, report selected counts and all paired results, and distinguish final-fit time from complete tuning time.
+
+Use a new runtime directory and append `--protocol extended800` to every `plan`, `fold` and `summarize` command. For example:
+
+```bash
+python reproduce.py prepare --work-dir .ngboost-extended800
+python compare_ngboost.py plan --protocol extended800
+python compare_ngboost.py fold --work-dir .ngboost-extended800 --fold 1 --protocol extended800
+# Repeat folds 2 through 10, then:
+python compare_ngboost.py summarize --work-dir .ngboost-extended800 --protocol extended800
+```
+
+The workflow dispatch defaults to `extended800`. Select `legacy200` to reproduce the original 50/100/200 experiment; the CLI defaults to that historical protocol so existing saved-result commands remain valid. New runs have separate Actions artifacts and result directories. Per-fold timeout is 240 minutes to accommodate the larger budget; the same ten-fold concurrency is retained. No course-report source is changed by this experiment.
+
+## Historical fixed protocol (`legacy200`)
 
 - Same 12,000 recordings, seed 20261009, ten speaker-disjoint outer folds and three inner folds as the original experiment. Each outer fold has 54 training and six unseen test speakers.
 - Both models select their parameter using the mean of clean and white-10 inner macro-F1. Pink noise and outer test labels never select a stage or parameter.

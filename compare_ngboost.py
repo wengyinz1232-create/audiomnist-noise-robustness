@@ -9,6 +9,7 @@ os.environ.setdefault('OPENBLAS_NUM_THREADS', '1')
 os.environ.setdefault('MKL_NUM_THREADS', '1')
 os.environ.setdefault('OMP_NUM_THREADS', '2')
 import argparse
+import copy
 import csv
 import importlib.metadata
 import json
@@ -41,6 +42,20 @@ PLAN = {
 }
 CONDITIONS = reproduce.CONDITIONS
 METRICS = reproduce.METRICS
+LEGACY_PLAN = copy.deepcopy(PLAN)
+
+
+def configure_protocol(protocol):
+    """Keep the historical grid reproducible; select the expanded grid explicitly."""
+    PLAN.clear()
+    PLAN.update(copy.deepcopy(LEGACY_PLAN))
+    if protocol == 'extended800':
+        PLAN['protocol_version'] = 2
+        PLAN['ngboost']['grid'] = [200, 400, 800]
+        PLAN['stage_reuse'] = ('Three 800-stage inner NGBoost fits score prefixes '
+                               '200/400/800; selected stage count refitted on outer training data.')
+    elif protocol != 'legacy200':
+        raise ValueError(f'Unknown protocol: {protocol}')
 
 
 def ng_model(stages, seed):
@@ -292,7 +307,10 @@ def main():
     p.add_argument('action',choices=['plan','fold','summarize'])
     p.add_argument('--work-dir',type=Path,default=Path('.ngboost-comparison'))
     p.add_argument('--fold',type=int,choices=range(1,11))
+    p.add_argument('--protocol',choices=['legacy200','extended800'],default='legacy200',
+                   help='Legacy 50/100/200 grid or expanded 200/400/800 grid; keep a separate work directory.')
     a=p.parse_args()
+    configure_protocol(a.protocol)
     if a.action=='plan': print(json.dumps(PLAN,indent=2));return
     work=reproduce.stage(a.work_dir)
     if a.action=='fold':

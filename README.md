@@ -32,6 +32,8 @@ python reproduce.py all --jobs 2
 
 ### 新增 NGBoost 配对训练实验
 
+新增 `extended800` 协议：仅将 NGBoost 轮数网格扩展为 **200 / 400 / 800**，保持学习率 0.03、树结构和十折外层／三折内层选参目标不变。Actions 手动运行时选择该协议；内层选择最佳轮数后才拟合外折模型，并非强制所有外折使用 800 轮。原 `legacy200` 协议和以下历史结果继续保留，新结果完成核验后另行归档。
+
 [实验说明与运行命令](docs/NGBOOST_EXPERIMENT.md) · [训练及比较入口](compare_ngboost.py) · [GitHub Actions](.github/workflows/ngboost.yml)
 
 以 MFCC+delta＋白噪声增强为范围，NGBoost 和 LightGBM 在相同外层十折、内层三折上选参并训练；每对模型在同一 runner 顺序运行，保存逐折预测、模型重载核验、配对分数差和计时。它是独立补充实验，不改写原 12 组配置。结果以实际训练和完整十折核验为准，不预设 NGBoost 更差；未完成的折不能被删除后用其余折冒充完整比较。

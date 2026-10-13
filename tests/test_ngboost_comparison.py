@@ -7,6 +7,25 @@ import compare_ngboost as comparison
 
 
 class PairedProtocolTests(unittest.TestCase):
+    def tearDown(self):
+        comparison.configure_protocol('legacy200')
+
+    def test_extended_protocol_preserves_model_and_selection_settings(self):
+        import copy
+        original=copy.deepcopy(comparison.PLAN)
+        comparison.configure_protocol('extended800')
+        self.assertEqual(comparison.PLAN['ngboost']['grid'],[200,400,800])
+        self.assertEqual(comparison.PLAN['selection'],original['selection'])
+        self.assertEqual(comparison.PLAN['lightgbm'],original['lightgbm'])
+        for k,v in original['ngboost'].items():
+            if k!='grid': self.assertEqual(comparison.PLAN['ngboost'][k],v)
+        comparison.configure_protocol('legacy200')
+        self.assertEqual(comparison.PLAN,original)
+
+    def test_extended_summary_recomputes_metrics_and_rejects_tampering(self):
+        comparison.configure_protocol('extended800')
+        self.test_full_summary_recomputes_metrics_and_rejects_tampering()
+
     def test_full_summary_recomputes_metrics_and_rejects_tampering(self):
         import json
         import reproduce
