@@ -37,3 +37,16 @@ python optimize_lightgbm.py summarize --work-dir runtime
 The older one-dimensional LightGBM searches remain in `reproduce.py` for historical
 comparisons. Use `optimize_lightgbm.py` and this workflow for the new joint search.
 NGBoost paired comparisons keep their original frozen comparator protocol.
+
+## Evidence-based iteration
+
+Use `python analyze_lightgbm_search.py --evidence downloaded-artifacts --output diagnosis.json`
+after downloading the fold ZIPs or the aggregate evidence. `--allow-partial` labels
+early diagnostics as provisional; a full report requires all forty folds.
+The analyzer checks audit hashes, protocol consistency, complete Cartesian grids
+and genuine argmax selection. It reads only inner scores for tuning advice.
+It reports marginal winner counts, best inner scores at each fixed value, losses
+from restricting a parameter to its middle value, winning-score gaps and the
+learning-rate/rounds interaction. Boundary dominance suggests further range
+investigation; dispersed choices suggest checking interactions first. These are
+diagnostics, not automatic grid replacements or independent test estimates.
