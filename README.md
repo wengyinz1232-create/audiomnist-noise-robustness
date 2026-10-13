@@ -28,9 +28,9 @@ python reproduce.py all --jobs 2
 
 ## 配置和核验范围
 
-较早的 RF 深度诊断入口：`optimize_rf.py` 使用训练内诊断后选定的共同 `[4,8,16]` 深度范围，记录实际树深、叶子数、内层分数和并列情况。`diagnose_rf_depth.py` 只使用指定外折的训练说话人检查深度曲线。该范围用于容量受控的 RF，四组中的三组筛查最优仍为上界16；它不是已确认的通用最优网格，也未证明中间值最常选。完整命令见 [RF 深度诊断说明](docs/RF_OPTIMIZATION.md)。当前特征采样比例方案使用下文的 `optimize_rf_midpoint.py`。
+RF 主代码已切换到特征采样比例调参：`AudioMNIST_完整版/evaluation.py`、`reproduce.py` 和 `optimize_rf.py` 均使用新方案。四组网格见 `AudioMNIST_完整版/rf_settings.json`；运行与迁移说明见 [RF 调参说明](docs/RF_OPTIMIZATION.md)。旧深度探索仅通过明确命名的 `rf_depth_diagnostic.py` / `diagnose_rf_depth.py` 调用。
 
-原始 12 组复现（`reproduce.py`）= 2 特征 × 3 类模型 × 2 训练方式。说话者隔离的外层 10 折、内层 3 折，共 1,320 次拟合、120 外层模型和 12 全数据模型。该历史复现入口保留原 RF 网格；下文的新 RF 方案使用独立入口。
+当前 12 组复现（`reproduce.py`）= 2 特征 × 3 类模型 × 2 训练方式。说话者隔离的外层 10 折、内层 3 折，共 1,320 次拟合、120 外层模型和 12 全数据模型。RF 已采用新的 `max_features` 网格。下文保存的历史结果仍对应各自旧提交；源码更新不会自动重算归档。
 
 ### 新增 NGBoost 配对训练实验
 
@@ -71,7 +71,8 @@ python reproduce.py all --jobs 2
 | LogMel | Logistic | C = 0.0001, 0.1, 100 |
 | MFCC+delta | Logistic clean | C = 0.0001, 0.003, 0.01 |
 | MFCC+delta | Logistic augmented | C = 0.01, 0.03, 0.1 |
-| 两种 | Random forest | max_depth = 4, 48, 128 |
+| Log-Mel CT | Random forest | max_features = 0.1, 0.3, 1.0；固定深度16 |
+| 其余三组 | Random forest | max_features = 0.01, 0.1, 0.3；固定深度16 |
 | LogMel | LightGBM GOSS | num_leaves = 3, 63, 255 |
 | MFCC+delta | LightGBM GOSS | lambda_l2 = 0, 0.1, 1；固定 7 leaves |
 
@@ -96,13 +97,13 @@ python reproduce.py verify --config logmel__logistic__clean_matched
 
 ## 随机森林四组中间值方案（本地探索）
 
-当前四组随机森林调参入口为 `optimize_rf_midpoint.py`，说明见
+原入口 `optimize_rf.py` 现在直接调用这套新方案，`optimize_rf_midpoint.py` 仍可使用。说明见
 `rf_midpoint_experiment/使用说明.txt`。它调节 `max_features`，固定 60 棵树、
 最大深度 16、最小叶子样本数 2；外层十折、内层三折，每折仍按验证分数最大值选择。
-安装依赖后，可用 `python reproduce.py prepare --work-dir .reproduction` 准备特征缓存。
+安装依赖后，可用 `python reproduce.py prepare --work-dir .reproduction-rf-current` 准备特征缓存。源码指纹已变化，请使用新工作目录。
 
 ```bash
-python optimize_rf_midpoint.py --cache-dir .reproduction/data --output .rf-midpoint --workers 4
+python optimize_rf.py --cache-dir .reproduction-rf-current/data --output .rf-midpoint --workers 4
 ```
 
 四组范围不同：Log-Mel clean 使用 `[0.1,0.3,1.0]`，其余三组使用
@@ -110,7 +111,7 @@ python optimize_rf_midpoint.py --cache-dir .reproduction/data --output .rf-midpo
 Log-Mel clean 的完整次数为 `[2,5,3]`，满足唯一众数，但不严格超过半数。
 这些范围来自同一数据的事后筛查，属于探索性结果；范围设计使用了跨折信息，
 不能当作独立确认或无偏嵌套交叉验证。完整四点候选均予保留，最终网格没有丢失
-本轮四点候选中的逐折最高内层分数。旧 `optimize_rf.py` 保留为深度诊断入口。
+本轮四点候选中的逐折最高内层分数。`reproduce.py all` 和 Full reproduction 工作流也已切换到这些 RF 设置；它们另外生成全数据模型，而本轮已验证的40折RF结果不包含全数据拟合。
 
 ## 已验证的云端运行
 

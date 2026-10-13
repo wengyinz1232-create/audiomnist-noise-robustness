@@ -23,22 +23,24 @@ import sys
 REPO = Path(__file__).resolve().parent
 SOURCE = REPO / 'AudioMNIST_完整版'
 CORE = ('common.py', 'features.py', 'prepare_data.py', 'evaluation.py',
-        'verify.py', 'verify_saved_run.py', 'predict.py')
+        'verify.py', 'verify_saved_run.py', 'predict.py', 'rf_settings.json')
 RUN_ID = 'reproduction'
 CONDITIONS = ('clean', 'white_20', 'white_10', 'pink_10')
 METRICS = ('macro_f1', 'accuracy', 'macro_precision', 'balanced_accuracy', 'log_loss')
 
 def configurations():
     result = {}
+    rf_settings = json.loads((SOURCE / 'rf_settings.json').read_text(encoding='utf-8'))
     for rep in ('logmel', 'mfcc_delta'):
         for model in ('logistic', 'forest', 'lightgbm_goss'):
             for mode in ('clean_matched', 'augmented'):
                 actual = 'lightgbm_goss_l2' if rep == 'mfcc_delta' and model == 'lightgbm_goss' else model
-                grid = {'logistic': [.0001, .1, 100.], 'forest': [4, 48, 128],
+                grid = {'logistic': [.0001, .1, 100.], 'forest': None,
                         'lightgbm_goss': [3, 63, 255], 'lightgbm_goss_l2': [0., .1, 1.]}[actual]
                 if rep == 'mfcc_delta' and model == 'logistic':
                     grid = [.0001, .003, .01] if mode == 'clean_matched' else [.01, .03, .1]
                 key = f'{rep}__{actual}__{mode}'
+                if model == 'forest': grid = list(rf_settings['grids'][key])
                 result[key] = {'representation': rep, 'model': actual, 'mode': mode, 'grid': grid}
     return result
 
@@ -225,6 +227,8 @@ def summarize(work):
         'source_sha256': {name: sha(work / name) for name in CORE},
         'result_sha256': {key: sha(result_path(work, key)) for key in CONFIGS},
         'limits': ['Engineering verification is not course-wide compliance.',
+                   'RF tunes max_features with fixed depth 16, 60 trees and minimum leaf size 2.',
+                   'RF grids are post-hoc and Log-Mel clean/augmented ranges differ.',
                    'MFCC logistic uses different grids by training mode.',
                    'MFCC LightGBM uses fixed seven-leaf trees and a shared L2 grid.',
                    'Data and grids were explored previously; this is a reproduction, not independent confirmation.',
@@ -250,7 +254,7 @@ def plot(reports, rows):
             ax.set_ylabel('Macro-F1 (mean +/- fold SD)'); ax.grid(alpha=.2)
     axes[0, 0].legend(fontsize=8)
     fig.suptitle('AudioMNIST: current 12 configurations, fresh 10 x 3 speaker-disjoint CV')
-    fig.supxlabel('MFCC logistic grids differ by mode; MFCC LightGBM uses a shared L2 grid. Fold SD is not a confidence interval.', fontsize=9)
+    fig.supxlabel('Log-Mel RF and MFCC logistic grids differ by mode. Fold SD is not a confidence interval.', fontsize=9)
     fig.savefig(reports / 'robustness.png', dpi=160); plt.close(fig)
 
 def main():

@@ -1,87 +1,43 @@
-# RF depth search with capacity diagnostics
+# Current random-forest training
 
-This document describes the earlier depth diagnostic. The current four-configuration
-midpoint experiment uses `optimize_rf_midpoint.py` and explicit per-configuration
-`max_features` grids. See `rf_midpoint_experiment/使用说明.txt` and the README.
-Its grids were selected post-hoc from inner-score exploration and must be reported
-as exploratory; the locked-grid runner always chooses the actual score maximum.
+The existing RF implementation now tunes `max_features` directly. This applies to `AudioMNIST_完整版/evaluation.py`, `reproduce.py train/all`, the Full reproduction workflow, and the `optimize_rf.py` entry point.
 
-`optimize_rf.py` is a new experiment, not a replacement for the archived
-`[4,48,128]` reproduction. The default `[4,8,16]` was chosen after a training-only
-screen of `[4,8,12,16,20,24,32,48]` on outer fold 1's 54 training speakers,
-using three inner folds and all four representation/mode combinations.
-These three limits actively restrict tree growth and produce distinct inner
-scores. This defines a capacity-controlled RF, not a claim to maximise RF
-performance over unrestricted depth. Neither universal optimality nor course
-midpoint compliance has been established.
-Sixty trees, minimum leaf size 2, square-root feature sampling, seeds, features,
-training modes and the manual 10-by-3 speaker-disjoint protocol are unchanged.
-Use the same grid for both representations and modes. Do not modify the grid
-based on outer test scores or force midpoint selection by breaking ties differently.
+Fixed settings: 60 bootstrap trees, maximum depth 16, minimum leaf size 2, Gini splitting, and minimum split size 2.
 
-Install `requirements-reproduce.txt`. Create features with the existing command:
+| Configuration | Feature-fraction grid | Recorded ten-fold selection counts |
+|---|---|---|
+| Log-Mel clean | `[0.1, 0.3, 1.0]` | `[2,5,3]` |
+| Log-Mel augmented | `[0.01, 0.1, 0.3]` | `[0,10,0]` |
+| MFCC+delta clean | `[0.01, 0.1, 0.3]` | `[0,10,0]` |
+| MFCC+delta augmented | `[0.01, 0.1, 0.3]` | `[0,10,0]` |
+
+`AudioMNIST_完整版/rf_settings.json` supplies grids and fixed settings to the main pipeline. Tests ensure these agree with the verified experiment configuration. Every outer fold still selects the actual highest clean/W10 inner macro-F1. Exact ties use candidate order; midpoint counts are observations, never forced choices. These grids were designed after exploration of the same folds and are not independent confirmation. The Log-Mel CT count is a unique mode, not a strict majority.
+
+## Run through the existing pipeline
+
+Use a fresh working directory because the source fingerprint and parameter meaning have changed:
 
 ```bash
-python reproduce.py prepare --work-dir .reproduction
-python optimize_rf.py --cache-dir .reproduction/data --representation mfcc_delta --mode augmented --fold 1
+python -m pip install -r requirements-reproduce.txt
+python reproduce.py prepare --work-dir .reproduction-rf-current
+python reproduce.py train --work-dir .reproduction-rf-current --config logmel__forest__clean_matched logmel__forest__augmented mfcc_delta__forest__clean_matched mfcc_delta__forest__augmented
+python reproduce.py verify --work-dir .reproduction-rf-current --config logmel__forest__clean_matched logmel__forest__augmented mfcc_delta__forest__clean_matched mfcc_delta__forest__augmented
 ```
 
-The second command is a single-fold smoke run, not a complete evaluation.
-To finish all four RF configurations (run sequentially):
+`python reproduce.py all --work-dir .reproduction-rf-current` trains all twelve model configurations using the updated RF settings. The main pipeline retains an additional all-data tuning/refit for each configuration. The previously verified RF experiment consisted of 40 outer models and had no all-data fit; changing the entry point does not retroactively create a new result batch.
+
+## RF-only entry
 
 ```bash
-python optimize_rf.py --cache-dir .reproduction/data --representation logmel --mode clean_matched
-python optimize_rf.py --cache-dir .reproduction/data --representation logmel --mode augmented
-python optimize_rf.py --cache-dir .reproduction/data --representation mfcc_delta --mode clean_matched
-python optimize_rf.py --cache-dir .reproduction/data --representation mfcc_delta --mode augmented
+python optimize_rf.py --cache-dir .reproduction-rf-current/data --output .rf-midpoint --workers 4
 ```
 
-Results default to `.rf-depth-v3/`, separated from historical outputs.
-`--depths 4 8 16` specifies an explicit ascending grid. Changed grids or sources
-require a new `--work-dir`; identical runs resume after hash checks. Do not run
-multiple processes against the same configuration directory.
+`optimize_rf_midpoint.py` remains an equivalent alias. These RF-only entry points run four configurations and produce the original verified experiment's result format. They do not add all-data models. The former depth-only `--depths`, `--representation`, `--mode` and `--fold` options belong to the explicitly historical `rf_depth_diagnostic.py`, documented in [the depth diagnostic notes](RF_DEPTH_DIAGNOSTIC.md).
 
-Each fold records all inner scores, each fitted tree's actual depth/leaf count,
-fraction reaching the depth cap, fit seconds, selected depth and near-best
-ties (1e-12 diagnostic tolerance; selection itself uses exact argmax). Selected
-models are reloaded and their probabilities checked on all four test conditions.
-Saved predictions and models have SHA-256 hashes. Summary reports partial/full
-status, selection counts and midpoint status only when all ten folds exist.
-One-fold runs have no sample SD. Four complete configurations use 400 actual
-fits and yield 40 outer models; no full-data deployment fit is performed.
+The optional multi-SNR mode in the older pipeline inherits each representation's augmented grid, but was not part of the four-configuration midpoint result.
 
-Check whether candidate depths actually change inner validation scores, whether
-trees reach their limits, and whether midpoint selection reflects distinct scores
-rather than a plateau. Boundary selection or ties must be reported, not hidden.
-The screen selected 16/16/8/16 for Log-Mel CT/AT and MFCC CT/AT respectively
-within this grid, so three configurations still prefer the upper boundary.
-Do not describe these data as satisfying the midpoint criterion. In MFCC AT,
-16 and 24 differ by only 0.000116 in mean inner F1; in both CT configurations,
-24/32/48 have identical scores and tree summaries. Larger depth alone is
-unlikely to create a well-separated, central optimum across every configuration.
-If midpoint compliance is essential, a separately specified regularisation
-parameter (e.g. minimum leaf size) may be a better tuning target; it is not
-changed here.
+## Validation and evidence
 
-To repeat the screening without fitting or scoring outer test recordings:
+Repository tests compare all four integrated RF configurations against the verified trainer on deterministic synthetic speaker-grouped data, including all candidate inner scores, chosen parameters, speaker partitions, saved models and probabilities under all four conditions. Configuration checks, staged-runtime checks and the separate RF protocol suite also run in Code checks.
 
-```bash
-python diagnose_rf_depth.py --cache-dir .reproduction/data --work-dir .rf-depth-screen
-```
-
-The screen only loads clean/W10 features and removes outer-test rows before
-passing arrays into its inner loop. Scores are exploratory inner-validation
-scores, not test results or independent confirmation. Completed configurations
-can resume; interrupted configurations restart their screening. Use a new work
-directory if sources or the protocol change. Applying a grid informed by fold 1
-to all ten folds is still exploratory, because its screening speakers include
-test speakers of other folds. For independent evaluation, lock the protocol and
-use new external speakers, or perform the entire screening within each outer
-training split. A global pilot must not be described as fully nested selection.
-
-Reusing this previously explored corpus is exploratory. New report results require
-complete runs and metric verification; the old RF result tables remain historical.
-
-```bash
-python -m unittest discover -s tests -v
-```
+Historical source snapshots, archived cloud results and the verified experimental evidence are retained as historical records. They are not the current training implementation and must not be relabeled as a fresh run. Previously generated runtimes must be regenerated in a new directory; a hash mismatch should not be bypassed.

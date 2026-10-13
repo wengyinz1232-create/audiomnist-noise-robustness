@@ -2,7 +2,7 @@ import tempfile
 import unittest
 from pathlib import Path
 import numpy as np
-import optimize_rf as rf
+import rf_depth_diagnostic as rf
 
 
 class RFOptimizationTests(unittest.TestCase):

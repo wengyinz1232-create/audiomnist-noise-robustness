@@ -1,10 +1,11 @@
 """Manual speaker-disjoint nested CV, hyperparameter search and metrics.
 
 只有分类器拟合调用 sklearn/LightGBM；没有调用 CV、GridSearch 或 metrics 工具。
-Both training modes have the SAME grids and validation objective, so the
-augmentation comparison does not also change the tuning objective.
+Both training modes have the same validation objective. RF uses the verified
+configuration-specific feature-fraction grids; Log-Mel CT/AT ranges differ.
 """
 import pickle
+import json
 import time
 import warnings
 from datetime import datetime, timezone
@@ -17,8 +18,18 @@ from threadpoolctl import threadpool_limits
 from common import ROOT, SEED, CONDITIONS, save_json, sha
 
 # Fixed before this fresh run, informed by the earlier exploratory inner scores.
-GRIDS = {'logistic':[.0001,.1,100.], 'forest':[4,48,128], 'lightgbm_goss':[3,63,255],
+GRIDS = {'logistic':[.0001,.1,100.], 'lightgbm_goss':[3,63,255],
          'lightgbm_goss_min_child':[5,20,80]}
+RF_SETTINGS = json.loads((ROOT/'rf_settings.json').read_text(encoding='utf-8'))
+
+
+def parameter_grid(rep, name, mode):
+    if name == 'forest':
+        # The optional multi-SNR experiment inherits the augmented grid; it is
+        # not part of the four configurations used to establish midpoint counts.
+        grid_mode = 'augmented' if mode == 'multi_snr_augmented' else mode
+        return list(RF_SETTINGS['grids'][f'{rep}__forest__{grid_mode}'])
+    return list(GRIDS[name])
 
 
 def grouped_folds(groups, indices, k, seed):
@@ -62,7 +73,11 @@ def model_for(name, value, seed):
     if name == 'logistic':
         return LogisticRegression(C=value,max_iter=2000,tol=1e-3,solver='lbfgs',random_state=seed)
     if name == 'forest':
-        return RandomForestClassifier(n_estimators=60,max_depth=int(value),min_samples_leaf=2,n_jobs=2,random_state=seed)
+        fraction = float(value)
+        if not 0 < fraction <= 1:
+            raise ValueError('RF now tunes max_features in (0, 1]; depth candidates are no longer valid.')
+        return RandomForestClassifier(**RF_SETTINGS['fixed'],max_features=fraction,
+            bootstrap=True,criterion='gini',min_samples_split=2,n_jobs=2,random_state=seed)
     if name == 'lightgbm_goss':
         return LGBMClassifier(n_estimators=70,num_leaves=int(value),learning_rate=.08,
             data_sample_strategy='goss',top_rate=.2,other_rate=.1,min_child_samples=20,
@@ -152,10 +167,17 @@ def run_configuration(rep,name,mode,run_id='main',grid_override=None):
     output = ROOT/'runs'/run_id/f'{rep}__{name}__{mode}'; output.mkdir(parents=True,exist_ok=True)
     with np.load(ROOT/'data'/f'{rep}.npz') as cache:
         y = cache['y']; groups = cache['groups']; variants = {c:cache[c] for c in CONDITIONS}
-    grid = grid_override or GRIDS[name]
+    grid = parameter_grid(rep,name,mode) if grid_override is None else list(grid_override)
+    if name == 'forest':
+        if len(grid)!=3 or grid!=sorted(set(grid)) or not all(0<float(v)<=1 for v in grid):
+            raise ValueError('RF requires three increasing max_features fractions in (0, 1].')
     signature = {p.name:sha(p) for p in [ROOT/'data'/f'{rep}.npz',ROOT/'evaluation.py',ROOT/'common.py',ROOT/'features.py']}
+    if name == 'forest': signature['rf_settings.json'] = sha(ROOT/'rf_settings.json')
     config = {'representation':rep,'model':name,'mode':mode,'grid':grid,'outer_folds':10,'inner_folds':3,
               'seed':SEED,'samples':len(y),'features':variants['clean'].shape[1],'signature':signature}
+    if name == 'forest':
+        config.update(tuned_parameter='max_features',fixed_parameters=RF_SETTINGS['fixed'],
+                      exploration_note=RF_SETTINGS['note'])
     path = output/'result.json'
     record = __import__('json').loads(path.read_text(encoding='utf-8')) if path.exists() else {'config':config,'folds':[]}
     assert record['config'] == config, 'Resume rejected: changed configuration/source'

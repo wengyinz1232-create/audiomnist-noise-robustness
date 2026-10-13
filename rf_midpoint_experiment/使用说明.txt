@@ -65,4 +65,4 @@ screen_rf_features.py、select_config_grids.py 为探索脚本，需要历史协
 复现当前锁定方案只需 train_rf_midpoint.py，不依赖重跑历史探索。
 
 仓库提供源码、锁定配置、selection_audit.json 和结果说明；模型、预测、特征缓存及本地日志不随源码提交。
-本次没有生成全数据部署模型。原始 reproduce.py 保留历史 RF 设置，新方案请使用 optimize_rf_midpoint.py。
+本轮40折实验没有生成全数据部署模型。当前主代码的 reproduce.py、evaluation.py 和 optimize_rf.py 均已切换到本方案；reproduce.py 主流程另外保留全数据拟合步骤。

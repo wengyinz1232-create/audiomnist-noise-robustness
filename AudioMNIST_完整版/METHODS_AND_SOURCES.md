@@ -24,14 +24,14 @@ white_20 / white_10 为合成高斯白噪声，SNR 分别 20/10 dB。pink_10 对
 
 原始录音、白噪声版本、粉红噪声版本共享源样本 ID 和说话人。先根据说话人指定折，再仅索引对应人员的版本；即使预先批量计算缓存也没有跨样本学习操作，不会因此造成标签泄漏。
 
-两种训练模式的 inner validation 都只看 clean 和 white_10 两个条件的 macro-F1 平均值。clean_matched 只训练干净录音；augmented 加上同一训练录音的 white_10 副本。二者参数网格相同。white_20 和 pink_10 均不参与选参；pink_10 从未作为训练输入。无法把 clean_matched 描述为“从未接触噪声信息”：它的拟合没用噪声，但参数选择参考了白噪声验证表现。
+两种训练模式的 inner validation 都只看 clean 和 white_10 两个条件的 macro-F1 平均值。clean_matched 只训练干净录音；augmented 加上同一训练录音的 white_10 副本。当前 RF 的 Log-Mel 两种训练模式网格不同，MFCC 两种模式网格相同；不同网格的性能差不能完全归因于增强。white_20 和 pink_10 均不参与选参；pink_10 从未作为训练输入。无法把 clean_matched 描述为“从未接触噪声信息”：它的拟合没用噪声，但参数选择参考了白噪声验证表现。
 
 ## 模型、复杂度和调参
 
 |模型|角色|固定设置|主批次调参范围|
 |---|---|---|---|
 |Multinomial logistic regression|简单：线性分类边界|L2、lbfgs、最多2000轮、tol=1e-3|C：0.0001 / 0.1 / 100|
-|Random forest|中等：并行自助采样树的非线性集成|60 棵树、最小叶样本2|最大深度：4 / 48 / 128|
+|Random forest|中等：并行自助采样树的非线性集成|60 棵树、最大深度16、最小叶样本2|max_features：Log-Mel CT 为0.1 / 0.3 / 1.0；其余三组为0.01 / 0.1 / 0.3|
 |LightGBM-GOSS|困难：逐步优化的梯度提升树与 GOSS|70 轮、学习率0.08、min_child_samples=20、L2=1、top_rate=.2、other_rate=.1|叶子数：3 / 63 / 255|
 
 这是模型机制/实现层次的三档解释，不是严格证明所有随机森林的假设空间都小于所有提升树。困难模型不是通过调大同一种模型参数凑出来的。

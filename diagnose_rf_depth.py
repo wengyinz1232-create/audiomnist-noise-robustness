@@ -4,7 +4,7 @@ import csv
 import json
 from pathlib import Path
 import numpy as np
-import optimize_rf as rf
+import rf_depth_diagnostic as rf
 
 DEPTHS = [4, 8, 12, 16, 20, 24, 32, 48]
 

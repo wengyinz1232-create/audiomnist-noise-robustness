@@ -1,4 +1,7 @@
 AudioMNIST teammate handoff: code, raw audio, feature caches and saved experiments.
+RF updated 2026-10-13: evaluation.py now tunes max_features from rf_settings.json,
+with 60 trees, depth 16 and minimum leaf size 2. Root reproduce.py also uses this configuration.
+Historical result indices below are unchanged; use a fresh runtime/run ID after this source update.
 Install dependencies: python -m pip install -r requirements.txt
 Current result index (no training): python build_experiment_index.py
 Start with results/current/status.json and summary_current_12.csv.
