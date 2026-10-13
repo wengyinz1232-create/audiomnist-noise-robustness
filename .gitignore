@@ -1,5 +1,9 @@
 # Local environments and credentials
 .reproduction/
+.rf-depth-v2/
+.rf-depth-v3/
+.rf-depth-screen/
+.rf-midpoint/
 .ngboost-comparison/
 .audit_deps/
 .venv/

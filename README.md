@@ -28,7 +28,9 @@ python reproduce.py all --jobs 2
 
 ## 配置和核验范围
 
-当前 12 组 = 2 特征 × 3 类模型 × 2 训练方式。说话者隔离的外层 10 折、内层 3 折，共 1,320 次拟合、120 外层模型和 12 全数据模型。
+较早的 RF 深度诊断入口：`optimize_rf.py` 使用训练内诊断后选定的共同 `[4,8,16]` 深度范围，记录实际树深、叶子数、内层分数和并列情况。`diagnose_rf_depth.py` 只使用指定外折的训练说话人检查深度曲线。该范围用于容量受控的 RF，四组中的三组筛查最优仍为上界16；它不是已确认的通用最优网格，也未证明中间值最常选。完整命令见 [RF 深度诊断说明](docs/RF_OPTIMIZATION.md)。当前特征采样比例方案使用下文的 `optimize_rf_midpoint.py`。
+
+原始 12 组复现（`reproduce.py`）= 2 特征 × 3 类模型 × 2 训练方式。说话者隔离的外层 10 折、内层 3 折，共 1,320 次拟合、120 外层模型和 12 全数据模型。该历史复现入口保留原 RF 网格；下文的新 RF 方案使用独立入口。
 
 ### 新增 NGBoost 配对训练实验
 
@@ -91,6 +93,24 @@ python reproduce.py verify --config logmel__logistic__clean_matched
 
 云端完整工作流：一次准备特征 → 12 个独立配置任务并行训练和核验 → 汇总报告。临时 prepared-features 工件保留 1 天；每组及汇总证据保留 14 天。数据缓存经过 SHA-256 核对后才用于训练。
 
+
+## 随机森林四组中间值方案（本地探索）
+
+当前四组随机森林调参入口为 `optimize_rf_midpoint.py`，说明见
+`rf_midpoint_experiment/使用说明.txt`。它调节 `max_features`，固定 60 棵树、
+最大深度 16、最小叶子样本数 2；外层十折、内层三折，每折仍按验证分数最大值选择。
+安装依赖后，可用 `python reproduce.py prepare --work-dir .reproduction` 准备特征缓存。
+
+```bash
+python optimize_rf_midpoint.py --cache-dir .reproduction/data --output .rf-midpoint --workers 4
+```
+
+四组范围不同：Log-Mel clean 使用 `[0.1,0.3,1.0]`，其余三组使用
+`[0.01,0.1,0.3]`。本轮中间候选获选次数依次为 5、10、10、10；
+Log-Mel clean 的完整次数为 `[2,5,3]`，满足唯一众数，但不严格超过半数。
+这些范围来自同一数据的事后筛查，属于探索性结果；范围设计使用了跨折信息，
+不能当作独立确认或无偏嵌套交叉验证。完整四点候选均予保留，最终网格没有丢失
+本轮四点候选中的逐折最高内层分数。旧 `optimize_rf.py` 保留为深度诊断入口。
 
 ## 已验证的云端运行
 

@@ -1,0 +1,68 @@
+随机森林：按验证分数选参的中间值方案
+
+当前入口是 train_rf_midpoint.py，配置是 midpoint_config.json。
+四组为 Log-Mel/MFCC+delta × clean_matched/augmented。
+本轮调参参数是 max_features（每次节点分裂考虑的特征比例）；固定 n_estimators=60、max_depth=16、min_samples_leaf=2。
+bootstrap=True、criterion=gini、min_samples_split=2，随机种子和说话人划分保持一致。
+只要求每组中间候选是十折唯一众数，不要求每折均选中间值，也不要求所有固定参数都是中间值。
+“中间值”指升序三点网格的第二项，不是端点的算术平均数。
+
+复现环境：Python 3.12，依赖见 requirements.txt。
+缓存需包含已核验的 inventory.json、logmel.npz、mfcc_delta.npz；缓存不重复打包。
+在原项目运行 python reproduce.py prepare --work-dir .reproduction 可准备特征。
+
+安装及检查（在本目录运行）：
+python -m pip install -r requirements.txt
+python -m unittest -v test_tune_rf.py
+
+用已锁定网格重新运行四组、十折外层、三折内层：
+python train_rf_midpoint.py --config midpoint_config.json --cache-dir <特征缓存目录> --output <全新结果目录> --workers 4
+
+该命令重新计算内层分数，共360次内层拟合、40次外层拟合。
+每个森林用两个线程；--workers 是并发外层折数。
+相同源码、数据和配置可断点续跑。改变源码或配置后使用新目录。
+不要同时启动两个进程写同一输出目录，不要使用 python -O（核验依赖 assert）。
+同一数据上重跑不构成独立验证；平台或库版本改变也可能造成小幅数值差异。
+
+选参规则：
+每折只用外层训练说话人的三个内层验证折。
+候选分数为 clean 和 white_10 条件平均 Macro-F1，再对三个内层折取平均。
+np.argmax 选择最高分，精确同分时取升序列表首项。
+记录选择后才计算外层测试结果。pink_10 不参与内层选参。
+midpoint_check.json 如实报告 PASS 或 FAIL，不覆盖真实选择来强制通过。
+PASS 要求每组中间候选获选次数严格大于两个端点，且中间值获选时不与端点同分。
+
+网格产生过程：
+四组共同筛查 max_features=[0.01,0.1,0.3,1.0]，固定以上结构。
+共同三点网格不能让四组全部满足要求，因此分别确定每组网格。
+枚举四选三的全部组合，筛选中间值唯一众数且没有中间平局的组合；
+优先选相对于完整四点筛查损失最小的内层成绩，完全相同时按网格升序确定。
+最终网格和获选次数见“中间值方案结果说明.txt”。
+selection_audit.json 保留全部尝试，共同网格失败证据也保留。
+
+方法限制：
+网格是在已探索数据及同一批划分上，根据内层分数事后确定的。
+整个网格设计步骤使用跨折信息，因此不能称为严格预先固定搜索空间的无偏嵌套交叉验证。
+这是一轮探索性比较；需要新说话人或新数据作独立确认。
+每折真实 argmax 得到保留；“中间值最常选”不等于“全局最优”，也不保证优于旧基线。
+报告需披露四组范围不同、完整四点筛查，以及全部测试条件的性能变化。
+
+本机运行证据（大体积产物未纳入 Git）：
+midpoint_results/：40个外层模型、选择、预测、指标、哈希、分组和协议。
+baseline_results/：相同划分旧基线（深度[4,48,128]、sqrt特征采样、60棵树、叶子样本2）。
+feature_screen/：四点候选内层分数、训练记录和共同网格审计。
+grid_selection/：各组网格选择的完整审计。
+tests.log：自动检查结果。
+保存模型均重新加载核验预测，结果另用预测概率独立复算指标。
+记录的绝对路径为本次执行来源；迁移机器后建议按上面命令重算。
+--reuse-inner-screen 仅用于显式复用本轮核验分数，不是必需参数。
+
+历史探索：
+tune_rf.py 保留原分阶段搜索和共享训练函数。
+该搜索在目标改为中间值方案后停止，完成32/40个外层折，不能称作完整四组调优。
+exploration_status.json 记录停止状态。当前中间值方案有单独的40折结果。
+screen_rf_features.py、select_config_grids.py 为探索脚本，需要历史协议/结果路径。
+复现当前锁定方案只需 train_rf_midpoint.py，不依赖重跑历史探索。
+
+仓库提供源码、锁定配置、selection_audit.json 和结果说明；模型、预测、特征缓存及本地日志不随源码提交。
+本次没有生成全数据部署模型。原始 reproduce.py 保留历史 RF 设置，新方案请使用 optimize_rf_midpoint.py。

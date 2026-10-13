@@ -15,4 +15,6 @@ jobs:
           python-version: '3.12'
       - run: python -m pip install -r requirements-reproduce.txt
       - run: python -m unittest discover -s tests -v
+      - run: python -m unittest -v test_tune_rf.py
+        working-directory: rf_midpoint_experiment
       - run: python reproduce.py self-test
